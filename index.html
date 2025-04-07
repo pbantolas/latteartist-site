@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- SEO Meta Tags -->
+		<meta
+			name="description"
+			content="Like you, I struggled to track my latte art progress. So I'm building LatteArtist – an iOS app to log pours, visualize improvement (finally!), and ditch the photo album chaos. Shaped by feedback from home baristas."
+		/>
+		<meta
+			name="keywords"
+			content="latte art, barista, coffee, espresso, practice, tracker, ios app, latte art app"
+		/>
+
+		<!-- Open Graph Meta Tags (Facebook, LinkedIn, etc.) -->
+		<meta
+			property="og:title"
+			content="LatteArtist: Visualize & Improve Your Latte Art Pour by Pour (iOS)"
+		/>
+		<meta
+			property="og:description"
+			content="Trying to improve your latte art? I'm building LatteArtist to help us track pours, see progress visually, and learn from our practice. Join the journey!"
+		/>
+		<meta
+			property="og:image"
+			content="https://latteartist.coffeeatpetros.com/assets/card-image.jpg"
+		/>
+		<meta
+			property="og:url"
+			content="https://latteartist.coffeeatpetros.com/"
+		/>
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="LatteArtist" />
+
+		<!-- Twitter Card Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta
+			name="twitter:title"
+			content="LatteArtist: Visualize & Improve Your Latte Art Pour by Pour (iOS)"
+		/>
+		<meta
+			name="twitter:description"
+			content="Trying to improve your latte art? I'm building LatteArtist to help us track pours, see progress visually, and learn from our practice. Join the journey!"
+		/>
+		<meta
+			name="twitter:image"
+			content="https://latteartist.coffeeatpetros.com/assets/card-image.webp"
+		/>
+		<!-- Optional: <meta name="twitter:site" content="@YourTwitterHandle"> -->
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href="https://latteartist.coffeeatpetros.com/" />
+
+		<!-- Favicon -->
+		<link
+			rel="icon"
+			type="image/png"
+			href="/favicon-96x96.png"
+			sizes="96x96"
+		/>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/apple-touch-icon.png"
+		/>
+		<link rel="manifest" href="/site.webmanifest" />
+
+		<title>LatteArtist: Latte Art Progress Tracking App for iOS</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			:root {
+				/* Light Mode Defaults */
+				--bg-gradient-start: #fafafa; /* Softer white */
+				--bg-gradient-end: #f5f5f5; /* Slightly darker soft white */
+				--text-primary: #2c2c2e;
+				--text-secondary: #5a5a5e;
+				--card-background: #ffffff;
+				--shadow-color: rgba(0, 0, 0, 0.07);
+				--border-color: #e5e5e5;
+				--brand-accent: #3330e4;
+				--link-color: var(--brand-accent); /* Default link color */
+				--link-highlight-bg: var(--brand-accent);
+				--link-highlight-text: #ffffff;
+				--quote-border-color: var(--border-color);
+				--title-color-light: var(--brand-accent);
+				--dark-mode-text-primary-val: #f2f2f7; /* Store value for JS */
+
+				--border-radius-large: 32px; /* Increased from 16px for AirOS ExtraLarge radius */
+				--spacing-unit: 1rem;
+
+				color-scheme: light;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				:root {
+					/* Dark Mode Overrides */
+					--bg-gradient-start: #1c1c1e;
+					--bg-gradient-end: #161618;
+					--text-primary: var(--dark-mode-text-primary-val);
+					--text-secondary: #a0a0a5;
+					--card-background: #34334c; /* Lighter dark grey for better contrast */
+					--shadow-color: rgba(0, 0, 0, 0.2);
+					--border-color: #3a3a3c;
+					--link-color: #7a78ff; /* Lighter link for dark mode */
+					--link-highlight-bg: var(
+						--brand-accent
+					); /* Keep highlight bg */
+					--link-highlight-text: #ffffff; /* White text should still work */
+					--quote-border-color: var(--border-color);
+					--title-color-dark: var(--text-primary);
+
+					color-scheme: dark;
+				}
+			}
+
+			body {
+				margin: 0;
+				padding: 0;
+				font-family: "Outfit", system-ui, -apple-system,
+					BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+					Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+				background: linear-gradient(
+					180deg,
+					var(--bg-gradient-start) 0%,
+					var(--bg-gradient-end) 100%
+				);
+				color: var(--text-primary);
+				line-height: 1.6;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				min-height: 100vh;
+				padding: calc(var(--spacing-unit) * 2);
+				box-sizing: border-box;
+				transition: background-color 0.3s ease, color 0.3s ease;
+			}
+
+			.container {
+				max-width: 960px;
+				width: 100%;
+				text-align: center;
+			}
+
+			header {
+				margin-bottom: calc(var(--spacing-unit) * 3);
+				text-align: center;
+			}
+
+			h1 {
+				font-optical-sizing: auto;
+				font-size: 2.8em;
+				font-weight: 600;
+				color: var(--title-color-light);
+				margin-bottom: calc(var(--spacing-unit) * 0.5);
+				line-height: 1.2;
+				max-width: 700px; /* Constrain width like paragraph */
+				margin-left: auto; /* Center constrained h1 */
+				margin-right: auto; /* Center constrained h1 */
+			}
+
+			@media (prefers-color-scheme: dark) {
+				h1 {
+					color: var(--title-color-dark);
+				}
+			}
+
+			header p {
+				font-size: 1.1em;
+				font-weight: 300;
+				color: var(--text-secondary);
+				max-width: 700px;
+				margin-left: auto;
+				margin-right: auto;
+				/* text-align: left; Revert to default center alignment from .container */
+			}
+
+			.main-content {
+				display: flex;
+				gap: calc(var(--spacing-unit) * 3);
+				align-items: flex-start;
+				margin-bottom: calc(var(--spacing-unit) * 3);
+			}
+
+			.content-column {
+				flex: 1;
+				text-align: left;
+			}
+
+			.image-column .screenshot-container {
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+
+			.form-column {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				height: 100%;
+			}
+
+			.signup-form-container h2 {
+				font-optical-sizing: auto;
+				font-size: 1.5em;
+				font-weight: 500;
+				color: var(--text-primary);
+				text-align: center;
+				margin-bottom: var(--spacing-unit);
+				margin-top: 0;
+			}
+
+			/* General Card Styling */
+			.card-container {
+				background-color: var(--card-background);
+				padding: calc(var(--spacing-unit) * 2); /* Consistent padding */
+				border-radius: var(--border-radius-large);
+				box-shadow: 0 4px 15px var(--shadow-color); /* Consistent shadow */
+				transition: background-color 0.3s ease, box-shadow 0.3s ease;
+				width: 100%;
+				box-sizing: border-box;
+				border: 1px solid var(--border-color); /* Subtle stroke */
+			}
+
+			.screenshot-container {
+				/* Specific adjustments if needed */
+				padding: var(
+					--spacing-unit
+				); /* Keep original screenshot padding */
+				box-shadow: 0 6px 20px var(--shadow-color); /* Keep original shadow */
+				line-height: 0; /* Prevent extra space below picture element */
+			}
+
+			.signup-form-container {
+				/* Inherits from .card-container, add specific styles */
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding: calc(
+					var(--spacing-unit) * 3
+				); /* Increased padding for AirOS Generous spec */
+			}
+
+			.screenshot {
+				/* Style applied to the fallback img inside picture */
+				display: block;
+				max-width: 100%;
+				height: auto;
+				border-radius: calc(
+					var(--border-radius-large) - var(--spacing-unit) / 2
+				);
+			}
+
+			.signup-form-container form {
+				margin: 0;
+				width: 100%;
+			}
+
+			/* Trust Section Card Specifics */
+			.trust-card-container {
+				max-width: 650px; /* Constrain width */
+				margin: 0 auto calc(var(--spacing-unit) * 4); /* Center horizontally, add bottom margin */
+			}
+
+			.trust-section {
+				/* Styles for content *inside* the card */
+				text-align: center;
+				width: 100%;
+				margin: 0; /* Remove outer margins */
+				padding: 0; /* Remove outer padding */
+			}
+
+			.trust-section p {
+				color: var(--text-secondary);
+				font-size: 0.95em;
+				margin-bottom: calc(var(--spacing-unit) * 0.5);
+			}
+
+			.trust-section a.highlight-link {
+				background-color: var(--link-highlight-bg);
+				color: var(--link-highlight-text);
+				padding: 0.1em 0.4em;
+				margin: 0 0.1em;
+				border-radius: 3px;
+				text-decoration: none;
+				font-weight: 500;
+				display: inline-block;
+				line-height: 1.3;
+				transition: opacity 0.2s ease;
+			}
+
+			.trust-section a.highlight-link:hover {
+				text-decoration: none;
+				opacity: 0.85;
+			}
+
+			.trust-section blockquote {
+				margin: var(--spacing-unit) auto
+					calc(var(--spacing-unit) * 0.75); /* Add top margin */
+				padding: 0 0 0 calc(var(--spacing-unit) * 1.5);
+				font-style: italic;
+				font-size: 1.05em;
+				color: var(--text-primary);
+				border-left: 3px solid var(--quote-border-color);
+				text-align: left; /* Keep quote text left aligned */
+				display: inline-block;
+				max-width: 90%;
+			}
+
+			.trust-section .attribution {
+				font-size: 0.9em;
+				color: var(--text-secondary);
+				text-align: center;
+				margin-top: 0;
+			}
+
+			/* Features Card Styling */
+			.features-card {
+				/* Inherits base card styles */
+				margin-bottom: calc(
+					var(--spacing-unit) * 2
+				); /* Space below features card */
+				padding: calc(
+					var(--spacing-unit) * 3
+				); /* Increased padding for AirOS Generous spec */
+			}
+
+			.features-card ul {
+				list-style: none;
+				padding-left: 0;
+				margin: 0; /* Remove default ul margin */
+			}
+
+			.features-card li {
+				margin-bottom: calc(
+					var(--spacing-unit) * 1.2
+				); /* Slightly more space between items */
+				font-size: 1em; /* Slightly smaller font */
+				color: var(--text-secondary);
+				display: flex;
+				align-items: center; /* Vertically center icon and text */
+				line-height: 1.5;
+			}
+
+			.features-card li:last-child {
+				margin-bottom: 0; /* No margin on last item */
+			}
+
+			.features-card li span {
+				/* Style the icon container */
+				display: inline-flex; /* Use flex for alignment */
+				align-items: center;
+				justify-content: center;
+				width: 1.5em; /* Adjust width for SVG */
+				height: 1.5em; /* Ensure consistent height */
+				margin-right: 0.8em;
+				flex-shrink: 0; /* Prevent shrinking */
+			}
+
+			.features-card li svg {
+				/* Style the SVG icons */
+				width: 100%;
+				height: 100%;
+				stroke: var(--text-secondary); /* Use neutral grey */
+				stroke-width: 1.5; /* Thin lines */
+				fill: none;
+				stroke-linecap: round;
+				stroke-linejoin: round;
+			}
+
+			footer {
+				margin-top: auto;
+				padding-top: calc(var(--spacing-unit) * 2);
+				font-size: 0.9em;
+				color: var(--text-secondary);
+				text-align: center;
+				width: 100%;
+				border-top: 1px solid var(--border-color);
+				transition: border-color 0.3s ease;
+			}
+
+			/* Responsive adjustments */
+			@media (max-width: 768px) {
+				h1 {
+					font-size: 2.4em;
+				}
+				.main-content {
+					flex-direction: column;
+					align-items: center;
+				}
+				.content-column {
+					width: 100%;
+					max-width: 500px;
+					flex: none;
+				}
+				.image-column .screenshot-container {
+					margin-bottom: calc(var(--spacing-unit) * 3);
+				}
+				.form-column {
+					height: auto;
+				}
+				.trust-card-container {
+					max-width: 500px; /* Match column width */
+				}
+				.trust-section blockquote {
+					padding-left: var(--spacing-unit);
+					font-size: 1em;
+					max-width: 100%;
+				}
+			}
+
+			.sharpie-highlight {
+				/* Use brand accent with transparency */
+				background-color: rgba(
+					51,
+					48,
+					228,
+					0.3
+				); /* --brand-accent (#3330e4) with 30% alpha */
+				padding: 0.1em 0.3em;
+				margin: 0 0.1em;
+				border-radius: 3px;
+				box-decoration-break: clone;
+				-webkit-box-decoration-break: clone;
+				font-weight: 500;
+				color: var(--text-primary); /* Ensure contrast */
+				/* Optional: slight skew for effect */
+				/* transform: skew(-2deg); */
+				/* display: inline-block; */ /* Needed if using transform */
+			}
+
+			/* Custom Android Checkbox Styles */
+			.android-checkbox-container {
+				display: none; /* Hidden by default */
+				margin-top: calc(
+					var(--spacing-unit) * 1.5
+				); /* Increased top margin slightly */
+				margin-bottom: 0; /* Remove bottom margin, let parent handle spacing */
+				text-align: left; /* Align text to the left */
+				width: 100%;
+				max-width: 300px; /* Re-add max-width for left alignment */
+				align-self: center; /* Keep container centered */
+				margin-left: auto; /* Center the container */
+				margin-right: auto; /* Center the container */
+			}
+
+			.android-checkbox-label {
+				display: inline-flex; /* Use inline-flex */
+				align-items: flex-start; /* Align items to the top */
+				cursor: pointer;
+				font-size: 0.85em; /* Slightly smaller font */
+				color: var(--text-secondary);
+				/* justify-content: center; Remove centering */
+			}
+
+			.custom-checkbox {
+				display: inline-block;
+				width: 18px; /* Slightly smaller */
+				height: 18px; /* Slightly smaller */
+				background-color: var(--card-background);
+				border: 1.5px solid var(--border-color);
+				border-radius: 5px; /* Slightly smaller radius */
+				margin-right: 0.6em; /* Reduced margin */
+				position: relative;
+				transition: background-color 0.2s ease, border-color 0.2s ease;
+				flex-shrink: 0; /* Prevent shrinking */
+			}
+
+			.custom-checkbox::after {
+				content: "";
+				position: absolute;
+				display: none; /* Hidden when not checked */
+				/* Adjusted checkmark position for smaller box */
+				left: 5px;
+				top: 1px;
+				width: 4px;
+				height: 9px;
+				border: solid var(--link-highlight-text); /* Checkmark color */
+				border-width: 0 2px 2px 0;
+				transform: rotate(45deg);
+			}
+
+			.custom-checkbox.checked {
+				background-color: var(--brand-accent);
+				border-color: var(--brand-accent);
+			}
+
+			.custom-checkbox.checked::after {
+				display: block; /* Show checkmark */
+			}
+		</style>
+		<!-- Analytics Tracking -->
+		<script>
+			(function () {
+				const hostname = window.location.hostname;
+				const protocol = window.location.protocol;
+				// Consider 'localhost', '127.0.0.1', and 'file:' protocol as local development
+				const isLocal =
+					hostname === "localhost" ||
+					hostname === "127.0.0.1" ||
+					protocol === "file:";
+
+				// Only load analytics if NOT local
+				if (!isLocal) {
+					const script = document.createElement("script");
+					script.defer = true;
+					script.src = "https://anal.bantolas.dev/script.js";
+					script.dataset.websiteId =
+						"0b36ac32-65f9-4bbd-bbf3-4f7bcf9ff201";
+					document.head.appendChild(script);
+				} else {
+					// Optional: Log a message to the console when running locally
+					console.log(
+						"Analytics tracking disabled for local development."
+					);
+				}
+			})();
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>Latte Art: Tracked. Improved.</h1>
+				<p>
+					Tired of scattered photos and guesswork in your latte art
+					practice? LatteArtist is a simple iOS journal designed to
+					help you intentionally log pours, track techniques, and
+					clearly visualize your improvement over time. Developed with
+					feedback from the home barista community on Reddit.
+				</p>
+			</header>
+
+			<main class="main-content">
+				<div class="content-column image-column">
+					<div class="card-container screenshot-container">
+						<picture>
+							<source
+								srcset="assets/feed-dark.png"
+								media="(prefers-color-scheme: dark)"
+							/>
+							<source
+								srcset="assets/feed-light.png"
+								media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+							/>
+							<img
+								src="assets/feed-light.png"
+								alt="LatteArtist App Screenshot showing a feed of latte art entries"
+								class="screenshot"
+							/>
+						</picture>
+					</div>
+				</div>
+				<div class="content-column form-column">
+					<!-- Features Card -->
+					<div class="card-container features-card">
+						<ul>
+							<li>
+								<span>
+									<!-- Camera Icon -->
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 24 24"
+									>
+										<path
+											d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"
+										></path>
+										<circle cx="12" cy="13" r="4"></circle>
+									</svg>
+								</span>
+								Capture each pour with photo and notes
+							</li>
+							<li>
+								<span>
+									<!-- Bar Chart Icon -->
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 24 24"
+									>
+										<line
+											x1="12"
+											y1="20"
+											x2="12"
+											y2="10"
+										></line>
+										<line
+											x1="18"
+											y1="20"
+											x2="18"
+											y2="4"
+										></line>
+										<line
+											x1="6"
+											y1="20"
+											x2="6"
+											y2="16"
+										></line>
+									</svg>
+								</span>
+								Track progress by pattern (e.g., tulips over
+								time)
+							</li>
+							<li>
+								<span>
+									<!-- Star Icon -->
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 24 24"
+									>
+										<polygon
+											points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+										></polygon>
+									</svg>
+								</span>
+								Rate pours to reflect how you felt about them
+							</li>
+							<li>
+								<span>
+									<!-- Filter Icon -->
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 24 24"
+									>
+										<polygon
+											points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"
+										></polygon>
+									</svg>
+								</span>
+								Filter by cup, milk type, pattern, and more
+							</li>
+							<li>
+								<span>
+									<!-- Image/Share Icon (using image for collage) -->
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 24 24"
+									>
+										<rect
+											x="3"
+											y="3"
+											width="18"
+											height="18"
+											rx="2"
+											ry="2"
+										></rect>
+										<circle
+											cx="8.5"
+											cy="8.5"
+											r="1.5"
+										></circle>
+										<polyline
+											points="21 15 16 10 5 21"
+										></polyline>
+									</svg>
+								</span>
+								Share progress collages (Planned!)
+							</li>
+						</ul>
+					</div>
+					<div
+						class="card-container signup-form-container"
+						id="signup-container"
+					>
+						<h2>
+							Want to Track Your Progress Too? Join the Waitlist
+							👇
+						</h2>
+						<!-- EmailOctopus Embedded Form Script -->
+						<script
+							async
+							src="https://eocampaign1.com/form/be5ce5f8-10bd-11f0-8871-7bb29bbe8677.js"
+							data-form="be5ce5f8-10bd-11f0-8871-7bb29bbe8677"
+						></script>
+
+						<!-- Static Android Checkbox Container (hidden initially, positioned below form) -->
+						<div
+							id="android-checkbox-static-container"
+							class="android-checkbox-container"
+							style="display: none"
+						>
+							<label class="android-checkbox-label">
+								<span class="custom-checkbox"></span> I'm an
+								Android user — let me know when this is
+								available for Android.
+							</label>
+						</div>
+					</div>
+				</div>
+			</main>
+
+			<div class="card-container trust-card-container">
+				<section class="trust-section">
+					<p>
+						I'm building this with feedback from home baristas on
+						<a
+							href="https://www.reddit.com/r/latteart/comments/1jqfwqd/comment/ml7yh05/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
+							target="_blank"
+							class="highlight-link"
+							rel="noopener noreferrer"
+							>Reddit</a
+						>
+						– here's what they're saying:
+					</p>
+					<blockquote>
+						"This is a BRILLIANT idea and I WILL be downloading this
+						as soon as it's released"
+					</blockquote>
+					<p class="attribution">– Reddit user</p>
+					<blockquote
+						style="margin-top: calc(var(--spacing-unit) * 1.5)"
+					>
+						<!-- Add some top margin -->
+						"Some might find it useful. I have a photo album in
+						chronological order and I’m relying on muscle memory and
+						handwritten notes to up my game."
+					</blockquote>
+					<p class="attribution">– Another Reddit user</p>
+				</section>
+			</div>
+
+			<footer>© 2025 LatteArtist</footer>
+		</div>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				const signupContainer =
+					document.getElementById("signup-container");
+				// Get the computed value of the CSS variable for dark mode text color
+				const darkModeTextColor =
+					getComputedStyle(document.documentElement)
+						.getPropertyValue("--dark-mode-text-primary-val")
+						.trim() || "#f2f2f7"; // Fallback
+
+				if (!signupContainer) {
+					console.error(
+						"Signup container (#signup-container) not found for MutationObserver."
+					);
+					return;
+				}
+
+				const observer = new MutationObserver((mutationsList) => {
+					// Check if dark mode is active *when mutation occurs*
+					const isDarkMode =
+						window.matchMedia &&
+						window.matchMedia("(prefers-color-scheme: dark)")
+							.matches;
+
+					if (!isDarkMode) {
+						return; // Only apply override in dark mode
+					}
+
+					for (const mutation of mutationsList) {
+						if (mutation.type === "childList") {
+							mutation.addedNodes.forEach((node) => {
+								// Check if the added node itself is the success message
+								if (
+									node.nodeType === 1 &&
+									node.classList.contains(
+										"emailoctopus-success-message"
+									)
+								) {
+									// Use setProperty with 'important' flag
+									node.style.setProperty(
+										"color",
+										darkModeTextColor,
+										"important"
+									);
+								}
+								// Also check if the success message is a descendant of the added node
+								else if (node.nodeType === 1) {
+									const successMessage = node.querySelector(
+										".emailoctopus-success-message"
+									);
+									if (successMessage) {
+										// Use setProperty with 'important' flag
+										successMessage.style.setProperty(
+											"color",
+											darkModeTextColor,
+											"important"
+										);
+									}
+								}
+							});
+						}
+					}
+				});
+
+				// Start observing the signup container for added/removed children and subtree changes
+				observer.observe(signupContainer, {
+					childList: true,
+					subtree: true,
+				});
+
+				// --- Android Checkbox Logic ---
+				let androidCheckboxAdded = false; // Flag to prevent multiple additions
+
+				const observerAndroid = new MutationObserver(
+					(mutationsList) => {
+						if (androidCheckboxAdded) {
+							// observerAndroid.disconnect(); // Optional: stop observing once added
+							return;
+						}
+
+						// Find the EmailOctopus hidden input
+						const hiddenInput = signupContainer.querySelector(
+							'input#field_3[type="hidden"]'
+						);
+						// Find the EmailOctopus submit input
+						const submitButton = signupContainer.querySelector(
+							'.emailoctopus-form input[type="submit"]'
+						);
+						// Find the static checkbox container and its elements
+						const staticCheckboxContainer = document.getElementById(
+							"android-checkbox-static-container"
+						);
+						const staticCustomCheckbox =
+							staticCheckboxContainer?.querySelector(
+								".custom-checkbox"
+							);
+						const staticLabel =
+							staticCheckboxContainer?.querySelector(
+								".android-checkbox-label"
+							);
+
+						// Check if the form elements AND the static checkbox elements are ready
+						if (
+							hiddenInput &&
+							submitButton &&
+							staticCheckboxContainer &&
+							staticCustomCheckbox &&
+							staticLabel &&
+							!androidCheckboxAdded
+						) {
+							// Make the static container visible
+							staticCheckboxContainer.style.display = "block";
+
+							// Set initial value for the hidden input
+							hiddenInput.value = "no";
+
+							// Add click listener to the static label
+							staticLabel.addEventListener("click", () => {
+								staticCustomCheckbox.classList.toggle(
+									"checked"
+								);
+								hiddenInput.value =
+									staticCustomCheckbox.classList.contains(
+										"checked"
+									)
+										? "yes"
+										: "no";
+							});
+
+							androidCheckboxAdded = true; // Set flag
+							// observerAndroid.disconnect(); // Optional: Disconnect after adding
+						}
+					}
+				);
+
+				// Start observing the signup container for the EmailOctopus form elements
+				observerAndroid.observe(signupContainer, {
+					childList: true,
+					subtree: true,
+				});
+
+				// Optional: Disconnect observers when it's no longer needed, e.g., on page unload
+				// window.addEventListener('unload', () => {
+				// 	observer.disconnect();
+				// 	observerAndroid.disconnect();
+				// });
+			});
+		</script>
+	</body>
+</html>
