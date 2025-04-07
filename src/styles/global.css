@@ -15,6 +15,7 @@
 	--shadow-color-rgb: 0 0 0; /* For use with opacity in Tailwind */
 	--shadow-opacity-light: 0.07;
 	--brand-accent: #3330e4;
+	--brand-accent-rgb: 51, 48, 228; /* RGB for #3330e4 */
 	--link-color: var(--brand-accent); /* Default link color */
 	--link-highlight-bg: var(--brand-accent);
 	--link-highlight-text: #ffffff;
@@ -72,5 +73,10 @@ html[data-theme="dark"] {
 
   /* Animation Definitions */
   --animate-fadeInUp: fadeInUp 0.6s ease-out forwards;
-}
-/* Custom utility classes removed as per simplification task */
+ }
+ 
+ @layer utilities {
+  .shadow-brand-glow {
+  	box-shadow: 0 0 15px 3px rgba(var(--brand-accent-rgb), 0.2);
+  }
+ }

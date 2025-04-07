@@ -60,7 +60,7 @@ const features = [
 				features.map((feature) => (
 					<li class="relative pl-10">
 						{/* Icon Wrapper (Timeline Point) */}
-						<div class="absolute left-[-2rem] top-[2px] w-7 h-7 bg-card border-2 border-gray-300 dark:border-gray-600 rounded-full flex items-center justify-center">
+						<div class="timeline-point absolute left-[-2rem] top-[2px] w-7 h-7 bg-card border-2 border-gray-300 dark:border-gray-600 rounded-full flex items-center justify-center transition-colors duration-300 ease-in-out">
 							<span class="inline-flex items-center justify-center w-4 h-4 flex-shrink-0">
 								<svg
 									class="w-full h-full stroke-[1.5] fill-none"
@@ -83,3 +83,65 @@ const features = [
 		</ul>
 	</div>
 </div>
+
+<style>
+	.timeline-point {
+		/* Smooth transitions for border, transform, and glow */
+		transition:
+			border-color 0.3s ease-in-out,
+			transform 0.3s ease-in-out,
+			box-shadow 0.3s ease-in-out; /* Added transform and box-shadow */
+	}
+	.timeline-point svg {
+		/* Smooth transition for SVG stroke color */
+		transition: stroke 0.3s ease-in-out;
+	}
+
+	.timeline-point.highlighted {
+		border-color: var(--brand-accent);
+		transform: scale(1.05); /* Add subtle scale */
+		/* Glow is handled by the 'shadow-brand-glow' utility class added via JS */
+	}
+
+	.timeline-point.highlighted svg {
+		stroke: var(--brand-accent);
+	}
+</style>
+
+<script>
+	// src/components/FeaturesCard.astro - Animation Script
+	const timelinePoints = document.querySelectorAll(".timeline-point");
+	const glowClass = "shadow-brand-glow"; // Utility class for glow effect
+	const highlightClass = "highlighted"; // Custom class for highlight effect
+	const animationInterval = 4000; // 2 seconds
+
+	let currentIndex = 0; // Start from the top
+
+	function animateTimeline() {
+		// Remove highlight from all points first
+		timelinePoints.forEach((point) => {
+			point.classList.remove(highlightClass);
+			point.classList.remove(glowClass); // Remove glow
+		});
+
+		// Add highlight to the current point
+		const currentPoint = timelinePoints[currentIndex];
+		if (currentPoint) {
+			currentPoint.classList.add(highlightClass);
+			currentPoint.classList.add(glowClass); // Add glow
+		}
+
+		// Move to the next point (visually downwards) for the next cycle
+		currentIndex++;
+		if (currentIndex >= timelinePoints.length) {
+			currentIndex = 0; // Loop back to the top
+		}
+	}
+
+	// Start the animation loop
+	if (timelinePoints.length > 0) {
+		// Initial highlight before interval starts
+		animateTimeline();
+		setInterval(animateTimeline, animationInterval);
+	}
+</script>
