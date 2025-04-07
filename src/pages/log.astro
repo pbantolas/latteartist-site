@@ -24,8 +24,13 @@ const renderedEntries = await Promise.all(
 ---
 
 <Layout
-	title="Log"
-	description="Development log and updates for the LatteArtist project."
+	title="LatteArtist Log: Behind the Scenes & Updates"
+	description="Follow the development journey of LatteArtist, the iOS app for latte art tracking. Get updates, insights, and behind-the-scenes looks."
+	ogTitle="LatteArtist Dev Log: Building an iOS Latte Art Tracker"
+	ogDescription="Peek behind the curtain! Read the latest updates and insights from the development of LatteArtist, the app designed to help you master latte art."
+	ogUrl="https://latteartist.coffeeatpetros.com/log"
+	twitterTitle="LatteArtist Log: Behind the Scenes & Updates"
+	twitterDescription="Follow the development journey of LatteArtist, the iOS app for latte art tracking. Get updates, insights, and behind-the-scenes looks."
 >
 	<h1
 		class="text-4xl md:text-5xl font-semibold mb-4 text-title-light dark:text-title-dark"
@@ -35,10 +40,6 @@ const renderedEntries = await Promise.all(
 	<p class="text-lg font-light text-secondary mb-12">
 		Updates, thoughts, and progress notes during development.
 	</p>
-
-	<a href="/" class="text-link hover:text-link-hover mb-12 block"
-		>&lt; Back to Home</a
-	>
 
 	{
 		renderedEntries.map((entry, index) => (

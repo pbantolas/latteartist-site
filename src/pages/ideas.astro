@@ -4,15 +4,50 @@ import Layout from "../layouts/Layout.astro";
 
 // Fetch all entries from the 'ideas' collection
 const ideas = await getCollection("ideas");
+
+// Render the content for each idea
+const renderedIdeas = await Promise.all(
+	ideas.map(async (idea) => {
+		const { Content } = await idea.render();
+		return { ...idea, Content };
+	})
+);
+
+const description =
+	"A collection of ideas and potential features for LatteArtist."; // Define description
 ---
 
 <Layout
-	title="Ideas"
-	description="A collection of ideas and potential features for LatteArtist."
+	title="LatteArtist Ideas: Shape the Future of Latte Art Tracking"
+	description="Have an idea for LatteArtist? Share your suggestions for the iOS latte art progress tracker. Help build the features you want to see!"
+	ogTitle="LatteArtist Ideas: Suggest Features for the iOS App"
+	ogDescription="Contribute your ideas to LatteArtist! What features would make tracking your latte art progress easier or more insightful? Let us know."
+	ogUrl="https://latteartist.coffeeatpetros.com/ideas"
+	twitterTitle="LatteArtist Ideas: Shape the Future of Latte Art Tracking"
+	twitterDescription="Have an idea for LatteArtist? Share your suggestions for the iOS latte art progress tracker. Help build the features you want to see!"
 >
-	<h1>Ideas</h1>
-	<p>Here are some ideas we're considering:</p>
-	<ul>
-		{ideas.map((idea) => <li>{idea.data.title}</li>)}
-	</ul>
+	<h1
+		class="text-4xl md:text-5xl font-semibold mb-4 text-title-light dark:text-title-dark"
+	>
+		Ideas
+	</h1>
+	<p class="text-lg font-light text-secondary mb-12">
+		{description}
+	</p>
+
+	{
+		renderedIdeas.map((idea, index) => (
+			<article class="mb-12">
+				<h2 class="text-2xl font-medium uppercase mb-2 text-title-light dark:text-title-dark">
+					{idea.data.title}
+				</h2>
+				<div class="prose dark:prose-invert max-w-none prose-p:text-foreground prose-headings:text-title-light dark:prose-headings:text-title-dark prose-a:text-link hover:prose-a:text-link-hover prose-strong:text-foreground">
+					<idea.Content />
+				</div>
+				{index < renderedIdeas.length - 1 && (
+					<hr class="mt-12 mb-12 border-t border-gray-200 dark:border-gray-700" />
+				)}
+			</article>
+		))
+	}
 </Layout>

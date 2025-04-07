@@ -14,11 +14,31 @@ if (!entry) {
 }
 
 const { Content } = await entry.render();
+const description =
+	"LatteArtist Project Roadmap - See what's planned for the app."; // Define description for use below
 ---
 
 <Layout
-	title={entry.data.title}
-	description="LatteArtist Project Roadmap - See what's planned for the app."
+	title="LatteArtist Roadmap: Building the Best Latte Art Tracker"
+	description="See what's planned for LatteArtist, the iOS app for tracking latte art progress. Follow along as we build features based on barista feedback."
+	ogTitle="LatteArtist Roadmap: What's Next for the iOS Latte Art App"
+	ogDescription="Explore the future of LatteArtist. See planned features, track development progress, and contribute your ideas for the ultimate latte art companion."
+	ogUrl="https://latteartist.coffeeatpetros.com/roadmap"
+	twitterTitle="LatteArtist Roadmap: Building the Best Latte Art Tracker"
+	twitterDescription="See what's planned for LatteArtist, the iOS app for tracking latte art progress. Follow along as we build features based on barista feedback."
 >
-	<Content />
+	<h1
+		class="text-4xl md:text-5xl font-semibold mb-4 text-title-light dark:text-title-dark"
+	>
+		{entry.data.title}
+	</h1>
+	<p class="text-lg font-light text-secondary mb-12">
+		{description}
+	</p>
+
+	<div
+		class="prose dark:prose-invert max-w-none prose-p:text-foreground prose-headings:text-title-light dark:prose-headings:text-title-dark prose-a:text-link hover:prose-a:text-link-hover prose-strong:text-foreground"
+	>
+		<Content />
+	</div>
 </Layout>
