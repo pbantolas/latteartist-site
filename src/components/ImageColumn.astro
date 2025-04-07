@@ -2,8 +2,12 @@
 // src/components/ImageColumn.astro
 ---
 
-<div class="content-column image-column">
-	<div class="card-container screenshot-container">
+<div class="w-full max-w-lg md:flex-1 md:max-w-none text-left">
+	{/* Responsive width and flex */}
+	<div
+		class="bg-card p-8 rounded-3xl border border-gray-200 dark:border-gray-700 shadow-xl leading-none w-full box-border mb-12 md:mb-0"
+	>
+		{/* Card styles with specific shadow and responsive margin */}
 		<picture>
 			<source
 				srcset="/assets/feed-dark.png"
@@ -16,56 +20,14 @@
 			<img
 				src="/assets/feed-light.png"
 				alt="LatteArtist App Screenshot showing a feed of latte art entries"
-				class="screenshot"
+				class="block max-w-full h-auto rounded-2xl"
 				width="1080"
 				height="2240"
 				loading="lazy"
 			/>
-			<!-- Added loading="lazy" -->
+			{/* Added loading="lazy" */}
 		</picture>
 	</div>
 </div>
 
-<style>
-	/* Styles specific to ImageColumn component */
-	.content-column {
-		/* Base styles needed if not globally defined elsewhere */
-		flex: 1;
-		text-align: left;
-	}
-
-	.image-column .screenshot-container {
-		margin-top: 0;
-		margin-bottom: 0;
-	}
-
-	/* .card-container base styles are in Layout.astro */
-	.screenshot-container {
-		/* Specific adjustments */
-		padding: var(--spacing-unit); /* Keep original screenshot padding */
-		box-shadow: 0 6px 20px var(--shadow-color); /* Keep original shadow */
-		line-height: 0; /* Prevent extra space below picture element */
-	}
-
-	.screenshot {
-		display: block;
-		max-width: 100%;
-		height: auto;
-		border-radius: calc(
-			var(--border-radius-large) - var(--spacing-unit) / 2
-		);
-	}
-
-	/* Responsive adjustments */
-	@media (max-width: 768px) {
-		.content-column {
-			/* Overrides for smaller screens */
-			width: 100%;
-			max-width: 500px;
-			flex: none;
-		}
-		.image-column .screenshot-container {
-			margin-bottom: calc(var(--spacing-unit) * 3);
-		}
-	}
-</style>
+<!-- Styles moved to Tailwind utility classes -->

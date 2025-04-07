@@ -2,100 +2,36 @@
 // src/components/TrustSection.astro
 ---
 
-<div class="card-container trust-card-container">
-	<section class="trust-section">
-		<p>
+<div
+	class="bg-card rounded-3xl border border-gray-200 dark:border-gray-700 shadow-lg shadow-black/7 dark:shadow-black/20 max-w-2xl mx-auto mb-16 p-8"
+>
+	<section class="text-center w-full m-0 p-0">
+		<p class="text-secondary text-sm mb-2">
 			I'm building this with feedback from home baristas on
 			<a
 				href="https://www.reddit.com/r/latteart/comments/1jqfwqd/comment/ml7yh05/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
 				target="_blank"
-				class="highlight-link"
+				class="bg-link-highlight-bg text-link-highlight-text px-1.5 py-0.5 mx-0.5 rounded-sm no-underline font-medium inline-block leading-tight hover:opacity-80"
 				rel="noopener noreferrer">Reddit</a
 			>
 			– here's what they're saying:
 		</p>
-		<blockquote>
+		<blockquote
+			class="mt-4 mb-3 mx-auto pl-6 italic text-lg text-primary border-l-4 border-indigo-300 dark:border-indigo-500 text-left inline-block max-w-[90%]"
+		>
 			"This is a BRILLIANT idea and I WILL be downloading this as soon as
 			it's released"
 		</blockquote>
-		<p class="attribution">– Reddit user</p>
-		<blockquote style="margin-top: calc(var(--spacing-unit) * 1.5)">
-			<!-- Add some top margin -->
-			"Some might find it useful. I have a photo album in chronological order
-			and I’m relying on muscle memory and handwritten notes to up my game."
+		<p class="text-sm text-secondary text-center mt-0">– Reddit user</p>
+		<blockquote
+			class="mt-6 mb-3 mx-auto pl-6 italic text-lg text-primary border-l-4 border-indigo-300 dark:border-indigo-500 text-left inline-block max-w-[90%]"
+		>
+			"Some might find it useful. I have a photo album in chronological
+			order and I’m relying on muscle memory and handwritten notes to up
+			my game."
 		</blockquote>
-		<p class="attribution">– Another Reddit user</p>
+		<p class="text-sm text-secondary text-center mt-0">
+			– Another Reddit user
+		</p>
 	</section>
 </div>
-
-<style>
-	/* Styles specific to TrustSection component */
-	/* .card-container base styles are in Layout.astro */
-	.trust-card-container {
-		max-width: 650px; /* Constrain width */
-		margin: 0 auto calc(var(--spacing-unit) * 4); /* Center horizontally, add bottom margin */
-	}
-
-	.trust-section {
-		/* Styles for content *inside* the card */
-		text-align: center;
-		width: 100%;
-		margin: 0; /* Remove outer margins */
-		padding: 0; /* Remove outer padding */
-	}
-
-	.trust-section p {
-		color: var(--text-secondary);
-		font-size: 0.95em;
-		margin-bottom: calc(var(--spacing-unit) * 0.5);
-	}
-
-	.trust-section a.highlight-link {
-		background-color: var(--link-highlight-bg);
-		color: var(--link-highlight-text);
-		padding: 0.1em 0.4em;
-		margin: 0 0.1em;
-		border-radius: 3px;
-		text-decoration: none;
-		font-weight: 500;
-		display: inline-block;
-		line-height: 1.3;
-		transition: opacity 0.2s ease;
-	}
-
-	.trust-section a.highlight-link:hover {
-		text-decoration: none;
-		opacity: 0.85;
-	}
-
-	.trust-section blockquote {
-		margin: var(--spacing-unit) auto calc(var(--spacing-unit) * 0.75); /* Add top margin */
-		padding: 0 0 0 calc(var(--spacing-unit) * 1.5);
-		font-style: italic;
-		font-size: 1.05em;
-		color: var(--text-primary);
-		border-left: 3px solid var(--quote-border-color);
-		text-align: left; /* Keep quote text left aligned */
-		display: inline-block;
-		max-width: 90%;
-	}
-
-	.trust-section .attribution {
-		font-size: 0.9em;
-		color: var(--text-secondary);
-		text-align: center;
-		margin-top: 0;
-	}
-
-	/* Responsive adjustments */
-	@media (max-width: 768px) {
-		.trust-card-container {
-			max-width: 500px; /* Match column width */
-		}
-		.trust-section blockquote {
-			padding-left: var(--spacing-unit);
-			font-size: 1em;
-			max-width: 100%;
-		}
-	}
-</style>

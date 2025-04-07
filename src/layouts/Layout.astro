@@ -2,6 +2,10 @@
 // src/layouts/Layout.astro
 import { ViewTransitions } from "astro:transitions";
 
+// Supports weights 100-900
+import "@fontsource-variable/outfit";
+import "../styles/global.css";
+
 interface Props {
 	title: string;
 	description: string;
@@ -30,7 +34,8 @@ const canonicalURL = new URL(ogUrl); // Use ogUrl as the base for canonical
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
+	<!-- Add data-theme for selector strategy -->
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -77,16 +82,49 @@ const canonicalURL = new URL(ogUrl); // Use ogUrl as the base for canonical
 		/>
 		<link rel="manifest" href="/site.webmanifest" />
 
-		<!-- Fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
-			rel="stylesheet"
-		/>
-
 		<!-- View Transitions -->
 		<ViewTransitions />
+
+		<!-- Theme Sync Script (Sets data-theme based on OS preference) -->
+		<script is:inline>
+			const theme = (() => {
+				if (
+					typeof localStorage !== "undefined" &&
+					localStorage.getItem("theme")
+				) {
+					return localStorage.getItem("theme");
+				}
+				if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+					return "dark";
+				}
+				return "light";
+			})();
+
+			if (theme === "dark") {
+				document.documentElement.setAttribute("data-theme", "dark");
+			} else {
+				document.documentElement.setAttribute("data-theme", "light");
+				// Optional: Remove if you only want to set dark, assuming light is default
+				// document.documentElement.removeAttribute('data-theme');
+			}
+			// Optional: Add listener to update theme if OS preference changes
+			window
+				.matchMedia("(prefers-color-scheme: dark)")
+				.addEventListener("change", (e) => {
+					if (e.matches) {
+						document.documentElement.setAttribute(
+							"data-theme",
+							"dark"
+						);
+					} else {
+						document.documentElement.setAttribute(
+							"data-theme",
+							"light"
+						);
+					}
+				});
+			// Note: This basic script doesn't include a manual toggle persistence via localStorage yet.
+		</script>
 
 		<!-- Analytics Tracking (Loads only on non-local environments) -->
 		<script is:inline>
@@ -116,10 +154,18 @@ const canonicalURL = new URL(ogUrl); // Use ogUrl as the base for canonical
 			})();
 		</script>
 	</head>
-	<body>
-		<div class="container">
+	<body
+		class="font-sans text-primary bg-gradient-to-b from-gradient-start to-gradient-end flex flex-col items-center min-h-screen p-8 leading-relaxed transition-colors duration-300 ease-in-out"
+	>
+		<div
+			class="container w-full max-w-5xl mx-auto px-4 flex flex-col flex-grow"
+		>
 			<slot />
-			<footer>© {new Date().getFullYear()} LatteArtist</footer>
+			<footer
+				class="mt-auto pt-8 text-sm text-secondary text-center w-full border-t border-gray-200 dark:border-gray-700 transition-colors duration-300 ease-in-out"
+			>
+				© {new Date().getFullYear()} LatteArtist
+			</footer>
 		</div>
 
 		<!-- Main Interaction Script -->
@@ -144,10 +190,10 @@ const canonicalURL = new URL(ogUrl); // Use ogUrl as the base for canonical
 
 				const observer = new MutationObserver((mutationsList) => {
 					// Check if dark mode is active *when mutation occurs*
+					// Now check the data-theme attribute instead of media query directly
 					const isDarkMode =
-						window.matchMedia &&
-						window.matchMedia("(prefers-color-scheme: dark)")
-							.matches;
+						document.documentElement.getAttribute("data-theme") ===
+						"dark";
 
 					if (!isDarkMode) {
 						return; // Only apply override in dark mode
@@ -243,13 +289,9 @@ const canonicalURL = new URL(ogUrl); // Use ogUrl as the base for canonical
 
 							// Add click listener to the static label
 							staticLabel.addEventListener("click", () => {
-								staticCustomCheckbox.classList.toggle(
-									"checked"
-								);
+								staticLabel.classList.toggle("checked"); // Target the label now
 								hiddenInput.value =
-									staticCustomCheckbox.classList.contains(
-										"checked"
-									)
+									staticLabel.classList.contains("checked") // Check the label's class
 										? "yes"
 										: "no";
 							});
@@ -276,156 +318,4 @@ const canonicalURL = new URL(ogUrl); // Use ogUrl as the base for canonical
 	</body>
 </html>
 
-<style is:global>
-	:root {
-		/* Light Mode Defaults */
-		--bg-gradient-start: #fafafa; /* Softer white */
-		--bg-gradient-end: #f5f5f5; /* Slightly darker soft white */
-		--text-primary: #2c2c2e;
-		--text-secondary: #5a5a5e;
-		--card-background: #ffffff;
-		--shadow-color: rgba(0, 0, 0, 0.07);
-		--border-color: #e5e5e5;
-		--brand-accent: #3330e4;
-		--link-color: var(--brand-accent); /* Default link color */
-		--link-highlight-bg: var(--brand-accent);
-		--link-highlight-text: #ffffff;
-		--quote-border-color: var(--border-color);
-		--title-color-light: var(--brand-accent);
-		--dark-mode-text-primary-val: #f2f2f7; /* Store value for JS */
-
-		--border-radius-large: 32px; /* Increased from 16px for AirOS ExtraLarge radius */
-		--spacing-unit: 1rem;
-
-		color-scheme: light;
-	}
-
-	@media (prefers-color-scheme: dark) {
-		:root {
-			/* Dark Mode Overrides */
-			--bg-gradient-start: #1c1c1e;
-			--bg-gradient-end: #161618;
-			--text-primary: var(--dark-mode-text-primary-val);
-			--text-secondary: #a0a0a5;
-			--card-background: #34334c; /* Lighter dark grey for better contrast */
-			--shadow-color: rgba(0, 0, 0, 0.2);
-			--border-color: #3a3a3c;
-			--link-color: #7a78ff; /* Lighter link for dark mode */
-			--link-highlight-bg: var(--brand-accent); /* Keep highlight bg */
-			--link-highlight-text: #ffffff; /* White text should still work */
-			--quote-border-color: var(--border-color);
-			--title-color-dark: var(--text-primary);
-
-			color-scheme: dark;
-		}
-	}
-
-	body {
-		margin: 0;
-		padding: 0;
-		font-family:
-			"Outfit",
-			system-ui,
-			-apple-system,
-			BlinkMacSystemFont,
-			"Segoe UI",
-			Roboto,
-			Oxygen,
-			Ubuntu,
-			Cantarell,
-			"Open Sans",
-			"Helvetica Neue",
-			sans-serif;
-		background: linear-gradient(
-			180deg,
-			var(--bg-gradient-start) 0%,
-			var(--bg-gradient-end) 100%
-		);
-		color: var(--text-primary);
-		line-height: 1.6;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		min-height: 100vh;
-		padding: calc(var(--spacing-unit) * 2);
-		box-sizing: border-box;
-		transition:
-			background-color 0.3s ease,
-			color 0.3s ease;
-	}
-
-	/* Container for max-width */
-	.container {
-		width: 100%; /* Ensure it takes full width up to max */
-		max-width: 960px; /* Apply the max-width constraint */
-		margin-left: auto; /* Center the container */
-		margin-right: auto; /* Center the container */
-		padding-left: calc(var(--spacing-unit) * 1); /* Add some padding */
-		padding-right: calc(var(--spacing-unit) * 1); /* Add some padding */
-		box-sizing: border-box; /* Include padding in width calculation */
-		display: flex; /* Use flexbox for internal layout */
-		flex-direction: column; /* Stack children vertically */
-		flex-grow: 1; /* Allow container to grow to fill space if needed */
-	}
-
-	/* Apply title color based on scheme */
-	h1 {
-		color: var(--title-color-light);
-	}
-	@media (prefers-color-scheme: dark) {
-		h1 {
-			color: var(--title-color-dark);
-		}
-	}
-
-	footer {
-		margin-top: auto;
-		padding-top: calc(var(--spacing-unit) * 2);
-		font-size: 0.9em;
-		color: var(--text-secondary);
-		text-align: center;
-		width: 100%;
-		border-top: 1px solid var(--border-color);
-		transition: border-color 0.3s ease;
-	}
-
-	/* General Card Styling Base */
-	.card-container {
-		background-color: var(--card-background);
-		padding: calc(var(--spacing-unit) * 2); /* Consistent padding */
-		border-radius: var(--border-radius-large);
-		box-shadow: 0 4px 15px var(--shadow-color); /* Consistent shadow */
-		transition:
-			background-color 0.3s ease,
-			box-shadow 0.3s ease;
-		width: 100%;
-		box-sizing: border-box;
-		border: 1px solid var(--border-color); /* Subtle stroke */
-	}
-
-	/* Responsive adjustments for layout */
-	@media (max-width: 768px) {
-		h1 {
-			font-size: 2.4em; /* Adjusted in global as h1 is likely consistent */
-		}
-		/* Adjustments for main content flex direction will be handled in the page/component */
-	}
-
-	/* Sharpie Highlight Utility */
-	.sharpie-highlight {
-		/* Use brand accent with transparency */
-		background-color: rgba(
-			51,
-			48,
-			228,
-			0.3
-		); /* --brand-accent (#3330e4) with 30% alpha */
-		padding: 0.1em 0.3em;
-		margin: 0 0.1em;
-		border-radius: 3px;
-		box-decoration-break: clone;
-		-webkit-box-decoration-break: clone;
-		font-weight: 500;
-		color: var(--text-primary); /* Ensure contrast */
-	}
-</style>
+<!-- Global styles removed - Handled by Tailwind and src/styles/global.css -->

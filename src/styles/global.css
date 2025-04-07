@@ -1,0 +1,48 @@
+/* src/styles/global.css */
+/* @import "tailwindcss/preflight";
+@tailwind utilities; */
+@import "tailwindcss";
+/* Replaces components in v4 */
+
+:root {
+	/* Light Mode Defaults */
+	--bg-gradient-start: #fafafa; /* Softer white */
+	--bg-gradient-end: #f5f5f5; /* Slightly darker soft white */
+	--text-primary: #2c2c2e;
+	--text-secondary: #5a5a5e;
+	--card-background: #ffffff;
+	--shadow-color-rgb: 0 0 0; /* For use with opacity in Tailwind */
+	--shadow-opacity-light: 0.07;
+	--brand-accent: #3330e4;
+	--link-color: var(--brand-accent); /* Default link color */
+	--link-highlight-bg: var(--brand-accent);
+	--link-highlight-text: #ffffff;
+	--title-color-light: var(--brand-accent);
+	--dark-mode-text-primary-val: #f2f2f7; /* Store value for JS */
+
+	--border-radius-large: 32px; /* Increased from 16px for AirOS ExtraLarge radius */
+	--spacing-unit: 1rem;
+
+	color-scheme: light;
+}
+
+html[data-theme="dark"] {
+	/* Dark Mode Overrides */
+	--bg-gradient-start: #1c1c1e;
+	--bg-gradient-end: #161618;
+	--text-primary: var(--dark-mode-text-primary-val);
+	--text-secondary: #a0a0a5;
+	--card-background: #34334c; /* Lighter dark grey for better contrast */
+	--shadow-opacity-dark: 0.2;
+	--link-color: #7a78ff; /* Lighter link for dark mode */
+	--link-highlight-bg: var(--brand-accent); /* Keep highlight bg */
+	--link-highlight-text: #ffffff; /* White text should still work */
+	--title-color-dark: var(--text-primary);
+
+	color-scheme: dark;
+}
+
+@theme {
+  --font-sans: 'Outfit Variable', 'sans-serif';
+}
+/* Custom utility classes removed as per simplification task */

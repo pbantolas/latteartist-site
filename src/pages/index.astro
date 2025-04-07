@@ -14,9 +14,13 @@ import TrustSection from "../components/TrustSection.astro";
 >
 	<Header />
 
-	<main class="main-content">
+	<main
+		class="flex flex-col items-center gap-12 mb-12 md:flex-row md:items-start"
+	>
 		<ImageColumn />
-		<div class="content-column form-column">
+		<div
+			class="flex flex-col justify-center h-auto w-full max-w-lg text-left md:flex-1 md:h-full md:max-w-none"
+		>
 			<FeaturesCard />
 			<SignupForm />
 		</div>
@@ -25,40 +29,4 @@ import TrustSection from "../components/TrustSection.astro";
 	<TrustSection />
 </Layout>
 
-<style>
-	/* Styles specific to index.astro page layout */
-	.main-content {
-		display: flex;
-		gap: calc(var(--spacing-unit) * 3);
-		align-items: flex-start;
-		margin-bottom: calc(var(--spacing-unit) * 3);
-	}
-
-	/* These might be needed if components don't define them */
-	.content-column {
-		flex: 1;
-		text-align: left; /* Default alignment */
-	}
-
-	.form-column {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		height: 100%;
-	}
-
-	/* Responsive adjustments for the main layout */
-	@media (max-width: 768px) {
-		.main-content {
-			flex-direction: column;
-			align-items: center;
-		}
-		/* .content-column responsive styles are handled within ImageColumn */
-		.form-column {
-			height: auto;
-			width: 100%; /* Ensure form column takes full width */
-			max-width: 500px; /* Match image column max-width */
-			flex: none;
-		}
-	}
-</style>
+<!-- Style block removed - Migrated to Tailwind classes -->
