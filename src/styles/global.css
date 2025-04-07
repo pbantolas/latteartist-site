@@ -6,41 +6,43 @@
 /* Replaces components in v4 */
 
 :root {
-	/* Light Mode Defaults */
-	--bg-gradient-start: #fafafa; /* Softer white */
-	--bg-gradient-end: #f5f5f5; /* Slightly darker soft white */
+	/* Colors - Light Mode */
+	--brand-accent: #3330e4;
+	--brand-accent-rgb: 51, 48, 228;
+	
 	--text-primary: #2c2c2e;
 	--text-secondary: #5a5a5e;
-	--card-background: #ffffff;
-	--shadow-color-rgb: 0 0 0; /* For use with opacity in Tailwind */
-	--shadow-opacity-light: 0.07;
-	--brand-accent: #3330e4;
-	--brand-accent-rgb: 51, 48, 228; /* RGB for #3330e4 */
-	--link-color: var(--brand-accent); /* Default link color */
-	--link-highlight-bg: var(--brand-accent);
-	--link-highlight-text: #ffffff;
-	--title-color-light: var(--brand-accent);
-	--dark-mode-text-primary-val: #f2f2f7; /* Store value for JS */
+	--text-on-accent: #ffffff;
+	
+	--bg-gradient-start: #fafafa;
+	--bg-gradient-end: #f5f5f5;
+	--bg-card: #ffffff;
+	
+	--shadow-color: 0 0 0;
+	--shadow-opacity: 0.07;
 
-	--border-radius-large: 32px; /* Increased from 16px for AirOS ExtraLarge radius */
+	/* Layout */
+	--border-radius-large: 32px;
 	--spacing-unit: 1rem;
 
+	/* System */
 	color-scheme: light;
 }
 
 html[data-theme="dark"] {
-	/* Dark Mode Overrides */
+	/* Colors - Dark Mode */
+	--brand-accent: #7a78ff;
+	
+	--text-primary: #f2f2f7;
+	--text-secondary: #b0b0b5;
+	
 	--bg-gradient-start: #1c1c1e;
 	--bg-gradient-end: #161618;
-	--text-primary: var(--dark-mode-text-primary-val);
-	--text-secondary: #b0b0b5;
-	--card-background: #2A2A2A; /* Lighter dark grey for better contrast */
-	--shadow-opacity-dark: 0.2;
-	--link-color: #7a78ff; /* Lighter link for dark mode */
-	--link-highlight-bg: var(--brand-accent); /* Keep highlight bg */
-	--link-highlight-text: #ffffff; /* White text should still work */
-	--title-color-dark: var(--text-primary);
+	--bg-card: #2A2A2A;
+	
+	--shadow-opacity: 0.2;
 
+	/* System */
 	color-scheme: dark;
 }
 
@@ -58,25 +60,23 @@ html[data-theme="dark"] {
 @theme inline {
   --font-sans: 'Outfit Variable', 'sans-serif';
 
-  /* Custom color definitions ported from tailwind.config.mjs */
+  /* Theme Colors */
   --color-primary: var(--text-primary);
   --color-secondary: var(--text-secondary);
   --color-accent: var(--brand-accent);
-  --color-link: var(--link-color);
-  --color-link-highlight-bg: var(--brand-accent);
-  --color-link-highlight-text: var(--link-highlight-text);
-  --color-card: var(--card-background);
+  --color-on-accent: var(--text-on-accent);
+  
+  /* Layout Colors */
+  --color-card: var(--bg-card);
   --color-gradient-start: var(--bg-gradient-start);
   --color-gradient-end: var(--bg-gradient-end);
-  --color-title-light: var(--title-color-light);
-  --color-title-dark: var(--title-color-dark);
 
-  /* Animation Definitions */
+  /* Animation */
   --animate-fadeInUp: fadeInUp 0.6s ease-out forwards;
- }
+}
  
  @layer utilities {
-  .shadow-brand-glow {
-  	box-shadow: 0 0 15px 3px rgba(var(--brand-accent-rgb), 0.2);
-  }
+   .shadow-brand-glow {
+     box-shadow: 0 0 15px 3px rgba(var(--brand-accent-rgb), var(--shadow-opacity));
+   }
  }
