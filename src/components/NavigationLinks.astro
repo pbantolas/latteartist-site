@@ -1,17 +1,47 @@
 ---
 // src/components/NavigationLinks.astro
+const { pathname } = Astro.url;
+
+// Define navigation links
+const navLinks = [
+	{ name: "Home", href: "/" },
+	{ name: "Roadmap", href: "/roadmap" },
+	{ name: "Log", href: "/log" },
+	{ name: "Ideas", href: "/ideas" },
+];
+
+// Helper function to determine if a link is active
+// Handles the case where the homepage path is "/"
+const isActive = (linkPath: string) => {
+	if (linkPath === "/") {
+		return pathname === "/";
+	}
+	// Check if the current pathname starts with the link path
+	// This handles nested routes if they exist (e.g., /log/update-1)
+	return pathname === linkPath || pathname.startsWith(linkPath + "/");
+};
 ---
 
-<nav class="flex justify-center gap-8 py-4 text-sm font-light text-neutral-600">
-	<a href="/log" class="hover:text-neutral-900 transition-colors duration-200"
-		>Log</a
+{/* Outer container for potential fixed positioning and background */}
+<div class="w-full flex justify-center p-2">
+	{/* Pill container with frosted background and rounded corners */}
+	<nav
+		class="inline-flex items-center space-x-1 rounded-full p-1 bg-white/70 dark:bg-black/70 backdrop-blur-md"
 	>
-	<a
-		href="/roadmap"
-		class="hover:text-neutral-900 transition-colors duration-200">Roadmap</a
-	>
-	<a
-		href="/ideas"
-		class="hover:text-neutral-900 transition-colors duration-200">Ideas</a
-	>
-</nav>
+		{
+			navLinks.map((link) => (
+				<a
+					href={link.href}
+					class:list={[
+						"px-4 py-1.5 rounded-full text-sm font-medium transition-colors duration-200 whitespace-nowrap",
+						isActive(link.href)
+							? "bg-accent text-white" // Active state: brand color background, white text
+							: "text-neutral-700 dark:text-neutral-300 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-neutral-900 dark:hover:text-white", // Default state
+					]}
+				>
+					{link.name}
+				</a>
+			))
+		}
+	</nav>
+</div>

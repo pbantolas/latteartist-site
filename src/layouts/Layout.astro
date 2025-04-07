@@ -5,7 +5,7 @@ import { ViewTransitions } from "astro:transitions";
 // Supports weights 100-900
 import "@fontsource-variable/outfit";
 import "../styles/global.css";
-
+import NavigationLinks from "../components/NavigationLinks.astro"; // Import the navigation component
 interface Props {
 	title: string;
 	description: string;
@@ -157,8 +157,19 @@ const canonicalURL = new URL(ogUrl); // Use ogUrl as the base for canonical
 	<body
 		class="font-sans text-primary bg-gradient-to-b from-gradient-start to-gradient-end flex flex-col items-center min-h-screen p-8 leading-relaxed transition-colors duration-300 ease-in-out"
 	>
+		<!-- Fixed Navigation Bar -->
+		<nav
+			class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ease-in-out"
+		>
+			<div class="container mx-auto max-w-5xl px-4">
+				{/* Optional: Constrain nav content width */}
+				<NavigationLinks />
+			</div>
+		</nav>
+
+		{/* Add pt-16 to push content below the fixed nav */}
 		<div
-			class="container w-full max-w-5xl mx-auto px-4 flex flex-col flex-grow"
+			class="container w-full max-w-5xl mx-auto px-4 flex flex-col flex-grow pt-16"
 		>
 			<slot />
 			<footer
