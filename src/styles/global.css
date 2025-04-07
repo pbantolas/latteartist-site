@@ -2,6 +2,7 @@
 /* @import "tailwindcss/preflight";
 @tailwind utilities; */
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 /* Replaces components in v4 */
 
 :root {

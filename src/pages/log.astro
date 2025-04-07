@@ -27,46 +27,37 @@ const renderedEntries = await Promise.all(
 	title="Log"
 	description="Development log and updates for the LatteArtist project."
 >
-	<h1>Development Log</h1>
-	<p>Updates, thoughts, and progress notes during development.</p>
+	<h1
+		class="text-4xl md:text-5xl font-semibold mb-4 text-title-light dark:text-title-dark"
+	>
+		Development Log
+	</h1>
+	<p class="text-lg font-light text-secondary mb-12">
+		Updates, thoughts, and progress notes during development.
+	</p>
 
 	{
 		renderedEntries.map((entry, index) => (
-			<article>
-				<h2>{entry.data.title}</h2>
-				<p>
-					<small>
-						Published on:{" "}
-						{entry.data.pubDate.toLocaleDateString("en-GB", {
-							year: "numeric",
-							month: "long",
-							day: "numeric",
-						})}
-					</small>
+			<article class="mb-12">
+				<h2 class="text-2xl font-medium uppercase mb-2 text-title-light dark:text-title-dark">
+					{entry.data.title}
+				</h2>
+				<p class="text-sm text-secondary block mb-4">
+					Published on:{" "}
+					{entry.data.pubDate.toLocaleDateString("en-GB", {
+						year: "numeric",
+						month: "long",
+						day: "numeric",
+					})}
 				</p>
-				<entry.Content />
+				<div class="prose dark:prose-invert max-w-none prose-p:text-foreground prose-headings:text-title-light dark:prose-headings:text-title-dark prose-a:text-link hover:prose-a:text-link-hover prose-strong:text-foreground">
+					<entry.Content />
+				</div>
 				{/* Add a separator unless it's the last entry */}
-				{index < renderedEntries.length - 1 && <hr />}
+				{index < renderedEntries.length - 1 && (
+					<hr class="mt-12 mb-12 border-t border-gray-200 dark:border-gray-700" />
+				)}
 			</article>
 		))
 	}
 </Layout>
-
-<style>
-	article {
-		margin-bottom: 2rem; /* Add space between log entries */
-	}
-	hr {
-		margin-top: 2rem;
-		border: none;
-		border-top: 1px solid var(--border-color);
-	}
-	h2 {
-		margin-bottom: 0.5rem;
-	}
-	p small {
-		color: var(--text-secondary);
-		display: block;
-		margin-bottom: 1rem;
-	}
-</style>
