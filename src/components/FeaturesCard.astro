@@ -1,0 +1,121 @@
+---
+// src/components/FeaturesCard.astro
+---
+
+<div class="card-container features-card">
+	<ul>
+		<li>
+			<span>
+				<!-- Camera Icon -->
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+					<path
+						d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"
+					></path>
+					<circle cx="12" cy="13" r="4"></circle>
+				</svg>
+			</span>
+			Capture each pour with photo and notes
+		</li>
+		<li>
+			<span>
+				<!-- Bar Chart Icon -->
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+					<line x1="12" y1="20" x2="12" y2="10"></line>
+					<line x1="18" y1="20" x2="18" y2="4"></line>
+					<line x1="6" y1="20" x2="6" y2="16"></line>
+				</svg>
+			</span>
+			Track progress by pattern (e.g., tulips over time)
+		</li>
+		<li>
+			<span>
+				<!-- Star Icon -->
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+					<polygon
+						points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+					></polygon>
+				</svg>
+			</span>
+			Rate pours to reflect how you felt about them
+		</li>
+		<li>
+			<span>
+				<!-- Filter Icon -->
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+					<polygon
+						points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"
+					></polygon>
+				</svg>
+			</span>
+			Filter by cup, milk type, pattern, and more
+		</li>
+		<li>
+			<span>
+				<!-- Image/Share Icon (using image for collage) -->
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+					<rect x="3" y="3" width="18" height="18" rx="2" ry="2"
+					></rect>
+					<circle cx="8.5" cy="8.5" r="1.5"></circle>
+					<polyline points="21 15 16 10 5 21"></polyline>
+				</svg>
+			</span>
+			Share progress collages (Planned!)
+		</li>
+	</ul>
+</div>
+
+<style>
+	/* Styles specific to FeaturesCard component */
+	/* .card-container base styles are in Layout.astro */
+	.features-card {
+		margin-bottom: calc(
+			var(--spacing-unit) * 2
+		); /* Space below features card */
+		padding: calc(
+			var(--spacing-unit) * 3
+		); /* Increased padding for AirOS Generous spec */
+	}
+
+	.features-card ul {
+		list-style: none;
+		padding-left: 0;
+		margin: 0; /* Remove default ul margin */
+	}
+
+	.features-card li {
+		margin-bottom: calc(
+			var(--spacing-unit) * 1.2
+		); /* Slightly more space between items */
+		font-size: 1em; /* Slightly smaller font */
+		color: var(--text-secondary);
+		display: flex;
+		align-items: center; /* Vertically center icon and text */
+		line-height: 1.5;
+	}
+
+	.features-card li:last-child {
+		margin-bottom: 0; /* No margin on last item */
+	}
+
+	.features-card li span {
+		/* Style the icon container */
+		display: inline-flex; /* Use flex for alignment */
+		align-items: center;
+		justify-content: center;
+		width: 1.5em; /* Adjust width for SVG */
+		height: 1.5em; /* Ensure consistent height */
+		margin-right: 0.8em;
+		flex-shrink: 0; /* Prevent shrinking */
+	}
+
+	.features-card li svg {
+		/* Style the SVG icons */
+		width: 100%;
+		height: 100%;
+		stroke: var(--text-secondary); /* Use neutral grey */
+		stroke-width: 1.5; /* Thin lines */
+		fill: none;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+	}
+</style>

@@ -1,0 +1,24 @@
+---
+import { getEntry } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+
+const entry = await getEntry("roadmap", "main");
+
+// Handle case where entry might not be found
+if (!entry) {
+	// You could redirect to a 404 page or render a specific message
+	// For simplicity, we'll throw an error which Astro handles
+	throw new Error(
+		"Roadmap entry 'main' not found. Please ensure 'src/content/roadmap/main.md' exists."
+	);
+}
+
+const { Content } = await entry.render();
+---
+
+<Layout
+	title={entry.data.title}
+	description="LatteArtist Project Roadmap - See what's planned for the app."
+>
+	<Content />
+</Layout>

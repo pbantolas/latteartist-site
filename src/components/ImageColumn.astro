@@ -1,0 +1,71 @@
+---
+// src/components/ImageColumn.astro
+---
+
+<div class="content-column image-column">
+	<div class="card-container screenshot-container">
+		<picture>
+			<source
+				srcset="/assets/feed-dark.png"
+				media="(prefers-color-scheme: dark)"
+			/>
+			<source
+				srcset="/assets/feed-light.png"
+				media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+			/>
+			<img
+				src="/assets/feed-light.png"
+				alt="LatteArtist App Screenshot showing a feed of latte art entries"
+				class="screenshot"
+				width="1080"
+				height="2240"
+				loading="lazy"
+			/>
+			<!-- Added loading="lazy" -->
+		</picture>
+	</div>
+</div>
+
+<style>
+	/* Styles specific to ImageColumn component */
+	.content-column {
+		/* Base styles needed if not globally defined elsewhere */
+		flex: 1;
+		text-align: left;
+	}
+
+	.image-column .screenshot-container {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	/* .card-container base styles are in Layout.astro */
+	.screenshot-container {
+		/* Specific adjustments */
+		padding: var(--spacing-unit); /* Keep original screenshot padding */
+		box-shadow: 0 6px 20px var(--shadow-color); /* Keep original shadow */
+		line-height: 0; /* Prevent extra space below picture element */
+	}
+
+	.screenshot {
+		display: block;
+		max-width: 100%;
+		height: auto;
+		border-radius: calc(
+			var(--border-radius-large) - var(--spacing-unit) / 2
+		);
+	}
+
+	/* Responsive adjustments */
+	@media (max-width: 768px) {
+		.content-column {
+			/* Overrides for smaller screens */
+			width: 100%;
+			max-width: 500px;
+			flex: none;
+		}
+		.image-column .screenshot-container {
+			margin-bottom: calc(var(--spacing-unit) * 3);
+		}
+	}
+</style>

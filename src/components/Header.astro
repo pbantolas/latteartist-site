@@ -1,0 +1,44 @@
+---
+// src/components/Header.astro
+---
+
+<header>
+	<h1>Latte Art: Tracked. Improved.</h1>
+	<p>
+		Tired of scattered photos and guesswork in your latte art practice?
+		LatteArtist is a simple iOS journal designed to help you intentionally
+		log pours, track techniques, and clearly visualize your improvement over
+		time. Developed with feedback from the home barista community on Reddit.
+	</p>
+</header>
+
+<style>
+	/* Styles specific to Header component */
+	header {
+		margin-bottom: calc(var(--spacing-unit) * 3);
+		text-align: center;
+	}
+
+	h1 {
+		/* Global color handled in Layout */
+		font-optical-sizing: auto;
+		font-size: 2.8em;
+		font-weight: 600;
+		margin-bottom: calc(var(--spacing-unit) * 0.5);
+		line-height: 1.2;
+		max-width: 700px; /* Constrain width like paragraph */
+		margin-left: auto; /* Center constrained h1 */
+		margin-right: auto; /* Center constrained h1 */
+	}
+
+	header p {
+		font-size: 1.1em;
+		font-weight: 300;
+		color: var(--text-secondary);
+		max-width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* Responsive adjustments for h1 are in Layout's global styles */
+</style>

@@ -1,0 +1,64 @@
+---
+// src/pages/index.astro
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import ImageColumn from "../components/ImageColumn.astro";
+import FeaturesCard from "../components/FeaturesCard.astro";
+import SignupForm from "../components/SignupForm.astro";
+import TrustSection from "../components/TrustSection.astro";
+---
+
+<Layout
+	title="LatteArtist: Latte Art Progress Tracking App for iOS"
+	description="Tired of scattered photos and guesswork in your latte art practice? LatteArtist is a simple iOS journal designed to help you intentionally log pours, track techniques, and clearly visualize your improvement over time. Developed with feedback from the home barista community on Reddit."
+>
+	<Header />
+
+	<main class="main-content">
+		<ImageColumn />
+		<div class="content-column form-column">
+			<FeaturesCard />
+			<SignupForm />
+		</div>
+	</main>
+
+	<TrustSection />
+</Layout>
+
+<style>
+	/* Styles specific to index.astro page layout */
+	.main-content {
+		display: flex;
+		gap: calc(var(--spacing-unit) * 3);
+		align-items: flex-start;
+		margin-bottom: calc(var(--spacing-unit) * 3);
+	}
+
+	/* These might be needed if components don't define them */
+	.content-column {
+		flex: 1;
+		text-align: left; /* Default alignment */
+	}
+
+	.form-column {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+	}
+
+	/* Responsive adjustments for the main layout */
+	@media (max-width: 768px) {
+		.main-content {
+			flex-direction: column;
+			align-items: center;
+		}
+		/* .content-column responsive styles are handled within ImageColumn */
+		.form-column {
+			height: auto;
+			width: 100%; /* Ensure form column takes full width */
+			max-width: 500px; /* Match image column max-width */
+			flex: none;
+		}
+	}
+</style>

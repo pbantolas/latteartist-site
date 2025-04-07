@@ -1,0 +1,18 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+
+// Fetch all entries from the 'ideas' collection
+const ideas = await getCollection("ideas");
+---
+
+<Layout
+	title="Ideas"
+	description="A collection of ideas and potential features for LatteArtist."
+>
+	<h1>Ideas</h1>
+	<p>Here are some ideas we're considering:</p>
+	<ul>
+		{ideas.map((idea) => <li>{idea.data.title}</li>)}
+	</ul>
+</Layout>

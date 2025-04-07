@@ -1,0 +1,72 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+
+// Fetch all entries from the 'log' collection
+const logEntries = await getCollection("log");
+
+// Sort entries by publication date, newest first
+const sortedLogEntries = logEntries.sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+// Render each entry's content
+// We need to render them individually to get the Content component for each
+const renderedEntries = await Promise.all(
+	sortedLogEntries.map(async (entry) => {
+		const { Content } = await entry.render();
+		return {
+			...entry, // Spread the original entry data
+			Content, // Add the rendered Content component
+		};
+	})
+);
+---
+
+<Layout
+	title="Log"
+	description="Development log and updates for the LatteArtist project."
+>
+	<h1>Development Log</h1>
+	<p>Updates, thoughts, and progress notes during development.</p>
+
+	{
+		renderedEntries.map((entry, index) => (
+			<article>
+				<h2>{entry.data.title}</h2>
+				<p>
+					<small>
+						Published on:{" "}
+						{entry.data.pubDate.toLocaleDateString("en-GB", {
+							year: "numeric",
+							month: "long",
+							day: "numeric",
+						})}
+					</small>
+				</p>
+				<entry.Content />
+				{/* Add a separator unless it's the last entry */}
+				{index < renderedEntries.length - 1 && <hr />}
+			</article>
+		))
+	}
+</Layout>
+
+<style>
+	article {
+		margin-bottom: 2rem; /* Add space between log entries */
+	}
+	hr {
+		margin-top: 2rem;
+		border: none;
+		border-top: 1px solid var(--border-color);
+	}
+	h2 {
+		margin-bottom: 0.5rem;
+	}
+	p small {
+		color: var(--text-secondary);
+		display: block;
+		margin-bottom: 1rem;
+	}
+</style>
