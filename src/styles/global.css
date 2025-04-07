@@ -42,7 +42,20 @@ html[data-theme="dark"] {
 	color-scheme: dark;
 }
 
-@theme {
+@theme inline {
   --font-sans: 'Outfit Variable', 'sans-serif';
+
+  /* Custom color definitions ported from tailwind.config.mjs */
+  --color-primary: var(--text-primary);
+  --color-secondary: var(--text-secondary);
+  --color-accent: var(--brand-accent);
+  --color-link: var(--link-color);
+  --color-link-highlight-bg: var(--brand-accent);
+  --color-link-highlight-text: var(--link-highlight-text);
+  --color-card: var(--card-background);
+  --color-gradient-start: var(--bg-gradient-start);
+  --color-gradient-end: var(--bg-gradient-end);
+  --color-title-light: var(--title-color-light);
+  --color-title-dark: var(--title-color-dark);
 }
 /* Custom utility classes removed as per simplification task */

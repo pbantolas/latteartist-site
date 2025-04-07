@@ -6,20 +6,7 @@ export default {
 	darkMode: ["selector", '[data-theme="dark"]'], // Use attribute selector for dark mode
 	theme: {
 		extend: {
-			colors: {
-				// Map CSS variables to Tailwind color names
-				primary: "var(--text-primary)",
-				secondary: "var(--text-secondary)",
-				accent: "var(--brand-accent)",
-				link: "var(--link-color)",
-				"link-highlight-bg": "var(--link-highlight-bg)",
-				"link-highlight-text": "var(--link-highlight-text)",
-				card: "var(--card-background)",
-				"gradient-start": "var(--bg-gradient-start)",
-				"gradient-end": "var(--bg-gradient-end)",
-				"title-light": "var(--title-color-light)", // Specific title color for light mode if needed
-				"title-dark": "var(--title-color-dark)", // Specific title color for dark mode if needed
-			},
+			// Colors are now defined in src/styles/global.css using @theme
 		},
 	},
 	plugins: [
