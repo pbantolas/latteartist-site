@@ -43,6 +43,17 @@ html[data-theme="dark"] {
 	color-scheme: dark;
 }
 
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @theme inline {
   --font-sans: 'Outfit Variable', 'sans-serif';
 
@@ -58,5 +69,8 @@ html[data-theme="dark"] {
   --color-gradient-end: var(--bg-gradient-end);
   --color-title-light: var(--title-color-light);
   --color-title-dark: var(--title-color-dark);
+
+  /* Animation Definitions */
+  --animate-fadeInUp: fadeInUp 0.6s ease-out forwards;
 }
 /* Custom utility classes removed as per simplification task */
