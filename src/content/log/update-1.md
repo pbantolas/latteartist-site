@@ -11,7 +11,7 @@ Honestly, that gave me a push to take this more seriously. Your feedback has bee
 
 Here’s what I changed:
 
-Folders / Pattern-Based Home
+## Folders / Pattern-Based Home
 
 u/Fun-Storage-594 suggested folders, and it clicked — the homepage shouldn’t dump all your pours. Instead, it should group them by pattern (like albums).
 
@@ -22,7 +22,7 @@ Now each pattern becomes its own little dashboard:
 
 Cleaner, clearer, more focused.
 
-Better Visual Separation
+## Better Visual Separation
 
 u/Jacob876 pointed out the header/stats area would benefit from some visual separation. That made total sense, it immediately looked so much easier to scan when I made the change. Thanks for all the UI tips so far Jacob!
 

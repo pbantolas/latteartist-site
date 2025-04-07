@@ -6,17 +6,23 @@ import ImageColumn from "../components/ImageColumn.astro";
 import FeaturesCard from "../components/FeaturesCard.astro";
 import SignupForm from "../components/SignupForm.astro";
 import TrustSection from "../components/TrustSection.astro";
+import NavigationLinks from "../components/NavigationLinks.astro";
 ---
 
 <Layout
 	title="LatteArtist: Latte Art Progress Tracking App for iOS"
 	description="Tired of scattered photos and guesswork in your latte art practice? LatteArtist is a simple iOS journal designed to help you intentionally log pours, track techniques, and clearly visualize your improvement over time. Developed with feedback from the home barista community on Reddit."
 >
-	<Header />
+	<div class="mb-12">
+		{/* Wrap Header and Nav, add bottom margin */}
+		<Header />
+		<NavigationLinks />
+	</div>
 
 	<main
-		class="flex flex-col items-center gap-12 mb-12 md:flex-row md:items-start"
+		class="flex flex-col items-center gap-12 mb-16 md:flex-row md:items-start"
 	>
+		{/* Increased bottom margin */}
 		<ImageColumn />
 		<div
 			class="flex flex-col justify-center h-auto w-full max-w-lg text-left md:flex-1 md:h-full md:max-w-none"

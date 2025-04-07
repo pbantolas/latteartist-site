@@ -21,24 +21,92 @@
 		id="android-checkbox-static-container"
 		class="hidden w-full max-w-xs self-center mx-auto text-left mt-6 mb-0"
 	>
-		{/* JS will set display: block */}
+		{/* JS will remove 'hidden' class */}
 		<label
-			class="group inline-flex items-start cursor-pointer text-sm text-secondary"
+			for="android-checkbox"
+			class="inline-flex items-center cursor-pointer text-sm text-secondary"
 		>
-			{
-				/* The 'custom-checkbox' class is used by JS in Layout.astro to find this element and toggle 'checked' */
-			}
-			<span
-				class="custom-checkbox inline-block w-4 h-4 bg-card border border-gray-200 dark:border-gray-700 rounded mr-2 relative transition-colors duration-200 ease-in-out flex-shrink-0 group-[.checked]:bg-accent group-[.checked]:border-accent"
-			>
-				{/* Checkmark (conditionally displayed via group-[.checked]) */}
-				<span
-					class="absolute hidden w-1.5 h-3 border-b-2 border-r-2 border-white rotate-45 top-[1px] left-[4px] group-[.checked]:block"
-				></span>
-			</span>
+			{/* Standard HTML checkbox */}
+			<input
+				type="checkbox"
+				id="android-checkbox"
+				class="form-checkbox h-4 w-4 text-accent bg-card border-gray-200 dark:border-gray-700 rounded mr-2 focus:ring-accent dark:focus:ring-offset-gray-800"
+			/>
 			I'm an Android user — let me know when this is available for Android.
 		</label>
 	</div>
 </div>
 
 <!-- Styles moved to Tailwind utility classes or global.css -->
+
+<script>
+	// --- Android Checkbox Logic using Standard Input ---
+	let androidCheckboxAdded = false; // Flag to prevent multiple additions
+
+	const observerAndroid = new MutationObserver((mutationsList, observer) => {
+		// Obtain signupContainer reference INSIDE the callback
+		const signupContainer = document.getElementById("signup-container");
+		if (!signupContainer) return; // Guard clause
+
+		if (androidCheckboxAdded) {
+			// observer.disconnect(); // Optional: stop observing once added
+			return;
+		}
+
+		// Find the EmailOctopus hidden input and assert its type
+		const hiddenInput = signupContainer.querySelector(
+			'input#field_3[type="hidden"]'
+		) as HTMLInputElement | null; // Assert type
+		// Find the EmailOctopus submit input (optional, but good to check if form is fully loaded)
+		const submitButton = signupContainer.querySelector(
+			'.emailoctopus-form input[type="submit"]'
+		);
+		// Find the static checkbox container
+		const staticCheckboxContainer = document.getElementById(
+			"android-checkbox-static-container"
+		);
+		// Find the new standard checkbox input
+		const androidCheckbox = staticCheckboxContainer?.querySelector(
+			"#android-checkbox"
+		) as HTMLInputElement | null;
+
+		// Check if the form elements AND the static checkbox elements are ready
+		if (
+			hiddenInput &&
+			submitButton &&
+			staticCheckboxContainer &&
+			androidCheckbox && // Check for the new input
+			!androidCheckboxAdded
+		) {
+			// Make the static container visible by removing the 'hidden' class
+			staticCheckboxContainer.classList.remove("hidden");
+
+			// Set initial value for the hidden input
+			hiddenInput.value = "no";
+
+			// Add change listener to the standard checkbox input
+			androidCheckbox.addEventListener("change", (event) => {
+				const isChecked = (event.target as HTMLInputElement).checked;
+				// Update hidden input value based on the checkbox's checked state
+				hiddenInput.value = isChecked ? "yes" : "no";
+			});
+
+			androidCheckboxAdded = true; // Set flag
+			// observer.disconnect(); // Optional: Disconnect after adding
+		}
+	});
+
+	// Start observing the signup container for the EmailOctopus form elements
+	// Ensure signupContainer exists in the DOM before calling observe
+	const initialSignupContainer = document.getElementById("signup-container");
+	if (initialSignupContainer) {
+		observerAndroid.observe(initialSignupContainer, {
+			childList: true,
+			subtree: true,
+		});
+	} else {
+		console.error(
+			"Signup container not found for Android checkbox observer."
+		);
+	}
+</script>
