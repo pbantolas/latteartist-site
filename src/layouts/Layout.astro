@@ -1,6 +1,6 @@
 ---
 // src/layouts/Layout.astro
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 
 // Supports weights 100-900
 import "@fontsource-variable/outfit";
@@ -83,11 +83,11 @@ const canonicalURL = new URL(ogUrl); // Use ogUrl as the base for canonical
 		<link rel="manifest" href="/site.webmanifest" />
 
 		<!-- View Transitions -->
-		<ViewTransitions />
+		<ClientRouter />
 
 		<!-- Theme Sync Script (Sets data-theme based on OS preference) -->
 		<script is:inline>
-			const theme = (() => {
+			const getPreferredTheme = () => {
 				if (
 					typeof localStorage !== "undefined" &&
 					localStorage.getItem("theme")
@@ -98,32 +98,27 @@ const canonicalURL = new URL(ogUrl); // Use ogUrl as the base for canonical
 					return "dark";
 				}
 				return "light";
-			})();
+			};
 
-			if (theme === "dark") {
-				document.documentElement.setAttribute("data-theme", "dark");
-			} else {
-				document.documentElement.setAttribute("data-theme", "light");
-				// Optional: Remove if you only want to set dark, assuming light is default
-				// document.documentElement.removeAttribute('data-theme');
-			}
-			// Optional: Add listener to update theme if OS preference changes
+			const applyTheme = (theme) => {
+				document.documentElement.setAttribute("data-theme", theme);
+			};
+
+			// Initial load
+			const theme = getPreferredTheme();
+			applyTheme(theme);
+
+			// OS theme change listener
 			window
 				.matchMedia("(prefers-color-scheme: dark)")
 				.addEventListener("change", (e) => {
-					if (e.matches) {
-						document.documentElement.setAttribute(
-							"data-theme",
-							"dark"
-						);
-					} else {
-						document.documentElement.setAttribute(
-							"data-theme",
-							"light"
-						);
-					}
+					applyTheme(e.matches ? "dark" : "light");
 				});
-			// Note: This basic script doesn't include a manual toggle persistence via localStorage yet.
+
+			// Astro client-side navigation fix
+			document.addEventListener("astro:after-swap", () => {
+				applyTheme(getPreferredTheme());
+			});
 		</script>
 
 		<!-- Analytics Tracking (Loads only on non-local environments) -->
