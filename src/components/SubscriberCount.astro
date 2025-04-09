@@ -1,0 +1,83 @@
+---
+// Astro component frontmatter (empty in this case)
+---
+
+<p id="subscriber-text-container" class="italic text-sm text-secondary mb-4">
+    Join <span id="subscriber-count" class="font-bold text-accent">9 other</span
+    > baristas already on the waitlist
+</p>
+
+<script>
+    const SUBSCRIBER_CACHE_KEY = "subscriberCountCache";
+    const CACHE_DURATION_MS = 3600000; // 1 hour
+    const ANIMATION_DURATION_MS = 1500;
+
+    function animateCount(targetCount: number, countSpanElement: HTMLElement) {
+        const startCount =
+            parseInt(countSpanElement.dataset.lastCount || "0") || 0;
+        const startTime = performance.now();
+
+        function updateCount(currentTime: number) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / ANIMATION_DURATION_MS, 1);
+            const currentValue = Math.round(
+                startCount +
+                    (targetCount - startCount) * (1 - Math.pow(1 - progress, 3))
+            );
+            countSpanElement.textContent = `${currentValue} other`;
+            countSpanElement.dataset.lastCount = currentValue.toString();
+
+            if (progress < 1) {
+                requestAnimationFrame(updateCount);
+            }
+        }
+
+        requestAnimationFrame(updateCount);
+    }
+
+    async function loadCount() {
+        const countSpan = document.getElementById("subscriber-count");
+        if (!countSpan) return;
+
+        // Check cache first
+        const cachedData = localStorage.getItem(SUBSCRIBER_CACHE_KEY);
+        if (cachedData) {
+            try {
+                const { count, timestamp } = JSON.parse(cachedData);
+                if (Date.now() - timestamp < CACHE_DURATION_MS) {
+                    countSpan.textContent = `... other`;
+                    animateCount(count, countSpan as HTMLElement);
+                    return;
+                }
+            } catch (e) {
+                console.error("Error parsing cached data:", e);
+            }
+        }
+
+        try {
+            const res = await fetch("/.netlify/functions/get-subscriber-count");
+            if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+            const { subscriberCount } = await res.json();
+
+            // Store in cache
+            localStorage.setItem(
+                SUBSCRIBER_CACHE_KEY,
+                JSON.stringify({
+                    count: subscriberCount,
+                    timestamp: Date.now(),
+                })
+            );
+
+            countSpan.textContent = `... other`;
+            animateCount(subscriberCount, countSpan as HTMLElement);
+
+            const container = document.getElementById(
+                "subscriber-text-container"
+            );
+            if (container) container.classList.remove("hidden");
+        } catch (e) {
+            console.error("Error loading subscriber count:", e);
+        }
+    }
+    loadCount();
+</script>
