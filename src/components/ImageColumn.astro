@@ -3,34 +3,34 @@
 ---
 
 <div
-	class="w-full max-w-lg md:flex-1 md:max-w-none text-left animate-fadeInUp opacity-0"
-	style="animation-delay: 0.1s"
+    class="w-full md:flex-1 text-left animate-fadeInUp opacity-0"
+    style="animation-delay: 0.1s"
 >
-	{/* Responsive width and flex */}
-	<div
-		class="bg-card p-8 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-xl shadow-black/2 dark:shadow-none leading-none w-full box-border"
-	>
-		{/* Card styles with specific shadow and responsive margin */}
-		<picture>
-			<source
-				srcset="/assets/feed-dark.png"
-				media="(prefers-color-scheme: dark)"
-			/>
-			<source
-				srcset="/assets/feed-light.png"
-				media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
-			/>
-			<img
-				src="/assets/feed-light.png"
-				alt="LatteArtist App Screenshot showing a feed of latte art entries"
-				class="block max-w-full h-auto rounded-2xl"
-				width="1080"
-				height="2240"
-				loading="lazy"
-			/>
-			{/* Added loading="lazy" */}
-		</picture>
-	</div>
+    {/* Responsive width and flex */}
+    <div
+        class="bg-card p-8 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-xl shadow-black/2 dark:shadow-none leading-none w-full box-border"
+    >
+        {/* Card styles with specific shadow and responsive margin */}
+        <picture>
+            <source
+                srcset="/assets/feed-dark.png"
+                media="(prefers-color-scheme: dark)"
+            />
+            <source
+                srcset="/assets/feed-light.png"
+                media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+            />
+            <img
+                src="/assets/feed-light.png"
+                alt="LatteArtist App Screenshot showing a feed of latte art entries"
+                class="block max-w-full h-auto rounded-2xl"
+                width="1080"
+                height="2240"
+                loading="lazy"
+            />
+            {/* Added loading="lazy" */}
+        </picture>
+    </div>
 </div>
 
 <!-- Styles moved to Tailwind utility classes -->
