@@ -7,27 +7,27 @@ import "@fontsource-variable/outfit";
 import "../styles/global.css";
 import NavigationLinks from "../components/NavigationLinks.astro"; // Import the navigation component
 interface Props {
-	title: string;
-	description: string;
-	ogTitle?: string;
-	ogDescription?: string;
-	ogImage?: string;
-	ogUrl?: string;
-	twitterTitle?: string;
-	twitterDescription?: string;
-	twitterImage?: string;
+    title: string;
+    description: string;
+    ogTitle?: string;
+    ogDescription?: string;
+    ogImage?: string;
+    ogUrl?: string;
+    twitterTitle?: string;
+    twitterDescription?: string;
+    twitterImage?: string;
 }
 
 const {
-	title = "LatteArtist: Latte Art Progress Tracking App for iOS",
-	description = "Like you, I struggled to track my latte art progress. So I'm building LatteArtist – an iOS app to log pours, visualize improvement (finally!), and ditch the photo album chaos. Shaped by feedback from home baristas.",
-	ogTitle = "LatteArtist: Visualize & Improve Your Latte Art Pour by Pour (iOS)",
-	ogDescription = "Trying to improve your latte art? I'm building LatteArtist to help us track pours, see progress visually, and learn from our practice. Join the journey!",
-	ogImage = "https://latteartist.coffeeatpetros.com/assets/card-image.jpg", // Use absolute URL for OG/Twitter images
-	ogUrl = "https://latteartist.coffeeatpetros.com/",
-	twitterTitle = "LatteArtist: Visualize & Improve Your Latte Art Pour by Pour (iOS)",
-	twitterDescription = "Trying to improve your latte art? I'm building LatteArtist to help us track pours, see progress visually, and learn from our practice. Join the journey!",
-	twitterImage = "https://latteartist.coffeeatpetros.com/assets/card-image.webp", // Use absolute URL for OG/Twitter images
+    title = "LatteArtist: Latte Art Progress Tracking App for iOS",
+    description = "Like you, I struggled to track my latte art progress. So I'm building LatteArtist – an iOS app to log pours, visualize improvement (finally!), and ditch the photo album chaos. Shaped by feedback from home baristas.",
+    ogTitle = "LatteArtist: Visualize & Improve Your Latte Art Pour by Pour (iOS)",
+    ogDescription = "Trying to improve your latte art? I'm building LatteArtist to help us track pours, see progress visually, and learn from our practice. Join the journey!",
+    ogImage = "https://latteartist.coffeeatpetros.com/assets/card-image.jpg", // Use absolute URL for OG/Twitter images
+    ogUrl = "https://latteartist.coffeeatpetros.com/",
+    twitterTitle = "LatteArtist: Visualize & Improve Your Latte Art Pour by Pour (iOS)",
+    twitterDescription = "Trying to improve your latte art? I'm building LatteArtist to help us track pours, see progress visually, and learn from our practice. Join the journey!",
+    twitterImage = "https://latteartist.coffeeatpetros.com/assets/card-image.webp", // Use absolute URL for OG/Twitter images
 } = Astro.props;
 
 const canonicalURL = new URL(ogUrl); // Use ogUrl as the base for canonical
@@ -35,293 +35,293 @@ const canonicalURL = new URL(ogUrl); // Use ogUrl as the base for canonical
 
 <!doctype html>
 <html lang="en" data-theme="light">
-	<!-- Add data-theme for selector strategy -->
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add data-theme for selector strategy -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<!-- SEO Meta Tags -->
-		<meta name="description" content={description} />
-		<meta
-			name="keywords"
-			content="latte art, barista, coffee, espresso, practice, tracker, ios app, latte art app"
-		/>
-		<title>{title}</title>
+        <!-- SEO Meta Tags -->
+        <meta name="description" content={description} />
+        <meta
+            name="keywords"
+            content="latte art, barista, coffee, espresso, practice, tracker, ios app, latte art app"
+        />
+        <title>{title}</title>
 
-		<!-- Open Graph Meta Tags -->
-		<meta property="og:title" content={ogTitle} />
-		<meta property="og:description" content={ogDescription} />
-		<meta property="og:image" content={ogImage} />
-		<meta property="og:url" content={canonicalURL} />
-		<meta property="og:type" content="website" />
-		<meta property="og:site_name" content="LatteArtist" />
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content={ogTitle} />
+        <meta property="og:description" content={ogDescription} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:url" content={canonicalURL} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="LatteArtist" />
 
-		<!-- Twitter Card Meta Tags -->
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content={twitterTitle} />
-		<meta name="twitter:description" content={twitterDescription} />
-		<meta name="twitter:image" content={twitterImage} />
-		<!-- Optional: <meta name="twitter:site" content="@YourTwitterHandle"> -->
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={twitterTitle} />
+        <meta name="twitter:description" content={twitterDescription} />
+        <meta name="twitter:image" content={twitterImage} />
+        <!-- Optional: <meta name="twitter:site" content="@YourTwitterHandle"> -->
 
-		<!-- Canonical URL -->
-		<link rel="canonical" href={canonicalURL} />
+        <!-- Canonical URL -->
+        <link rel="canonical" href={canonicalURL} />
 
-		<!-- Favicon -->
-		<link
-			rel="icon"
-			type="image/png"
-			href="/favicon-96x96.png"
-			sizes="96x96"
-		/>
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="shortcut icon" href="/favicon.ico" />
-		<link
-			rel="apple-touch-icon"
-			sizes="180x180"
-			href="/apple-touch-icon.png"
-		/>
-		<link rel="manifest" href="/site.webmanifest" />
+        <!-- Favicon -->
+        <link
+            rel="icon"
+            type="image/png"
+            href="/favicon-96x96.png"
+            sizes="96x96"
+        />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
 
-		<!-- View Transitions -->
-		<ClientRouter />
+        <!-- View Transitions -->
+        <ClientRouter />
 
-		<!-- Theme Sync Script (Sets data-theme based on OS preference) -->
-		<script is:inline>
-			const getPreferredTheme = () => {
-				if (
-					typeof localStorage !== "undefined" &&
-					localStorage.getItem("theme")
-				) {
-					return localStorage.getItem("theme");
-				}
-				if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-					return "dark";
-				}
-				return "light";
-			};
+        <!-- Theme Sync Script (Sets data-theme based on OS preference) -->
+        <script is:inline>
+            const getPreferredTheme = () => {
+                if (
+                    typeof localStorage !== "undefined" &&
+                    localStorage.getItem("theme")
+                ) {
+                    return localStorage.getItem("theme");
+                }
+                if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                    return "dark";
+                }
+                return "light";
+            };
 
-			const applyTheme = (theme) => {
-				document.documentElement.setAttribute("data-theme", theme);
-			};
+            const applyTheme = (theme) => {
+                document.documentElement.setAttribute("data-theme", theme);
+            };
 
-			// Initial load
-			const theme = getPreferredTheme();
-			applyTheme(theme);
+            // Initial load
+            const theme = getPreferredTheme();
+            applyTheme(theme);
 
-			// OS theme change listener
-			window
-				.matchMedia("(prefers-color-scheme: dark)")
-				.addEventListener("change", (e) => {
-					applyTheme(e.matches ? "dark" : "light");
-				});
+            // OS theme change listener
+            window
+                .matchMedia("(prefers-color-scheme: dark)")
+                .addEventListener("change", (e) => {
+                    applyTheme(e.matches ? "dark" : "light");
+                });
 
-			// Astro client-side navigation fix
-			document.addEventListener("astro:after-swap", () => {
-				applyTheme(getPreferredTheme());
-			});
-		</script>
+            // Astro client-side navigation fix
+            document.addEventListener("astro:after-swap", () => {
+                applyTheme(getPreferredTheme());
+            });
+        </script>
 
-		<!-- Analytics Tracking (Loads only on non-local environments) -->
-		<script is:inline>
-			(function () {
-				const hostname = window.location.hostname;
-				const protocol = window.location.protocol;
-				// Consider 'localhost', '127.0.0.1', and 'file:' protocol as local development
-				const isLocal =
-					hostname === "localhost" ||
-					hostname === "127.0.0.1" ||
-					protocol === "file:";
+        <!-- Analytics Tracking (Loads only on non-local environments) -->
+        <script is:inline>
+            (function () {
+                const hostname = window.location.hostname;
+                const protocol = window.location.protocol;
+                // Consider 'localhost', '127.0.0.1', and 'file:' protocol as local development
+                const isLocal =
+                    hostname === "localhost" ||
+                    hostname === "127.0.0.1" ||
+                    protocol === "file:";
 
-				// Only load analytics if NOT local
-				if (!isLocal) {
-					const script = document.createElement("script");
-					script.defer = true;
-					script.src = "https://anal.bantolas.dev/script.js";
-					script.dataset.websiteId =
-						"0b36ac32-65f9-4bbd-bbf3-4f7bcf9ff201";
-					document.head.appendChild(script);
-				} else {
-					// Optional: Log a message to the console when running locally
-					console.log(
-						"Analytics tracking disabled for local development."
-					);
-				}
-			})();
-		</script>
-	</head>
-	<body
-		class="font-sans text-primary bg-gradient-to-b from-gradient-start to-gradient-end flex flex-col items-center min-h-screen p-8 leading-relaxed transition-colors duration-300 ease-in-out"
-	>
-		<!-- Fixed Navigation Bar -->
-		<nav
-			class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ease-in-out"
-		>
-			<div class="container mx-auto max-w-5xl px-4 pt-2">
-				{/* Optional: Constrain nav content width */}
-				<NavigationLinks />
-			</div>
-		</nav>
+                // Only load analytics if NOT local
+                if (!isLocal) {
+                    const script = document.createElement("script");
+                    script.defer = true;
+                    script.src = "https://anal.bantolas.dev/script.js";
+                    script.dataset.websiteId =
+                        "0b36ac32-65f9-4bbd-bbf3-4f7bcf9ff201";
+                    document.head.appendChild(script);
+                } else {
+                    // Optional: Log a message to the console when running locally
+                    console.log(
+                        "Analytics tracking disabled for local development."
+                    );
+                }
+            })();
+        </script>
+    </head>
+    <body
+        class="font-sans text-primary bg-gradient-to-b from-gradient-start to-gradient-end flex flex-col items-center min-h-screen p-8 leading-relaxed transition-colors duration-300 ease-in-out"
+    >
+        <!-- Fixed Navigation Bar -->
+        <nav
+            class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ease-in-out"
+        >
+            <div class="container mx-auto max-w-5xl px-4 pt-2">
+                {/* Optional: Constrain nav content width */}
+                <NavigationLinks />
+            </div>
+        </nav>
 
-		{/* Add pt-16 to push content below the fixed nav */}
-		<div
-			class="container w-full max-w-5xl mx-auto px-4 flex flex-col flex-grow pt-8"
-		>
-			<slot />
-			<footer
-				class="mt-auto pt-8 text-sm text-secondary text-center w-full border-t border-gray-200 dark:border-gray-700 transition-colors duration-300 ease-in-out"
-			>
-				© {new Date().getFullYear()} LatteArtist
-			</footer>
-		</div>
+        {/* Add pt-16 to push content below the fixed nav */}
+        <div
+            class="container w-full max-w-5xl mx-auto px-4 flex flex-col flex-grow pt-12"
+        >
+            <slot />
+            <footer
+                class="mt-auto pt-8 text-sm text-secondary text-center w-full border-t border-gray-200 dark:border-gray-700 transition-colors duration-300 ease-in-out"
+            >
+                © {new Date().getFullYear()} LatteArtist
+            </footer>
+        </div>
 
-		<!-- Main Interaction Script -->
-		<script is:inline>
-			// Using is:inline because this script needs access to the DOM immediately
-			// and manipulates elements potentially added by other scripts (EmailOctopus).
-			document.addEventListener("DOMContentLoaded", () => {
-				const signupContainer =
-					document.getElementById("signup-container");
-				// Get the computed value of the CSS variable for dark mode text color
-				const darkModeTextColor =
-					getComputedStyle(document.documentElement)
-						.getPropertyValue("--dark-mode-text-primary-val")
-						.trim() || "#f2f2f7"; // Fallback
+        <!-- Main Interaction Script -->
+        <script is:inline>
+            // Using is:inline because this script needs access to the DOM immediately
+            // and manipulates elements potentially added by other scripts (EmailOctopus).
+            document.addEventListener("DOMContentLoaded", () => {
+                const signupContainer =
+                    document.getElementById("signup-container");
+                // Get the computed value of the CSS variable for dark mode text color
+                const darkModeTextColor =
+                    getComputedStyle(document.documentElement)
+                        .getPropertyValue("--dark-mode-text-primary-val")
+                        .trim() || "#f2f2f7"; // Fallback
 
-				if (!signupContainer) {
-					console.error(
-						"Signup container (#signup-container) not found for MutationObserver."
-					);
-					return;
-				}
+                if (!signupContainer) {
+                    console.error(
+                        "Signup container (#signup-container) not found for MutationObserver."
+                    );
+                    return;
+                }
 
-				const observer = new MutationObserver((mutationsList) => {
-					// Check if dark mode is active *when mutation occurs*
-					// Now check the data-theme attribute instead of media query directly
-					const isDarkMode =
-						document.documentElement.getAttribute("data-theme") ===
-						"dark";
+                const observer = new MutationObserver((mutationsList) => {
+                    // Check if dark mode is active *when mutation occurs*
+                    // Now check the data-theme attribute instead of media query directly
+                    const isDarkMode =
+                        document.documentElement.getAttribute("data-theme") ===
+                        "dark";
 
-					if (!isDarkMode) {
-						return; // Only apply override in dark mode
-					}
+                    if (!isDarkMode) {
+                        return; // Only apply override in dark mode
+                    }
 
-					for (const mutation of mutationsList) {
-						if (mutation.type === "childList") {
-							mutation.addedNodes.forEach((node) => {
-								// Check if the added node itself is the success message
-								if (
-									node.nodeType === 1 &&
-									node.classList.contains(
-										"emailoctopus-success-message"
-									)
-								) {
-									// Use setProperty with 'important' flag
-									node.style.setProperty(
-										"color",
-										darkModeTextColor,
-										"important"
-									);
-								}
-								// Also check if the success message is a descendant of the added node
-								else if (node.nodeType === 1) {
-									const successMessage = node.querySelector(
-										".emailoctopus-success-message"
-									);
-									if (successMessage) {
-										// Use setProperty with 'important' flag
-										successMessage.style.setProperty(
-											"color",
-											darkModeTextColor,
-											"important"
-										);
-									}
-								}
-							});
-						}
-					}
-				});
+                    for (const mutation of mutationsList) {
+                        if (mutation.type === "childList") {
+                            mutation.addedNodes.forEach((node) => {
+                                // Check if the added node itself is the success message
+                                if (
+                                    node.nodeType === 1 &&
+                                    node.classList.contains(
+                                        "emailoctopus-success-message"
+                                    )
+                                ) {
+                                    // Use setProperty with 'important' flag
+                                    node.style.setProperty(
+                                        "color",
+                                        darkModeTextColor,
+                                        "important"
+                                    );
+                                }
+                                // Also check if the success message is a descendant of the added node
+                                else if (node.nodeType === 1) {
+                                    const successMessage = node.querySelector(
+                                        ".emailoctopus-success-message"
+                                    );
+                                    if (successMessage) {
+                                        // Use setProperty with 'important' flag
+                                        successMessage.style.setProperty(
+                                            "color",
+                                            darkModeTextColor,
+                                            "important"
+                                        );
+                                    }
+                                }
+                            });
+                        }
+                    }
+                });
 
-				// Start observing the signup container for added/removed children and subtree changes
-				observer.observe(signupContainer, {
-					childList: true,
-					subtree: true,
-				});
+                // Start observing the signup container for added/removed children and subtree changes
+                observer.observe(signupContainer, {
+                    childList: true,
+                    subtree: true,
+                });
 
-				// --- Android Checkbox Logic ---
-				let androidCheckboxAdded = false; // Flag to prevent multiple additions
+                // --- Android Checkbox Logic ---
+                let androidCheckboxAdded = false; // Flag to prevent multiple additions
 
-				const observerAndroid = new MutationObserver(
-					(mutationsList) => {
-						if (androidCheckboxAdded) {
-							// observerAndroid.disconnect(); // Optional: stop observing once added
-							return;
-						}
+                const observerAndroid = new MutationObserver(
+                    (mutationsList) => {
+                        if (androidCheckboxAdded) {
+                            // observerAndroid.disconnect(); // Optional: stop observing once added
+                            return;
+                        }
 
-						// Find the EmailOctopus hidden input
-						const hiddenInput = signupContainer.querySelector(
-							'input#field_3[type="hidden"]'
-						);
-						// Find the EmailOctopus submit input
-						const submitButton = signupContainer.querySelector(
-							'.emailoctopus-form input[type="submit"]'
-						);
-						// Find the static checkbox container and its elements
-						const staticCheckboxContainer = document.getElementById(
-							"android-checkbox-static-container"
-						);
-						const staticCustomCheckbox =
-							staticCheckboxContainer?.querySelector(
-								".custom-checkbox"
-							);
-						const staticLabel =
-							staticCheckboxContainer?.querySelector(
-								".android-checkbox-label"
-							);
+                        // Find the EmailOctopus hidden input
+                        const hiddenInput = signupContainer.querySelector(
+                            'input#field_3[type="hidden"]'
+                        );
+                        // Find the EmailOctopus submit input
+                        const submitButton = signupContainer.querySelector(
+                            '.emailoctopus-form input[type="submit"]'
+                        );
+                        // Find the static checkbox container and its elements
+                        const staticCheckboxContainer = document.getElementById(
+                            "android-checkbox-static-container"
+                        );
+                        const staticCustomCheckbox =
+                            staticCheckboxContainer?.querySelector(
+                                ".custom-checkbox"
+                            );
+                        const staticLabel =
+                            staticCheckboxContainer?.querySelector(
+                                ".android-checkbox-label"
+                            );
 
-						// Check if the form elements AND the static checkbox elements are ready
-						if (
-							hiddenInput &&
-							submitButton &&
-							staticCheckboxContainer &&
-							staticCustomCheckbox &&
-							staticLabel &&
-							!androidCheckboxAdded
-						) {
-							// Make the static container visible
-							staticCheckboxContainer.style.display = "block";
+                        // Check if the form elements AND the static checkbox elements are ready
+                        if (
+                            hiddenInput &&
+                            submitButton &&
+                            staticCheckboxContainer &&
+                            staticCustomCheckbox &&
+                            staticLabel &&
+                            !androidCheckboxAdded
+                        ) {
+                            // Make the static container visible
+                            staticCheckboxContainer.style.display = "block";
 
-							// Set initial value for the hidden input
-							hiddenInput.value = "no";
+                            // Set initial value for the hidden input
+                            hiddenInput.value = "no";
 
-							// Add click listener to the static label
-							staticLabel.addEventListener("click", () => {
-								staticLabel.classList.toggle("checked"); // Target the label now
-								hiddenInput.value =
-									staticLabel.classList.contains("checked") // Check the label's class
-										? "yes"
-										: "no";
-							});
+                            // Add click listener to the static label
+                            staticLabel.addEventListener("click", () => {
+                                staticLabel.classList.toggle("checked"); // Target the label now
+                                hiddenInput.value =
+                                    staticLabel.classList.contains("checked") // Check the label's class
+                                        ? "yes"
+                                        : "no";
+                            });
 
-							androidCheckboxAdded = true; // Set flag
-							// observerAndroid.disconnect(); // Optional: Disconnect after adding
-						}
-					}
-				);
+                            androidCheckboxAdded = true; // Set flag
+                            // observerAndroid.disconnect(); // Optional: Disconnect after adding
+                        }
+                    }
+                );
 
-				// Start observing the signup container for the EmailOctopus form elements
-				observerAndroid.observe(signupContainer, {
-					childList: true,
-					subtree: true,
-				});
+                // Start observing the signup container for the EmailOctopus form elements
+                observerAndroid.observe(signupContainer, {
+                    childList: true,
+                    subtree: true,
+                });
 
-				// Optional: Disconnect observers when it's no longer needed, e.g., on page unload
-				// window.addEventListener('unload', () => {
-				// 	observer.disconnect();
-				// 	observerAndroid.disconnect();
-				// });
-			});
-		</script>
-	</body>
+                // Optional: Disconnect observers when it's no longer needed, e.g., on page unload
+                // window.addEventListener('unload', () => {
+                // 	observer.disconnect();
+                // 	observerAndroid.disconnect();
+                // });
+            });
+        </script>
+    </body>
 </html>
 
 <!-- Global styles removed - Handled by Tailwind and src/styles/global.css -->

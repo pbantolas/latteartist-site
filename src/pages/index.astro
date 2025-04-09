@@ -14,9 +14,9 @@ import TrustSection from "../components/TrustSection.astro";
 >
     <Header />
 
-    <div class="mb-4 md:flex md:gap-8 md:max-w-6xl md:mx-auto">
+    <div class="mb-8 md:flex md:gap-8 md:max-w-6xl md:mx-auto">
         {/* Left column - descriptive text */}
-        <div class="md:w-1/2">
+        <div class="md:w-2/5">
             <p class="text-xl font-normal text-secondary mb-4">
                 Tired of scattered photos and guesswork in your latte art
                 practice?
@@ -28,8 +28,14 @@ import TrustSection from "../components/TrustSection.astro";
             </p>
         </div>
 
+        {/* Vertical divider - only visible on md screens and up */}
+        <!-- <div
+            class="hidden md:block border-l border-gray-200 dark:border-gray-700 self-stretch mx-4"
+        >
+        </div> -->
+
         {/* Right column - signup form */}
-        <div class="mt-8 md:mt-0 md:w-1/2">
+        <div class="mt-8 md:mt-0 md:w-3/5">
             <SignupForm />
         </div>
     </div>
