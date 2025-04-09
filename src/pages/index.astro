@@ -9,28 +9,44 @@ import TrustSection from "../components/TrustSection.astro";
 ---
 
 <Layout
-	title="LatteArtist: Latte Art Progress Tracking App for iOS"
-	description="Tired of scattered photos and guesswork in your latte art practice? LatteArtist is a simple iOS journal designed to help you intentionally log pours, track techniques, and clearly visualize your improvement over time. Developed with feedback from the home barista community on Reddit."
+    title="LatteArtist: Latte Art Progress Tracking App for iOS"
+    description="Tired of scattered photos and guesswork in your latte art practice? LatteArtist is a simple iOS journal designed to help you intentionally log pours, track techniques, and clearly visualize your improvement over time. Developed with feedback from the home barista community on Reddit."
 >
-	<div class="mb-4">
-		{/* Wrap Header and Nav, add bottom margin */}
-		<Header />
-	</div>
+    <Header />
 
-	<main
-		class="flex flex-col items-center gap-12 mb-16 md:flex-row md:items-start"
-	>
-		{/* Increased bottom margin */}
-		<ImageColumn />
-		<div
-			class="flex flex-col justify-center h-auto w-full max-w-lg text-left md:flex-1 md:h-full md:max-w-none"
-		>
-			<FeaturesCard />
-			<SignupForm />
-		</div>
-	</main>
+    <div class="mb-4 md:flex md:gap-8 md:max-w-6xl md:mx-auto">
+        {/* Left column - descriptive text */}
+        <div class="md:w-1/2">
+            <p class="text-xl font-normal text-secondary mb-4">
+                Tired of scattered photos and guesswork in your latte art
+                practice?
+            </p>
+            <p class="text-lg font-light text-secondary">
+                LatteArtist is a calm, focused iOS journal that helps you log
+                your pours, spot trends, and actually see your improvement over
+                time.
+            </p>
+        </div>
 
-	<TrustSection />
+        {/* Right column - signup form */}
+        <div class="mt-8 md:mt-0 md:w-1/2">
+            <SignupForm />
+        </div>
+    </div>
+
+    <main
+        class="flex flex-col items-center gap-12 mb-16 md:flex-row md:items-start"
+    >
+        {/* Increased bottom margin */}
+        <ImageColumn />
+        <div
+            class="flex flex-col justify-center h-auto w-full max-w-lg text-left md:flex-1 md:h-full md:max-w-none"
+        >
+            <FeaturesCard />
+        </div>
+    </main>
+
+    <TrustSection />
 </Layout>
 
 <!-- Style block removed - Migrated to Tailwind classes -->

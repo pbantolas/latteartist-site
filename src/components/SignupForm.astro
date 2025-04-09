@@ -3,194 +3,194 @@
 ---
 
 <div
-	class="bg-card rounded-3xl border border-gray-100 dark:border-gray-800 shadow-xl shadow-black/2 dark:shadow-none w-full box-border flex flex-col items-center p-12 animate-fadeInUp opacity-0"
-	style="animation-delay: 1.0s"
-	id="signup-container"
+    class="bg-card rounded-3xl border border-gray-100 dark:border-gray-800 shadow-xl shadow-black/2 dark:shadow-none box-border flex flex-col items-center p-12 animate-fadeInUp opacity-0"
+    style="animation-delay: 1.0s"
+    id="signup-container"
 >
-	<h2 class="text-2xl font-medium text-primary text-center mb-4 mt-0">
-		Want to Track Your Progress Too? Join the Waitlist 👇
-	</h2>
-	<!-- Placeholder for EmailOctopus form -->
-	<div id="emailoctopus-form-placeholder" class="w-full"></div>
+    <h2 class="text-2xl font-medium text-primary text-center mb-4 mt-0">
+        Want to Track Your Progress Too? Join the Waitlist 👇
+    </h2>
+    <!-- Placeholder for EmailOctopus form -->
+    <div id="emailoctopus-form-placeholder"></div>
 
-	<!-- Divider -->
-	<hr class="my-6 border-gray-200 dark:border-gray-700 w-full max-w-xs" />
+    <!-- Divider -->
+    <hr class="my-6 border-gray-200 dark:border-gray-700 w-full max-w-xs" />
 
-	<!-- Static Android Checkbox Container (hidden initially, positioned below form) -->
-	<div
-		id="android-checkbox-static-container"
-		class="hidden w-full max-w-xs self-center mx-auto text-left mb-0"
-	>
-		{/* JS will remove 'hidden' class */}
-		<label
-			for="android-checkbox"
-			class="inline-flex items-center cursor-pointer text-sm text-secondary"
-		>
-			{/* Standard HTML checkbox */}
-			<input
-				type="checkbox"
-				id="android-checkbox"
-				class="form-checkbox h-4 w-4 text-accent bg-card border-gray-200 dark:border-gray-700 rounded mr-2 focus:ring-accent dark:focus:ring-offset-gray-800"
-			/>
-			Android user? Let me know when it's ready!
-		</label>
-	</div>
+    <!-- Static Android Checkbox Container (hidden initially, positioned below form) -->
+    <div
+        id="android-checkbox-static-container"
+        class="hidden w-full max-w-xs self-center mx-auto text-left mb-0"
+    >
+        {/* JS will remove 'hidden' class */}
+        <label
+            for="android-checkbox"
+            class="inline-flex items-center cursor-pointer text-sm text-secondary"
+        >
+            {/* Standard HTML checkbox */}
+            <input
+                type="checkbox"
+                id="android-checkbox"
+                class="form-checkbox h-4 w-4 text-accent bg-card border-gray-200 dark:border-gray-700 rounded mr-2 focus:ring-accent dark:focus:ring-offset-gray-800"
+            />
+            Android user? Let me know when it's ready!
+        </label>
+    </div>
 </div>
 
 <!-- Styles moved to Tailwind utility classes or global.css -->
 
 <script>
-	// Flag to prevent multiple checkbox logic additions within the observer
-	let androidCheckboxAdded = false;
-	// Hold observer instance to disconnect it later
-	let observerAndroid: MutationObserver | null = null;
-	// Flag emailOctopusScriptLoaded removed - replaced by DOM check
+    // Flag to prevent multiple checkbox logic additions within the observer
+    let androidCheckboxAdded = false;
+    // Hold observer instance to disconnect it later
+    let observerAndroid: MutationObserver | null = null;
+    // Flag emailOctopusScriptLoaded removed - replaced by DOM check
 
-	function initializeAndroidCheckboxObserver() {
-		// Reset flag each time the page loads/navigates to ensure logic can re-attach
-		androidCheckboxAdded = false;
+    function initializeAndroidCheckboxObserver() {
+        // Reset flag each time the page loads/navigates to ensure logic can re-attach
+        androidCheckboxAdded = false;
 
-		// Disconnect previous observer if it exists from a prior navigation
-		if (observerAndroid) {
-			// console.log("Disconnecting previous observer."); // Debug log
-			observerAndroid.disconnect();
-			observerAndroid = null; // Clear the reference
-		}
+        // Disconnect previous observer if it exists from a prior navigation
+        if (observerAndroid) {
+            // console.log("Disconnecting previous observer."); // Debug log
+            observerAndroid.disconnect();
+            observerAndroid = null; // Clear the reference
+        }
 
-		// Obtain signupContainer reference for the current page view
-		const signupContainer = document.getElementById("signup-container");
-		if (!signupContainer) {
-			// If the container isn't present on this page, do nothing.
-			// console.log("Signup container not found on this page load."); // Debug log
-			return;
-		}
+        // Obtain signupContainer reference for the current page view
+        const signupContainer = document.getElementById("signup-container");
+        if (!signupContainer) {
+            // If the container isn't present on this page, do nothing.
+            // console.log("Signup container not found on this page load."); // Debug log
+            return;
+        }
 
-		// console.log("Initializing Signup Form Logic..."); // Debug log
+        // console.log("Initializing Signup Form Logic..."); // Debug log
 
-		// --- Dynamically Load EmailOctopus Script ---
-		const eoPlaceholder = signupContainer.querySelector(
-			"#emailoctopus-form-placeholder"
-		);
-		// Check if placeholder exists AND if the script isn't already there
-		const existingEoScript = eoPlaceholder?.querySelector(
-			'script[src="https://eocampaign1.com/form/be5ce5f8-10bd-11f0-8871-7bb29bbe8677.js"]'
-		);
+        // --- Dynamically Load EmailOctopus Script ---
+        const eoPlaceholder = signupContainer.querySelector(
+            "#emailoctopus-form-placeholder"
+        );
+        // Check if placeholder exists AND if the script isn't already there
+        const existingEoScript = eoPlaceholder?.querySelector(
+            'script[src="https://eocampaign1.com/form/be5ce5f8-10bd-11f0-8871-7bb29bbe8677.js"]'
+        );
 
-		if (eoPlaceholder && !existingEoScript) {
-			// console.log("Dynamically loading EmailOctopus script..."); // Debug log
-			const eoScript = document.createElement("script");
-			eoScript.src =
-				"https://eocampaign1.com/form/be5ce5f8-10bd-11f0-8871-7bb29bbe8677.js";
-			eoScript.dataset.form = "be5ce5f8-10bd-11f0-8871-7bb29bbe8677";
-			eoScript.async = true; // Load asynchronously
-			eoPlaceholder.appendChild(eoScript);
-		} else if (existingEoScript) {
-			// console.log("EmailOctopus script already exists in placeholder."); // Debug log
-		} else if (!eoPlaceholder) {
-			console.error("EmailOctopus placeholder not found!");
-			// Fallback or error handling if needed
-		}
-		// --- End Dynamic Loading ---
+        if (eoPlaceholder && !existingEoScript) {
+            // console.log("Dynamically loading EmailOctopus script..."); // Debug log
+            const eoScript = document.createElement("script");
+            eoScript.src =
+                "https://eocampaign1.com/form/be5ce5f8-10bd-11f0-8871-7bb29bbe8677.js";
+            eoScript.dataset.form = "be5ce5f8-10bd-11f0-8871-7bb29bbe8677";
+            eoScript.async = true; // Load asynchronously
+            eoPlaceholder.appendChild(eoScript);
+        } else if (existingEoScript) {
+            // console.log("EmailOctopus script already exists in placeholder."); // Debug log
+        } else if (!eoPlaceholder) {
+            console.error("EmailOctopus placeholder not found!");
+            // Fallback or error handling if needed
+        }
+        // --- End Dynamic Loading ---
 
-		// console.log("Initializing Android Checkbox Observer..."); // Debug log
+        // console.log("Initializing Android Checkbox Observer..."); // Debug log
 
-		observerAndroid = new MutationObserver((mutationsList, observer) => {
-			// Re-obtain container inside callback as DOM might change
-			const currentSignupContainer =
-				document.getElementById("signup-container");
-			if (!currentSignupContainer) {
-				// If container disappears during observation (e.g., navigating away mid-check), disconnect
-				// console.warn("Signup container disappeared, disconnecting observer."); // Debug log
-				observer.disconnect();
-				observerAndroid = null;
-				return;
-			}
+        observerAndroid = new MutationObserver((mutationsList, observer) => {
+            // Re-obtain container inside callback as DOM might change
+            const currentSignupContainer =
+                document.getElementById("signup-container");
+            if (!currentSignupContainer) {
+                // If container disappears during observation (e.g., navigating away mid-check), disconnect
+                // console.warn("Signup container disappeared, disconnecting observer."); // Debug log
+                observer.disconnect();
+                observerAndroid = null;
+                return;
+            }
 
-			// If logic already added during this observer instance's lifetime, do nothing.
-			if (androidCheckboxAdded) {
-				// console.log("Android checkbox logic already added for this instance."); // Debug log
-				return;
-			}
+            // If logic already added during this observer instance's lifetime, do nothing.
+            if (androidCheckboxAdded) {
+                // console.log("Android checkbox logic already added for this instance."); // Debug log
+                return;
+            }
 
-			// Find the EmailOctopus hidden input
-			const hiddenInput = currentSignupContainer.querySelector(
-				'input#field_3[type="hidden"]'
-			) as HTMLInputElement | null;
-			// Find the EmailOctopus submit input (good indicator form is loaded)
-			const submitButton = currentSignupContainer.querySelector(
-				'.emailoctopus-form input[type="submit"]'
-			);
-			// Find the static checkbox container
-			const staticCheckboxContainer = document.getElementById(
-				"android-checkbox-static-container"
-			);
-			// Find the standard checkbox input
-			const androidCheckbox = staticCheckboxContainer?.querySelector(
-				"#android-checkbox"
-			) as HTMLInputElement | null;
+            // Find the EmailOctopus hidden input
+            const hiddenInput = currentSignupContainer.querySelector(
+                'input#field_3[type="hidden"]'
+            ) as HTMLInputElement | null;
+            // Find the EmailOctopus submit input (good indicator form is loaded)
+            const submitButton = currentSignupContainer.querySelector(
+                '.emailoctopus-form input[type="submit"]'
+            );
+            // Find the static checkbox container
+            const staticCheckboxContainer = document.getElementById(
+                "android-checkbox-static-container"
+            );
+            // Find the standard checkbox input
+            const androidCheckbox = staticCheckboxContainer?.querySelector(
+                "#android-checkbox"
+            ) as HTMLInputElement | null;
 
-			// Check if the form elements AND the static checkbox elements are ready
-			if (
-				hiddenInput &&
-				submitButton && // Ensure submit button is present
-				staticCheckboxContainer &&
-				androidCheckbox &&
-				!androidCheckboxAdded // Ensure logic hasn't been added yet
-			) {
-				// console.log("EmailOctopus form detected, adding checkbox logic."); // Debug log
-				// Make the static container visible
-				staticCheckboxContainer.classList.remove("hidden");
+            // Check if the form elements AND the static checkbox elements are ready
+            if (
+                hiddenInput &&
+                submitButton && // Ensure submit button is present
+                staticCheckboxContainer &&
+                androidCheckbox &&
+                !androidCheckboxAdded // Ensure logic hasn't been added yet
+            ) {
+                // console.log("EmailOctopus form detected, adding checkbox logic."); // Debug log
+                // Make the static container visible
+                staticCheckboxContainer.classList.remove("hidden");
 
-				// Set initial value for the hidden input based on checkbox's current state
-				hiddenInput.value = androidCheckbox.checked ? "yes" : "no";
+                // Set initial value for the hidden input based on checkbox's current state
+                hiddenInput.value = androidCheckbox.checked ? "yes" : "no";
 
-				// Add change listener using 'onchange' to implicitly remove any old listeners
-				androidCheckbox.onchange = (event) => {
-					const isChecked = (event.target as HTMLInputElement)
-						.checked;
-					hiddenInput.value = isChecked ? "yes" : "no";
-					// console.log(`Checkbox changed: ${hiddenInput.value}`); // Debug log
-				};
+                // Add change listener using 'onchange' to implicitly remove any old listeners
+                androidCheckbox.onchange = (event) => {
+                    const isChecked = (event.target as HTMLInputElement)
+                        .checked;
+                    hiddenInput.value = isChecked ? "yes" : "no";
+                    // console.log(`Checkbox changed: ${hiddenInput.value}`); // Debug log
+                };
 
-				androidCheckboxAdded = true; // Set flag
-				// console.log("Android checkbox logic added successfully."); // Debug log
+                androidCheckboxAdded = true; // Set flag
+                // console.log("Android checkbox logic added successfully."); // Debug log
 
-				// Optional: Disconnect observer now that we've found the elements and added the logic
-				// observer.disconnect();
-				// observerAndroid = null;
-			} else {
-				// console.log("EmailOctopus form elements not ready yet..."); // Debug log (can be noisy)
-			}
-		});
+                // Optional: Disconnect observer now that we've found the elements and added the logic
+                // observer.disconnect();
+                // observerAndroid = null;
+            } else {
+                // console.log("EmailOctopus form elements not ready yet..."); // Debug log (can be noisy)
+            }
+        });
 
-		// Start observing the signup container for the EmailOctopus form elements
-		// console.log("Starting MutationObserver on #signup-container."); // Debug log
-		observerAndroid.observe(signupContainer, {
-			childList: true, // Watch for nodes being added/removed
-			subtree: true, // Watch descendants too
-		});
-	}
+        // Start observing the signup container for the EmailOctopus form elements
+        // console.log("Starting MutationObserver on #signup-container."); // Debug log
+        observerAndroid.observe(signupContainer, {
+            childList: true, // Watch for nodes being added/removed
+            subtree: true, // Watch descendants too
+        });
+    }
 
-	// Add the event listener to run the initialization logic whenever Astro finishes loading a page
-	// This covers both initial load and client-side navigations.
-	// Function to handle initialization on page load/navigation
-	function handlePageLoad() {
-		// Reset flags for the new page view
-		androidCheckboxAdded = false;
-		// emailOctopusScriptLoaded = false; // Flag removed
-		initializeAndroidCheckboxObserver();
-	}
+    // Add the event listener to run the initialization logic whenever Astro finishes loading a page
+    // This covers both initial load and client-side navigations.
+    // Function to handle initialization on page load/navigation
+    function handlePageLoad() {
+        // Reset flags for the new page view
+        androidCheckboxAdded = false;
+        // emailOctopusScriptLoaded = false; // Flag removed
+        initializeAndroidCheckboxObserver();
+    }
 
-	// Add the event listener to run the initialization logic whenever Astro finishes loading a page
-	// This covers both initial load and client-side navigations.
-	document.addEventListener("astro:page-load", handlePageLoad);
+    // Add the event listener to run the initialization logic whenever Astro finishes loading a page
+    // This covers both initial load and client-side navigations.
+    document.addEventListener("astro:page-load", handlePageLoad);
 
-	// Ensure it also runs on initial load if astro:page-load fires late or is missed
-	if (document.readyState === "complete") {
-		// console.log("Document already complete, running handlePageLoad directly."); // Debug log
-		handlePageLoad();
-	} else {
-		window.addEventListener("load", handlePageLoad, { once: true });
-		// console.log("Added window load listener as fallback."); // Debug log
-	}
+    // Ensure it also runs on initial load if astro:page-load fires late or is missed
+    if (document.readyState === "complete") {
+        // console.log("Document already complete, running handlePageLoad directly."); // Debug log
+        handlePageLoad();
+    } else {
+        window.addEventListener("load", handlePageLoad, { once: true });
+        // console.log("Added window load listener as fallback."); // Debug log
+    }
 </script>
