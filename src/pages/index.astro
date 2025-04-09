@@ -1,7 +1,6 @@
 ---
 // src/pages/index.astro
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
 import ImageColumn from "../components/ImageColumn.astro";
 import FeaturesCard from "../components/FeaturesCard.astro";
 import SignupForm from "../components/SignupForm.astro";
@@ -12,47 +11,43 @@ import TrustSection from "../components/TrustSection.astro";
     title="LatteArtist: Latte Art Progress Tracking App for iOS"
     description="Tired of scattered photos and guesswork in your latte art practice? LatteArtist is a simple iOS journal designed to help you intentionally log pours, track techniques, and clearly visualize your improvement over time. Developed with feedback from the home barista community on Reddit."
 >
-    <Header />
+    <section>
+        {/* New two-column layout */}
+        <div class="mb-8 md:flex md:gap-8 md:max-w-6xl md:mx-auto">
+            {/* Left column - text and signup form */}
+            <div class="md:w-1/2 md:mt-8">
+                <h1 class="text-2xl md:text-4xl font-bold mb-6">
+                    Turn Latte Art Practice into Progress
+                </h1>
+                <p class="text-xl font-normal text-secondary mb-4">
+                    Tired of scattered photos and guesswork in your latte art
+                    practice?
+                </p>
+                <p class="text-lg font-light text-secondary mb-8">
+                    LatteArtist is a calm, focused iOS journal that helps you
+                    log your pours, spot trends, and actually see your
+                    improvement over time.
+                </p>
+                <SignupForm />
+            </div>
 
-    <div class="mb-8 md:flex md:gap-8 md:max-w-6xl md:mx-auto">
-        {/* Left column - descriptive text */}
-        <div class="md:w-2/5">
-            <p class="text-xl font-normal text-secondary mb-4">
-                Tired of scattered photos and guesswork in your latte art
-                practice?
-            </p>
-            <p class="text-lg font-light text-secondary">
-                LatteArtist is a calm, focused iOS journal that helps you log
-                your pours, spot trends, and actually see your improvement over
-                time.
-            </p>
+            {/* Right column - image */}
+            <div class="mt-8 md:mt-0 md:w-1/2">
+                <ImageColumn />
+            </div>
         </div>
+    </section>
 
-        {/* Vertical divider - only visible on md screens and up */}
-        <!-- <div
-            class="hidden md:block border-l border-gray-200 dark:border-gray-700 self-stretch mx-4"
-        >
-        </div> -->
-
-        {/* Right column - signup form */}
-        <div class="mt-8 md:mt-0 md:w-3/5">
-            <SignupForm />
-        </div>
-    </div>
-
-    <main
-        class="flex flex-col items-center gap-12 mb-16 md:flex-row md:items-start"
-    >
-        {/* Increased bottom margin */}
-        <ImageColumn />
-        <div
-            class="flex flex-col justify-center h-auto w-full max-w-lg text-left md:flex-1 md:h-full md:max-w-none"
-        >
-            <FeaturesCard />
+    <main>
+        <div class="flex flex-col md:flex-row gap-8 max-w-6xl mx-auto my-16">
+            <div class="w-full md:w-1/2">
+                <FeaturesCard />
+            </div>
+            <div class="w-full md:w-1/2">
+                <TrustSection />
+            </div>
         </div>
     </main>
-
-    <TrustSection />
 </Layout>
 
 <!-- Style block removed - Migrated to Tailwind classes -->
