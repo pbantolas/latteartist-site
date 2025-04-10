@@ -1,0 +1,39 @@
+---
+import { getEntry } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+
+const entry = await getEntry("privacy", "privacy-policy");
+
+// Handle case where entry might not be found
+if (!entry) {
+    throw new Error(
+        "Privacy policy not found. Please ensure 'src/content/privacy/privacy-policy.md' exists."
+    );
+}
+
+const { Content } = await entry.render();
+---
+
+<Layout
+    title="LatteArtist Privacy Policy"
+    description="Learn how LatteArtist protects your privacy and handles your data"
+    ogTitle="LatteArtist Privacy Policy"
+    ogDescription="Learn how LatteArtist protects your privacy and handles your data"
+    ogUrl="https://latteartist.coffeeatpetros.com/privacy-policy"
+    twitterTitle="LatteArtist Privacy Policy"
+    twitterDescription="Learn how LatteArtist protects your privacy and handles your data"
+>
+    <div class="max-w-4xl mx-auto px-4 mb-4">
+        <h1
+            class="text-4xl md:text-5xl font-semibold mb-4 text-title-light dark:text-title-dark"
+        >
+            {entry.data.title}
+        </h1>
+
+        <div
+            class="prose dark:prose-invert max-w-none prose-p:text-foreground prose-headings:text-title-light dark:prose-headings:text-title-dark prose-a:text-link hover:prose-a:text-link-hover prose-strong:text-foreground"
+        >
+            <Content />
+        </div>
+    </div>
+</Layout>
