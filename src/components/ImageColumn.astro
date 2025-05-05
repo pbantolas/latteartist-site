@@ -11,25 +11,18 @@
         class="bg-card p-8 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-xl shadow-black/2 dark:shadow-none leading-none w-full box-border"
     >
         {/* Card styles with specific shadow and responsive margin */}
-        <picture>
-            <source
-                srcset="/assets/feed-dark.png"
-                media="(prefers-color-scheme: dark)"
-            />
-            <source
-                srcset="/assets/feed-light.png"
-                media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
-            />
-            <img
-                src="/assets/feed-light.png"
-                alt="LatteArtist App Screenshot showing a feed of latte art entries"
-                class="block max-w-full h-auto rounded-2xl"
-                width="1080"
-                height="2240"
-                loading="lazy"
-            />
-            {/* Added loading="lazy" */}
-        </picture>
+        <video
+            autoplay
+            loop
+            muted
+            playsinline
+            width="1080"
+            height="1920"
+            class="block max-w-full h-auto rounded-2xl"
+        >
+            <source src="/assets/demo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
     </div>
 </div>
 
