@@ -121,33 +121,16 @@ const canonicalURL = new URL(ogUrl); // Use ogUrl as the base for canonical
             });
         </script>
 
-        <!-- Analytics Tracking (Loads only on non-local environments) -->
-        <script is:inline>
-            (function () {
-                const hostname = window.location.hostname;
-                const protocol = window.location.protocol;
-                // Consider 'localhost', '127.0.0.1', and 'file:' protocol as local development
-                const isLocal =
-                    hostname === "localhost" ||
-                    hostname === "127.0.0.1" ||
-                    protocol === "file:";
-
-                // Only load analytics if NOT local
-                if (!isLocal) {
-                    const script = document.createElement("script");
-                    script.defer = true;
-                    script.src = "https://anal.bantolas.dev/script.js";
-                    script.dataset.websiteId =
-                        "0b36ac32-65f9-4bbd-bbf3-4f7bcf9ff201";
-                    document.head.appendChild(script);
-                } else {
-                    // Optional: Log a message to the console when running locally
-                    console.log(
-                        "Analytics tracking disabled for local development."
-                    );
-                }
-            })();
-        </script>
+        {/* Analytics Tracking (Loads only in production) */}
+        {
+            import.meta.env.PROD && (
+                <script
+                    defer
+                    src="https://anal.bantolas.dev/script.js"
+                    data-website-id="0b36ac32-65f9-4bbd-bbf3-4f7bcf9ff201"
+                />
+            )
+        }
     </head>
     <body
         class="font-sans text-primary bg-gradient-to-b from-gradient-start to-gradient-end flex flex-col items-center min-h-screen p-2 leading-relaxed transition-colors duration-300 ease-in-out"
