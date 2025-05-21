@@ -26,25 +26,32 @@ const isActive = (linkPath: string) => {
 <div class="w-full flex justify-center p-2">
     {/* Pill container with frosted background and rounded corners */}
     <nav
-        class="relative inline-flex items-center space-x-1 rounded-full p-1 bg-white/70 dark:bg-black/70 backdrop-blur-md"
+        class="relative rounded-full p-1 bg-white/70 dark:bg-black/70 backdrop-blur-md"
     >
-        {
-            navLinks.map((link) => (
-                <a
-                    href={link.href}
-                    class:list={[
-                        // Base styles shared by both active and inactive states (excluding padding/margin/specific colors)
-                        "rounded-full text-sm font-medium transition-colors duration-200 whitespace-nowrap",
-                        isActive(link.href)
-                            ? // Active state: Taller, overflowing effect with increased py, negative margins, shadow
-                              "relative px-4 py-1 z-10 text-white before:content-[''] before:absolute before:inset-0 before:rounded-full before:bg-accent before:shadow-lg before:transform before:scale-140 before:-z-10"
-                            : // Inactive state: original padding and colors with hover effects
-                              "px-4 py-1 text-neutral-700 dark:text-neutral-300 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-neutral-900 dark:hover:text-white",
-                    ]}
-                >
-                    {link.name}
-                </a>
-            ))
-        }
+        <ul class="inline-flex items-center space-x-1">
+            {
+                navLinks.map((link) => (
+                    <li>
+                        <a
+                            href={link.href}
+                            class:list={[
+                                // Base styles shared by both active and inactive states (excluding padding/margin/specific colors)
+                                "rounded-full text-sm font-medium transition-colors duration-200 whitespace-nowrap",
+                                isActive(link.href)
+                                    ? // Active state: Taller, overflowing effect with increased py, negative margins, shadow
+                                      "relative px-4 py-1 z-10 text-white before:content-[''] before:absolute before:inset-0 before:rounded-full before:bg-accent before:shadow-lg before:transform before:scale-140 before:-z-10"
+                                    : // Inactive state: original padding and colors with hover effects
+                                      "px-4 py-1 text-neutral-700 dark:text-neutral-300 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-neutral-900 dark:hover:text-white",
+                            ]}
+                            aria-current={
+                                isActive(link.href) ? "page" : undefined
+                            }
+                        >
+                            {link.name}
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
     </nav>
 </div>

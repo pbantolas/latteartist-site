@@ -113,7 +113,9 @@ import Seo from "../components/Seo.astro";
         <div
             class="w-full mx-auto px-4 flex flex-col flex-grow pt-16 md:pt-20 lg:pt-24"
         >
-            <slot />
+            <main id="main-content" class="w-full">
+                <slot />
+            </main>
             <footer
                 class="mt-auto pt-8 text-sm text-secondary text-center w-full border-t border-gray-200 dark:border-gray-700 transition-colors duration-300 ease-in-out"
             >
