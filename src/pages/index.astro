@@ -14,7 +14,7 @@ import FaqAccordion from "../components/FaqAccordion.astro"; // Added FAQ compon
 >
     <section>
         {/* New two-column layout */}
-        <div class="mb-4 md:flex md:gap-8 md:max-w-6xl md:mx-auto">
+        <div class="md:flex md:gap-8 md:max-w-6xl md:mx-auto">
             {/* Left column - text and signup form */}
             <div class="md:w-3/5 md:mt-8">
                 <h1 class="text-2xl md:text-4xl font-bold mb-6">
@@ -40,13 +40,15 @@ import FaqAccordion from "../components/FaqAccordion.astro"; // Added FAQ compon
     </section>
 
     <main>
-        <div class="w-full md:w-full mt-8">
+        <div class="w-full md:w-full mt-16 md:mt-20 lg:mt-24">
             <FeaturesCard />
         </div>
-        <div class="w-full md:w-full mt-8">
+        <div class="w-full md:w-full mt-16 md:mt-20 lg:mt-24">
             <TrustSection />
         </div>
         {/* Added FAQ component inside main */}
-        <FaqAccordion />
+        <div class="mt-16 md:mt-20 lg:mt-24">
+            <FaqAccordion />
+        </div>
     </main>
 </Layout>
