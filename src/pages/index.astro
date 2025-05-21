@@ -12,9 +12,8 @@ import FaqAccordion from "../components/FaqAccordion.astro"; // Added FAQ compon
     title="LatteArtist: Latte Art Progress Tracking App for iOS"
     description="Stop guessing with latte art! LatteArtist for iOS logs pours, tracks techniques & visualizes progress. The essential journal for home baristas. Improve faster!"
 >
-    <section>
-        {/* New two-column layout */}
-        <div class="md:flex md:gap-8 md:max-w-6xl md:mx-auto">
+    <section class="w-full max-w-5xl mx-auto px-4">
+        <div class="md:flex md:gap-8">
             {/* Left column - text and signup form */}
             <div class="md:w-3/5 md:mt-8">
                 <h1 class="text-2xl md:text-4xl font-bold mb-6">
@@ -39,11 +38,11 @@ import FaqAccordion from "../components/FaqAccordion.astro"; // Added FAQ compon
         </div>
     </section>
 
-    <main>
-        <div class="w-full md:w-full mt-16 md:mt-20 lg:mt-24">
+    <main class="w-full max-w-4xl mx-auto px-4">
+        <div class="mt-16 md:mt-20 lg:mt-24">
             <FeaturesCard />
         </div>
-        <div class="w-full md:w-full mt-16 md:mt-20 lg:mt-24">
+        <div class="mt-16 md:mt-20 lg:mt-24">
             <TrustSection />
         </div>
         {/* Added FAQ component inside main */}

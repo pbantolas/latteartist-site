@@ -103,7 +103,7 @@ import Seo from "../components/Seo.astro";
         <nav
             class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ease-in-out"
         >
-            <div class="container mx-auto max-w-5xl px-4 pt-2">
+            <div class="container mx-auto px-4 pt-2">
                 {/* Optional: Constrain nav content width */}
                 <NavigationLinks />
             </div>
@@ -111,7 +111,7 @@ import Seo from "../components/Seo.astro";
 
         {/* Add pt-16 to push content below the fixed nav */}
         <div
-            class="container w-full max-w-5xl mx-auto px-4 flex flex-col flex-grow pt-16 md:pt-20 lg:pt-24"
+            class="w-full mx-auto px-4 flex flex-col flex-grow pt-16 md:pt-20 lg:pt-24"
         >
             <slot />
             <footer
