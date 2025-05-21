@@ -16,6 +16,6 @@ Page with user ideas, seeded manually. Let's future visitors feel involved.
 
 ## Tech
 
-Astro
-Tailwind
+Astro 5.7
+Tailwind 4
 Netlify
