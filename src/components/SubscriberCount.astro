@@ -2,9 +2,44 @@
 // Astro component frontmatter (empty in this case)
 ---
 
+<style>
+    @keyframes shimmer {
+        0% {
+            background-position: -150% center;
+        }
+        100% {
+            background-position: 150% center;
+        }
+    }
+    .animate-shimmer {
+        background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.4) 20%,
+            rgba(255, 255, 255, 0.4) 80%,
+            rgba(255, 255, 255, 0) 100%
+        );
+        background-size: 150% 100%;
+        animation: shimmer 2s infinite linear;
+    }
+    .dark .animate-shimmer {
+        background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.15) 20%,
+            rgba(255, 255, 255, 0.15) 80%,
+            rgba(255, 255, 255, 0) 100%
+        );
+    }
+</style>
+
 <p id="subscriber-text-container" class="italic text-sm text-secondary mb-4">
-    Join <span id="subscriber-count" class="font-bold text-accent"></span> baristas
-    already on the waitlist
+    Join <span
+        class="inline-flex items-center bg-brand-accent/10 dark:bg-brand-accent/20 rounded px-2 py-0.5 relative overflow-hidden"
+    >
+        <span id="subscriber-count" class="font-bold text-accent"></span>
+        <span class="absolute inset-0 animate-shimmer"></span>
+    </span> baristas already on the waitlist
 </p>
 
 <script>
@@ -77,6 +112,26 @@
             if (container) container.classList.remove("hidden");
         } catch (e) {
             console.error("Error loading subscriber count:", e);
+
+            // Generate random number between 50-150 for local development
+            const randomCount = Math.floor(Math.random() * (150 - 50 + 1)) + 50;
+
+            // Store random count in cache
+            localStorage.setItem(
+                SUBSCRIBER_CACHE_KEY,
+                JSON.stringify({
+                    count: randomCount,
+                    timestamp: Date.now(),
+                })
+            );
+
+            countSpan.textContent = `... other`;
+            animateCount(randomCount, countSpan as HTMLElement);
+
+            const container = document.getElementById(
+                "subscriber-text-container"
+            );
+            if (container) container.classList.remove("hidden");
         }
     }
     loadCount();

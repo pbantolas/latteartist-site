@@ -5,6 +5,7 @@ import ImageColumn from "../components/ImageColumn.astro";
 import FeaturesCard from "../components/FeaturesCard.astro";
 import SignupForm from "../components/SignupForm.astro";
 import TrustSection from "../components/TrustSection.astro";
+import FaqAccordion from "../components/FaqAccordion.astro"; // Added FAQ component import
 ---
 
 <Layout
@@ -39,15 +40,13 @@ import TrustSection from "../components/TrustSection.astro";
     </section>
 
     <main>
-        <div class="flex flex-col md:flex-row gap-8 max-w-6xl mx-auto mt-8">
-            <div class="w-full md:w-1/2">
-                <FeaturesCard />
-            </div>
-            <div class="w-full md:w-1/2">
-                <TrustSection />
-            </div>
+        <div class="w-full md:w-full mt-8">
+            <FeaturesCard />
         </div>
+        <div class="w-full md:w-full mt-8">
+            <TrustSection />
+        </div>
+        {/* Added FAQ component inside main */}
+        <FaqAccordion />
     </main>
 </Layout>
-
-<!-- Style block removed - Migrated to Tailwind classes -->
