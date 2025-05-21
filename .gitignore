@@ -29,3 +29,4 @@ _docs
 
 # Local Netlify folder
 .netlify
+.vscode
