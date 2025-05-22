@@ -1,57 +1,70 @@
 ---
-// src/components/NavigationLinks.astro
+// NavigationLinks.astro - Ultra Tailwind version
 const { pathname } = Astro.url;
 
-// Define navigation links
 const navLinks = [
     { name: "Home", href: "/" },
     { name: "Log", href: "/log" },
-    // { name: "Roadmap", href: "/roadmap" },
-    // { name: "Ideas", href: "/ideas" },
 ];
 
-// Helper function to determine if a link is active
-// Handles the case where the homepage path is "/"
 const isActive = (linkPath: string) => {
     if (linkPath === "/") {
         return pathname === "/";
     }
-    // Check if the current pathname starts with the link path
-    // This handles nested routes if they exist (e.g., /log/update-1)
     return pathname === linkPath || pathname.startsWith(linkPath + "/");
 };
 ---
 
-{/* Outer container for potential fixed positioning and background */}
 <div class="w-full flex justify-center p-2">
-    {/* Pill container with frosted background and rounded corners */}
     <nav
-        class="relative rounded-full p-1 bg-white/70 dark:bg-black/70 backdrop-blur-md"
+        class="group/nav relative rounded-full p-0.5 bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.08)] dark:from-white/5 dark:border-white/5 dark:shadow-[0_8px_32px_rgba(0,0,0,0.3)]"
     >
-        <ul class="inline-flex items-center space-x-1">
-            {
-                navLinks.map((link) => (
-                    <li>
-                        <a
-                            href={link.href}
-                            class:list={[
-                                // Base styles shared by both active and inactive states (excluding padding/margin/specific colors)
-                                "rounded-full text-sm font-medium transition-colors duration-200 whitespace-nowrap",
-                                isActive(link.href)
-                                    ? // Active state: Taller, overflowing effect with increased py, negative margins, shadow
-                                      "relative px-4 py-1 z-10 text-white before:content-[''] before:absolute before:inset-0 before:rounded-full before:bg-accent before:shadow-lg before:transform before:scale-140 before:-z-10"
-                                    : // Inactive state: original padding and colors with hover effects
-                                      "px-4 py-1 text-neutral-700 dark:text-neutral-300 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-neutral-900 dark:hover:text-white",
-                            ]}
-                            aria-current={
-                                isActive(link.href) ? "page" : undefined
-                            }
-                        >
-                            {link.name}
-                        </a>
-                    </li>
-                ))
-            }
-        </ul>
+        {/* Inner glass layer */}
+        <div class="rounded-full bg-white/30 p-0.5 dark:bg-black/30">
+            <div
+                class="rounded-full bg-gradient-to-b from-white/50 to-white/30 p-1 dark:from-black/50 dark:to-black/30"
+            >
+                <ul class="inline-flex items-center gap-1">
+                    {
+                        navLinks.map((link) => (
+                            <li>
+                                <a
+                                    href={link.href}
+                                    class={`
+                                        relative inline-flex items-center px-5 py-2 rounded-full
+                                        text-[15px] font-medium tracking-tight
+                                        transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]
+                                        whitespace-nowrap
+                                        ${
+                                            isActive(link.href)
+                                                ? "text-white bg-accent scale-[1.02] shadow-lg shadow-accent/25"
+                                                : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5"
+                                        }
+                                    `}
+                                    aria-current={
+                                        isActive(link.href) ? "page" : undefined
+                                    }
+                                >
+                                    {/* Text with subtle animation */}
+                                    <span
+                                        class={`
+                                        relative z-10 transition-transform duration-300
+                                        ${isActive(link.href) ? "drop-shadow-[0_1px_2px_rgba(0,0,0,0.1)]" : ""}
+                                    `}
+                                    >
+                                        {link.name}
+                                    </span>
+
+                                    {/* Active state glow */}
+                                    {isActive(link.href) && (
+                                        <div class="absolute inset-0 rounded-full bg-accent/20 blur-md -z-10 animate-pulse" />
+                                    )}
+                                </a>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+        </div>
     </nav>
 </div>
