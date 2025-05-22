@@ -2,42 +2,11 @@
 // Astro component frontmatter (empty in this case)
 ---
 
-<style>
-    @keyframes shimmer {
-        0% {
-            background-position: -150% center;
-        }
-        100% {
-            background-position: 150% center;
-        }
-    }
-    .animate-shimmer {
-        background: linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.4) 20%,
-            rgba(255, 255, 255, 0.4) 80%,
-            rgba(255, 255, 255, 0) 100%
-        );
-        background-size: 150% 100%;
-        animation: shimmer 2s infinite linear;
-    }
-    .dark .animate-shimmer {
-        background: linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.15) 20%,
-            rgba(255, 255, 255, 0.15) 80%,
-            rgba(255, 255, 255, 0) 100%
-        );
-    }
-</style>
-
 <p id="subscriber-text-container" class="text-md text-secondary mb-4">
     Join <span
         class="inline-flex items-center bg-brand-accent/10 dark:bg-brand-accent/20 rounded relative overflow-hidden"
     >
-        <span id="subscriber-count" class="font-bold text-accent"></span>
+        <span id="subscriber-count" class="font-bold animate-text-shine"></span>
     </span> baristas already on the waitlist
 </p>
 

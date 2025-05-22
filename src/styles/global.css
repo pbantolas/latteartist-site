@@ -6,77 +6,116 @@
 /* Replaces components in v4 */
 
 :root {
-	/* Colors - Light Mode */
-	--brand-accent: #3330e4;
-	--brand-accent-rgb: 51, 48, 228;
-	
-	--text-primary: #2c2c2e;
-	--text-secondary: #5a5a5e;
-	--text-on-accent: #ffffff;
-	
-	--bg-gradient-start: #fafafa;
-	--bg-gradient-end: #f5f5f5;
-	--bg-card: #ffffff;
-	
-	--shadow-color: 0 0 0;
-	--shadow-opacity: 0.07;
+    /* Colors - Light Mode */
+    --brand-accent: #3330e4;
+    --brand-accent-rgb: 51, 48, 228;
 
-	/* Layout */
-	--border-radius-large: 32px;
-	--spacing-unit: 1rem;
+    --text-primary: #2c2c2e;
+    --text-secondary: #5a5a5e;
+    --text-on-accent: #ffffff;
 
-	/* System */
-	color-scheme: light;
+    --bg-gradient-start: #fafafa;
+    --bg-gradient-end: #f5f5f5;
+    --bg-card: #ffffff;
+
+    --shadow-color: 0 0 0;
+    --shadow-opacity: 0.07;
+
+    /* Layout */
+    --border-radius-large: 32px;
+    --spacing-unit: 1rem;
+
+    /* System */
+    color-scheme: light;
 }
 
 html[data-theme="dark"] {
-	/* Colors - Dark Mode */
-	--brand-accent: #7a78ff;
-	
-	--text-primary: #f2f2f7;
-	--text-secondary: #b0b0b5;
-	
-	--bg-gradient-start: #1c1c1e;
-	--bg-gradient-end: #161618;
-	--bg-card: #2A2A2A;
-	
-	--shadow-opacity: 0.2;
+    /* Colors - Dark Mode */
+    --brand-accent: #7a78ff;
 
-	/* System */
-	color-scheme: dark;
+    --text-primary: #f2f2f7;
+    --text-secondary: #b0b0b5;
+
+    --bg-gradient-start: #1c1c1e;
+    --bg-gradient-end: #161618;
+    --bg-card: #2a2a2a;
+
+    --shadow-opacity: 0.2;
+
+    /* System */
+    color-scheme: dark;
 }
 
 @keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @theme inline {
-  --font-sans: 'Outfit Variable', 'sans-serif';
+    --font-sans: "Outfit Variable", "sans-serif";
 
-  /* Theme Colors */
-  --color-primary: var(--text-primary);
-  --color-secondary: var(--text-secondary);
-  --color-accent: var(--brand-accent);
-  --color-on-accent: var(--text-on-accent);
-  
-  /* Layout Colors */
-  --color-card: var(--bg-card);
-  --color-gradient-start: var(--bg-gradient-start);
-  --color-gradient-end: var(--bg-gradient-end);
+    /* Theme Colors */
+    --color-primary: var(--text-primary);
+    --color-secondary: var(--text-secondary);
+    --color-accent: var(--brand-accent);
+    --color-on-accent: var(--text-on-accent);
 
-  /* Animation */
-  --animate-fadeInUp: fadeInUp 0.6s ease-out forwards;
+    /* Layout Colors */
+    --color-card: var(--bg-card);
+    --color-gradient-start: var(--bg-gradient-start);
+    --color-gradient-end: var(--bg-gradient-end);
+
+    /* Animation */
+    --animate-fadeInUp: fadeInUp 0.6s ease-out forwards;
+
+    /* Shine Effect Variables */
+    --shine-duration: 3s;
+    --shine-highlight-color: white;
+    --shine-bg-size: 200px;
+    --shine-angle: -60deg;
 }
- 
- @layer utilities {
-   .shadow-brand-glow {
-     box-shadow: 0 0 15px 3px rgba(var(--brand-accent-rgb), var(--shadow-opacity));
-   }
- }
+
+@keyframes shine-effect-animation {
+    0% {
+        background-position: calc(0% - var(--shine-bg-size)) center;
+    }
+    100% {
+        background-position: calc(100% + var(--shine-bg-size)) center;
+    }
+}
+
+@layer utilities {
+    .animate-text-shine {
+        background-color: var(--color-accent);
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-image: linear-gradient(
+            var(--shine-angle),
+            transparent 0%,
+            transparent 40%,
+            var(--shine-highlight-color) 50%,
+            transparent 60%,
+            transparent 100%
+        );
+        background-size: var(--shine-bg-size) 100%;
+        background-repeat: no-repeat;
+        animation-name: shine-effect-animation;
+        animation-duration: var(--shine-duration);
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+}
+
+@layer utilities {
+    .shadow-brand-glow {
+        box-shadow: 0 0 15px 3px
+            rgba(var(--brand-accent-rgb), var(--shadow-opacity));
+    }
+}
