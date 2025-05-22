@@ -7,7 +7,7 @@
         class="inline-flex items-center bg-brand-accent/10 dark:bg-brand-accent/20 rounded relative overflow-hidden"
     >
         <span id="subscriber-count" class="font-bold animate-text-shine"></span>
-    </span> baristas already on the waitlist
+    </span> home baristas already getting beta access.
 </p>
 
 <script>
@@ -27,7 +27,7 @@
                 startCount +
                     (targetCount - startCount) * (1 - Math.pow(1 - progress, 3))
             );
-            countSpanElement.textContent = `${currentValue} other`;
+            countSpanElement.textContent = `${currentValue}+`;
             countSpanElement.dataset.lastCount = currentValue.toString();
 
             if (progress < 1) {
@@ -71,7 +71,7 @@
                 })
             );
 
-            countSpan.textContent = `... other`;
+            countSpan.textContent = `...+`;
             animateCount(subscriberCount, countSpan as HTMLElement);
 
             const container = document.getElementById(
@@ -93,7 +93,7 @@
                 })
             );
 
-            countSpan.textContent = `... other`;
+            countSpan.textContent = `...+`;
             animateCount(randomCount, countSpan as HTMLElement);
 
             const container = document.getElementById(
