@@ -15,8 +15,10 @@ import Layout from "../layouts/Layout.astro";
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
             <a
-                href="/"
+                id="backToHomeLink"
+                href="#"
                 class="inline-block bg-color-card text-color-primary font-semibold py-3 px-6 rounded-lg shadow-md hover:opacity-90 transition-opacity duration-200 border border-gray-200 dark:border-gray-700"
+                onclick="event.preventDefault(); window.location.replace('/');"
             >
                 Back to Home
             </a>
