@@ -37,6 +37,7 @@ html[data-theme="dark"] {
     --text-secondary: #b0b0b5;
 
     --bg-gradient-start: #1c1c1e;
+    --bg-gradient-start-dark: #1c1c1e; /* Explicitly define for dark mode */
     --bg-gradient-end: #161618;
     --bg-card: #2a2a2a;
 

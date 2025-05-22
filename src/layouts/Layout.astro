@@ -27,6 +27,12 @@ import Seo from "../components/Seo.astro";
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Mobile Safari Background Color -->
+        <meta
+            name="apple-mobile-web-app-status-bar-style"
+            content="black-translucent"
+        />
+        <meta name="theme-color" content="#fafafa" id="theme-color-meta" />
 
         <Seo {...Astro.props} />
 
@@ -49,7 +55,7 @@ import Seo from "../components/Seo.astro";
         <!-- View Transitions -->
         <ClientRouter />
 
-        <!-- Theme Sync Script (Sets data-theme based on OS preference) -->
+        <!-- Theme Sync Script (Sets data-theme based on OS preference and updates theme-color meta tag) -->
         <script is:inline>
             const getPreferredTheme = () => {
                 if (
@@ -66,6 +72,25 @@ import Seo from "../components/Seo.astro";
 
             const applyTheme = (theme) => {
                 document.documentElement.setAttribute("data-theme", theme);
+                // Update theme-color meta tag
+                const themeColorMeta =
+                    document.getElementById("theme-color-meta");
+                if (themeColorMeta) {
+                    const computedStyle = getComputedStyle(
+                        document.documentElement
+                    );
+                    const bgColor = computedStyle
+                        .getPropertyValue(
+                            theme === "dark"
+                                ? "--bg-gradient-start-dark"
+                                : "--bg-gradient-start"
+                        )
+                        .trim();
+                    themeColorMeta.setAttribute(
+                        "content",
+                        bgColor || (theme === "dark" ? "#1c1c1e" : "#fafafa")
+                    );
+                }
             };
 
             // Initial load
