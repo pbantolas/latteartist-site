@@ -31,8 +31,19 @@ import Layout from "../layouts/Layout.astro";
 
     <script is:inline>
         function trackUmamiSignupSuccess() {
+            const hasTracked = sessionStorage.getItem(
+                "latteArtistSignupSuccessTracked"
+            );
+            if (hasTracked) {
+                return; // Already tracked in this session
+            }
+
             if (window.umami && typeof window.umami.track === "function") {
                 window.umami.track("Signup-Success-Pageview");
+                sessionStorage.setItem(
+                    "latteArtistSignupSuccessTracked",
+                    "true"
+                );
             }
         }
 
