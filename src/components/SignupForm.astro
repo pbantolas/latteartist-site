@@ -162,33 +162,6 @@ import SubscriberCount from "./SubscriberCount.astro";
                     // console.log(`Checkbox changed: ${hiddenInput.value}`); // Debug log
                 };
 
-                // --- Umami Event Tracking for Email Signup Success ---
-                // Attach Umami tracking to the EmailOctopus form submit event
-                const emailOctopusForm = currentSignupContainer.querySelector(
-                    ".emailoctopus-form"
-                ) as HTMLFormElement | null;
-                if (emailOctopusForm) {
-                    // Remove any previous listener to avoid duplicate tracking
-                    emailOctopusForm.removeEventListener(
-                        "submit",
-                        window.__umamiSignupListener as EventListener
-                    );
-                    // Define the tracking function and store it on window to allow removal if needed
-                    window.__umamiSignupListener = function () {
-                        if (
-                            window.umami &&
-                            typeof window.umami.track === "function"
-                        ) {
-                            window.umami.track("Email Signup Success");
-                        }
-                    };
-                    emailOctopusForm.addEventListener(
-                        "submit",
-                        window.__umamiSignupListener
-                    );
-                }
-                // --- End Umami Event Tracking ---
-
                 androidCheckboxAdded = true; // Set flag
                 // console.log("Android checkbox logic added successfully."); // Debug log
 

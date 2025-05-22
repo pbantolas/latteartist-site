@@ -16,6 +16,7 @@ interface Props {
     twitterTitle?: string;
     twitterDescription?: string;
     twitterImage?: string;
+    noIndex?: boolean;
 }
 
 import Seo from "../components/Seo.astro";
@@ -35,6 +36,11 @@ import Seo from "../components/Seo.astro";
         <meta name="theme-color" content="#fafafa" id="theme-color-meta" />
 
         <Seo {...Astro.props} />
+        {
+            Astro.props.noIndex && (
+                <meta name="robots" content="noindex, nofollow" />
+            )
+        }
 
         <!-- Favicon -->
         <link
@@ -147,155 +153,5 @@ import Seo from "../components/Seo.astro";
                 © {new Date().getFullYear()} LatteArtist
             </footer>
         </div>
-
-        <!-- Main Interaction Script -->
-        <script is:inline>
-            // Using is:inline because this script needs access to the DOM immediately
-            // and manipulates elements potentially added by other scripts (EmailOctopus).
-            document.addEventListener("DOMContentLoaded", () => {
-                const signupContainer =
-                    document.getElementById("signup-container");
-                // Get the computed value of the CSS variable for dark mode text color
-                const darkModeTextColor =
-                    getComputedStyle(document.documentElement)
-                        .getPropertyValue("--dark-mode-text-primary-val")
-                        .trim() || "#f2f2f7"; // Fallback
-
-                if (!signupContainer) {
-                    console.error(
-                        "Signup container (#signup-container) not found for MutationObserver."
-                    );
-                    return;
-                }
-
-                const observer = new MutationObserver((mutationsList) => {
-                    // Check if dark mode is active *when mutation occurs*
-                    // Now check the data-theme attribute instead of media query directly
-                    const isDarkMode =
-                        document.documentElement.getAttribute("data-theme") ===
-                        "dark";
-
-                    if (!isDarkMode) {
-                        return; // Only apply override in dark mode
-                    }
-
-                    for (const mutation of mutationsList) {
-                        if (mutation.type === "childList") {
-                            mutation.addedNodes.forEach((node) => {
-                                // Check if the added node itself is the success message
-                                if (
-                                    node.nodeType === 1 &&
-                                    node.classList.contains(
-                                        "emailoctopus-success-message"
-                                    )
-                                ) {
-                                    // Use setProperty with 'important' flag
-                                    node.style.setProperty(
-                                        "color",
-                                        darkModeTextColor,
-                                        "important"
-                                    );
-                                }
-                                // Also check if the success message is a descendant of the added node
-                                else if (node.nodeType === 1) {
-                                    const successMessage = node.querySelector(
-                                        ".emailoctopus-success-message"
-                                    );
-                                    if (successMessage) {
-                                        // Use setProperty with 'important' flag
-                                        successMessage.style.setProperty(
-                                            "color",
-                                            darkModeTextColor,
-                                            "important"
-                                        );
-                                    }
-                                }
-                            });
-                        }
-                    }
-                });
-
-                // Start observing the signup container for added/removed children and subtree changes
-                observer.observe(signupContainer, {
-                    childList: true,
-                    subtree: true,
-                });
-
-                // --- Android Checkbox Logic ---
-                let androidCheckboxAdded = false; // Flag to prevent multiple additions
-
-                const observerAndroid = new MutationObserver(
-                    (mutationsList) => {
-                        if (androidCheckboxAdded) {
-                            // observerAndroid.disconnect(); // Optional: stop observing once added
-                            return;
-                        }
-
-                        // Find the EmailOctopus hidden input
-                        const hiddenInput = signupContainer.querySelector(
-                            'input#field_3[type="hidden"]'
-                        );
-                        // Find the EmailOctopus submit input
-                        const submitButton = signupContainer.querySelector(
-                            '.emailoctopus-form input[type="submit"]'
-                        );
-                        // Find the static checkbox container and its elements
-                        const staticCheckboxContainer = document.getElementById(
-                            "android-checkbox-static-container"
-                        );
-                        const staticCustomCheckbox =
-                            staticCheckboxContainer?.querySelector(
-                                ".custom-checkbox"
-                            );
-                        const staticLabel =
-                            staticCheckboxContainer?.querySelector(
-                                ".android-checkbox-label"
-                            );
-
-                        // Check if the form elements AND the static checkbox elements are ready
-                        if (
-                            hiddenInput &&
-                            submitButton &&
-                            staticCheckboxContainer &&
-                            staticCustomCheckbox &&
-                            staticLabel &&
-                            !androidCheckboxAdded
-                        ) {
-                            // Make the static container visible
-                            staticCheckboxContainer.style.display = "block";
-
-                            // Set initial value for the hidden input
-                            hiddenInput.value = "no";
-
-                            // Add click listener to the static label
-                            staticLabel.addEventListener("click", () => {
-                                staticLabel.classList.toggle("checked"); // Target the label now
-                                hiddenInput.value =
-                                    staticLabel.classList.contains("checked") // Check the label's class
-                                        ? "yes"
-                                        : "no";
-                            });
-
-                            androidCheckboxAdded = true; // Set flag
-                            // observerAndroid.disconnect(); // Optional: Disconnect after adding
-                        }
-                    }
-                );
-
-                // Start observing the signup container for the EmailOctopus form elements
-                observerAndroid.observe(signupContainer, {
-                    childList: true,
-                    subtree: true,
-                });
-
-                // Optional: Disconnect observers when it's no longer needed, e.g., on page unload
-                // window.addEventListener('unload', () => {
-                // 	observer.disconnect();
-                // 	observerAndroid.disconnect();
-                // });
-            });
-        </script>
     </body>
 </html>
-
-<!-- Global styles removed - Handled by Tailwind and src/styles/global.css -->

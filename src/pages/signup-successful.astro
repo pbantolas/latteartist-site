@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Signup Successful" noIndex={true}>
+    <section
+        class="pt-16 md:pt-20 lg:pt-24 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto text-center"
+    >
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 text-color-primary">
+            Thank You for Signing Up!
+        </h1>
+        <p class="text-lg md:text-xl mb-8 text-color-secondary">
+            Keep an eye on your inbox for exciting updates and behind-the-scenes
+            content from LatteArtist.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a
+                href="/"
+                class="inline-block bg-color-accent text-color-on-accent font-semibold py-3 px-6 rounded-lg shadow-md hover:opacity-90 transition-opacity duration-200"
+            >
+                Back to Home
+            </a>
+            <a
+                href="/log"
+                class="inline-block border border-color-accent text-color-accent font-semibold py-3 px-6 rounded-lg hover:bg-color-accent hover:text-color-on-accent transition-colors duration-200"
+            >
+                Read our Log
+            </a>
+        </div>
+    </section>
+
+    <script is:inline>
+        if (window.umami && typeof window.umami.track === "function") {
+            window.umami.track("Signup-Success-Pageview");
+        }
+    </script></Layout
+>
