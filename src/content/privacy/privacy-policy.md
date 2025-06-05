@@ -8,7 +8,13 @@ This privacy policy applies to the LatteArtist Journal app (hereby referred to a
 
 **What information does the Application obtain and how is it used?**
 
-The Application does not obtain any information when you download and use it. Registration is not required to use the Application.
+The Application does **not** require user registration and does **not** collect any personally identifying information.
+
+However, it does collect anonymized usage data using a third-party service called TelemetryDeck. This helps the developer understand how the app is used and improve future versions.
+
+The information collected includes general, non-identifying data such as app version, device type, and anonymous events (e.g. when a pour is started, cancelled, or saved).
+
+There is currently no in-app setting to opt out of this telemetry. If you would prefer not to share this data, you can uninstall the app.
 
 **Does the Application collect precise real time location information of the device?**
 
@@ -16,7 +22,7 @@ This Application does not collect precise information about the location of your
 
 **Do third parties see and/or have access to information obtained by the Application?**
 
-Since the Application does not collect any information, no data is shared with third parties.
+Anonymous usage data is shared with TelemetryDeck, a privacy-focused analytics provider. TelemetryDeck does not receive any personal information and cannot identify you. No other third parties receive data from the Application.
 
 **What are my opt-out rights?**
 
