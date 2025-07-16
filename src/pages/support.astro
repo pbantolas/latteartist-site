@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import FaqAccordion from "../components/FaqAccordion.astro";
 ---
 
 <Layout
@@ -43,9 +44,15 @@ import Layout from "../layouts/Layout.astro";
                 <li>Steps to reproduce the problem (if applicable)</li>
             </ul>
 
-            <h2>Common Questions</h2>
+            <div class="mb-8">
+                <FaqAccordion 
+                    title="Common Questions" 
+                    titleClass="text-2xl font-medium text-primary mb-8"
+                    isReleased={true}
+                />
+            </div>
             <p>
-                For general questions about app functionality, feature requests, or feedback, please don't hesitate to reach out. We're always looking to improve the app based on user feedback.
+                If your question isn't covered above, please don't hesitate to reach out at <a href="mailto:petros@coffeeatpetros.com">petros@coffeeatpetros.com</a>. We're always looking to improve the app based on user feedback.
             </p>
 
             <h2>Privacy & Data</h2>

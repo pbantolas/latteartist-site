@@ -131,14 +131,11 @@ import Seo from "../components/Seo.astro";
         class="font-sans text-primary bg-gradient-to-b from-gradient-start to-gradient-end flex flex-col items-center min-h-screen p-2 leading-relaxed transition-colors duration-300 ease-in-out"
     >
         <!-- Fixed Navigation Bar -->
-        <div
+        <header
             class="fixed top-0 left-0 w-screen z-50 transition-colors duration-300 ease-in-out"
         >
-            <!-- <div class="container mx-auto px-4 pt-2"> -->
-            {/* Optional: Constrain nav content width */}
             <NavigationLinks />
-            <!-- </div> -->
-        </div>
+        </header>
 
         {/* Add pt-16 to push content below the fixed nav */}
         <div class="w-full mx-auto px-4 flex flex-col flex-grow pt-20 lg:pt-24">

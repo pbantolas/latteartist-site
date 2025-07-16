@@ -1,9 +1,20 @@
 ---
 // src/components/FaqAccordion.astro
+interface Props {
+    title?: string;
+    titleClass?: string;
+    isReleased?: boolean;
+}
+
+const { 
+    title = "Frequently Asked Questions", 
+    titleClass = "text-3xl font-medium text-center text-primary mb-8",
+    isReleased = false
+} = Astro.props;
 ---
 
-<h2 class="text-3xl font-medium text-center text-primary mb-8">
-    Frequently Asked Questions
+<h2 class={titleClass}>
+    {title}
 </h2>
 <div class="space-y-4">
     <details
@@ -119,42 +130,44 @@
         </div>
     </details>
 
-    <details
-        class="group bg-card rounded-2xl border border-gray-100 dark:border-gray-800 shadow-lg shadow-black/5 dark:shadow-none transition duration-300 ease-in-out hover:border-brand-accent/50 hover:shadow-brand-glow"
-    >
-        <summary
-            class="flex justify-between items-center cursor-pointer list-none p-6"
+    {!isReleased && (
+        <details
+            class="group bg-card rounded-2xl border border-gray-100 dark:border-gray-800 shadow-lg shadow-black/5 dark:shadow-none transition duration-300 ease-in-out hover:border-brand-accent/50 hover:shadow-brand-glow"
         >
-            <span class="font-medium text-primary"
-                >When will the LatteArtist app be available for iOS?</span
+            <summary
+                class="flex justify-between items-center cursor-pointer list-none p-6"
             >
-            <span
-                class="text-secondary group-open:rotate-180 transition-transform duration-200"
-            >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
+                <span class="font-medium text-primary"
+                    >When will the LatteArtist app be available for iOS?</span
                 >
-                    <path
-                        fill-rule="evenodd"
-                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                        clip-rule="evenodd"></path>
-                </svg>
-            </span>
-        </summary>
-        <div class="px-6 pb-6">
-            <p class="mt-3 text-secondary">
-                LatteArtist is currently in private beta for iOS. By signing up
-                for early access, you can join my TestFlight beta program. This
-                is a great opportunity for you to be among the first to use the
-                app, provide <strong>feedback</strong>, and help me shape its
-                development based on real <strong>home barista</strong> needs!
-            </p>
-        </div>
-    </details>
+                <span
+                    class="text-secondary group-open:rotate-180 transition-transform duration-200"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </span>
+            </summary>
+            <div class="px-6 pb-6">
+                <p class="mt-3 text-secondary">
+                    LatteArtist is currently in private beta for iOS. By signing up
+                    for early access, you can join my TestFlight beta program. This
+                    is a great opportunity for you to be among the first to use the
+                    app, provide <strong>feedback</strong>, and help me shape its
+                    development based on real <strong>home barista</strong> needs!
+                </p>
+            </div>
+        </details>
+    )}
 
     <details
         class="group bg-card rounded-2xl border border-gray-100 dark:border-gray-800 shadow-lg shadow-black/5 dark:shadow-none transition duration-300 ease-in-out hover:border-brand-accent/50 hover:shadow-brand-glow"
@@ -194,44 +207,46 @@
         </div>
     </details>
 
-    <details
-        class="group bg-card rounded-2xl border border-gray-100 dark:border-gray-800 shadow-lg shadow-black/5 dark:shadow-none transition duration-300 ease-in-out hover:border-brand-accent/50 hover:shadow-brand-glow"
-    >
-        <summary
-            class="flex justify-between items-center cursor-pointer list-none p-6"
+    {!isReleased && (
+        <details
+            class="group bg-card rounded-2xl border border-gray-100 dark:border-gray-800 shadow-lg shadow-black/5 dark:shadow-none transition duration-300 ease-in-out hover:border-brand-accent/50 hover:shadow-brand-glow"
         >
-            <span class="font-medium text-primary"
-                >How can I provide feedback or suggest ideas?</span
+            <summary
+                class="flex justify-between items-center cursor-pointer list-none p-6"
             >
-            <span
-                class="text-secondary group-open:rotate-180 transition-transform duration-200"
-            >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
+                <span class="font-medium text-primary"
+                    >How can I provide feedback or suggest ideas?</span
                 >
-                    <path
-                        fill-rule="evenodd"
-                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                        clip-rule="evenodd"></path>
-                </svg>
-            </span>
-        </summary>
-        <div class="px-6 pb-6">
-            <p class="mt-3 text-secondary">
-                Your <strong>feedback</strong> is invaluable in helping me make LatteArtist
-                the best tool for our
-                <strong>latte art community</strong>! When you sign up, you can
-                reply to the welcome email with your thoughts. Once you're in
-                the beta, you can also provide feedback directly through the
-                TestFlight app. I'm excited to hear your ideas for new features
-                or improvements to the <strong>UI/UX</strong>.
-            </p>
-        </div>
-    </details>
+                <span
+                    class="text-secondary group-open:rotate-180 transition-transform duration-200"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </span>
+            </summary>
+            <div class="px-6 pb-6">
+                <p class="mt-3 text-secondary">
+                    Your <strong>feedback</strong> is invaluable in helping me make LatteArtist
+                    the best tool for our
+                    <strong>latte art community</strong>! When you sign up, you can
+                    reply to the welcome email with your thoughts. Once you're in
+                    the beta, you can also provide feedback directly through the
+                    TestFlight app. I'm excited to hear your ideas for new features
+                    or improvements to the <strong>UI/UX</strong>.
+                </p>
+            </div>
+        </details>
+    )}
 
     <details
         class="group bg-card rounded-2xl border border-gray-100 dark:border-gray-800 shadow-lg shadow-black/5 dark:shadow-none transition duration-300 ease-in-out hover:border-brand-accent/50 hover:shadow-brand-glow"
@@ -267,9 +282,8 @@
                 <strong>pours</strong>. By consistently logging details like
                 your <strong>milk type</strong> (including
                 <strong>oat milk</strong> or other alternatives),
-                <strong>bean freshness</strong>, <strong>grind size</strong>,
-                <strong>frothing</strong> technique, and even
-                <strong>cup shape</strong>, you can start to identify patterns.
+                and even
+                <strong>cup shape</strong> and <strong>volume</strong>, you can start to identify patterns.
                 Reviewing your <strong>timeline</strong> and
                 <strong>ratings</strong> alongside these variables can provide insights
                 into what leads to successful
