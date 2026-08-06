@@ -1,43 +1,12 @@
----
-// src/components/TrustSection.astro
----
-
-<div class="max-w-2xl mx-auto">
-    <h2 class="mb-8 text-center text-3xl font-medium">
-        What Other Users Are Saying
-    </h2>
-    <section class="text-center w-full m-0 p-8 bg-card rounded-3xl">
-        <p class="text-secondary text-sm mb-2">
-            I'm building this with feedback from home baristas on
-            <a
-                href="https://www.reddit.com/r/latteart/comments/1jqfwqd/comment/ml7yh05/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
-                target="_blank"
-                class="bg-accent text-on-accent px-1.5 py-0.5 mx-0.5 rounded-full no-underline font-medium inline-block leading-tight transition-opacity duration-200 hover:opacity-80"
-                rel="noopener noreferrer">Reddit</a
-            >
-            – here's what they're saying:
-        </p>
-        <figure>
-            <blockquote
-                class="mt-4 mb-3 mx-auto pl-6 italic text-lg text-primary border-l-4 border-indigo-300 dark:border-indigo-500 text-left inline-block max-w-[90%]"
-            >
-                "This is a BRILLIANT idea and I WILL be downloading this as soon
-                as it's released"
-            </blockquote>
-            <figcaption class="text-sm text-secondary mt-2">
-                – Reddit user
-            </figcaption>
-        </figure>
-        <figure>
-            <blockquote
-                class="mt-6 mb-3 mx-auto pl-6 italic text-lg text-primary border-l-4 border-indigo-300 dark:border-indigo-500 text-left inline-block max-w-[90%]"
-            >
-                "I have a photo album in chronological order and I’m relying on
-                muscle memory and handwritten notes to up my game."
-            </blockquote>
-            <figcaption class="text-sm text-secondary mt-2">
-                – Another Reddit user
-            </figcaption>
-        </figure>
-    </section>
-</div>
+<section class="grid gap-8 border-y border-black/5 py-10 md:grid-cols-[0.8fr_1.2fr] dark:border-white/10" aria-labelledby="why-heading">
+    <div>
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Why LatteArtist exists</p>
+        <h2 id="why-heading" class="mt-3 text-3xl font-semibold text-primary">Practice was getting lost in the camera roll.</h2>
+    </div>
+    <figure>
+        <blockquote class="text-2xl leading-relaxed text-primary">“I have a photo album in chronological order and I’m relying on muscle memory and handwritten notes to up my game.”</blockquote>
+        <figcaption class="mt-4 text-sm text-secondary">
+            A home barista on <a href="https://www.reddit.com/r/latteart/comments/1jqfwqd/comment/ml7yh05/" target="_blank" rel="noopener noreferrer" class="font-semibold text-accent">r/latteart</a>
+        </figcaption>
+    </figure>
+</section>
