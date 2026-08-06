@@ -2,4 +2,4 @@
 title: Roadmap
 ---
 
-# Roadmap coming soon!
+Roadmap details are coming soon.

@@ -30,9 +30,26 @@ const privacyCollection = defineCollection({
     }),
 });
 
+const guidesCollection = defineCollection({
+    type: "content",
+    schema: z.object({
+        title: z.string(),
+        description: z.string(),
+        eyebrow: z.string(),
+        pubDate: z.date(),
+        updatedDate: z.date().optional(),
+        readTime: z.string(),
+        order: z.number(),
+        featured: z.boolean().default(false),
+        keywords: z.array(z.string()),
+        related: z.array(z.string()).default([]),
+    }),
+});
+
 export const collections = {
     roadmap: roadmapCollection,
     ideas: ideasCollection,
     log: logCollection,
     privacy: privacyCollection,
+    guides: guidesCollection,
 };

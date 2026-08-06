@@ -1,0 +1,70 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import GuideCard from "../../components/GuideCard.astro";
+import AppStoreCta from "../../components/AppStoreCta.astro";
+
+const guides = (await getCollection("guides")).sort((a, b) => a.data.order - b.data.order);
+const slugFor = (id: string) => id.replace(/\.md$/, "");
+const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Latte art guides",
+    description: "Practical latte art guides for milk texture, beginner pours, troubleshooting, and deliberate practice.",
+    url: new URL("/learn/", Astro.site).href,
+    hasPart: guides.map((guide) => ({
+        "@type": "Article",
+        name: guide.data.title,
+        url: new URL(`/learn/${slugFor(guide.id)}/`, Astro.site).href,
+    })),
+};
+---
+
+<Layout
+    title="Latte Art Guides: Milk, Hearts, Troubleshooting & Practice"
+    description="Learn latte art from the foundations: texture silky microfoam, pour your first heart, diagnose common problems, and build a repeatable practice routine."
+    canonical="/learn/"
+    structuredData={collectionSchema}
+>
+    <section class="mx-auto w-full max-w-6xl">
+        <div class="learn-hero">
+            <div>
+                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Latte art field notes</p>
+                <h1 class="mt-4 max-w-4xl text-4xl font-semibold leading-[1.03] tracking-[-0.04em] text-primary sm:text-6xl lg:text-7xl">
+                    Learn one variable at a time.
+                </h1>
+                <p class="mt-6 max-w-2xl text-lg leading-relaxed text-secondary sm:text-xl">
+                    Clear guides for the questions home baristas ask most: how the milk should move, why a pour becomes a blob, and what to practise next.
+                </p>
+            </div>
+            <div class="practice-note" aria-label="Suggested learning path">
+                <p class="text-xs font-semibold uppercase tracking-[0.18em] text-accent">A simple path</p>
+                <ol class="mt-5 space-y-4">
+                    <li><span>01</span> Texture the milk</li>
+                    <li><span>02</span> Pour a heart</li>
+                    <li><span>03</span> Diagnose one symptom</li>
+                    <li><span>04</span> Repeat and record</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {guides.map((guide) => (
+                <GuideCard
+                    href={`/learn/${slugFor(guide.id)}`}
+                    eyebrow={guide.data.eyebrow}
+                    title={guide.data.title}
+                    description={guide.data.description}
+                    readTime={guide.data.readTime}
+                />
+            ))}
+        </div>
+
+        <div class="mt-16">
+            <AppStoreCta
+                heading="Keep a record of the practice"
+                body="LatteArtist is a practice journal—not a coach or an automatic grader. Use it to save each pour, record context, and see how your attempts change over time."
+            />
+        </div>
+    </section>
+</Layout>

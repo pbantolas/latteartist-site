@@ -1,0 +1,23 @@
+---
+interface Props {
+    href: string;
+    eyebrow: string;
+    title: string;
+    description: string;
+    readTime: string;
+}
+
+const { href, eyebrow, title, description, readTime } = Astro.props;
+---
+
+<article class="group relative flex h-full flex-col rounded-3xl border border-black/5 bg-card p-6 shadow-[0_16px_50px_rgba(22,22,26,0.06)] transition duration-300 hover:-translate-y-1 hover:border-accent/25 dark:border-white/10 dark:shadow-none">
+    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-accent">{eyebrow}</p>
+    <h2 class="mt-3 text-2xl font-semibold leading-tight text-primary">
+        <a href={href} class="outline-none before:absolute before:inset-0 focus-visible:underline">{title}</a>
+    </h2>
+    <p class="mt-3 flex-1 text-secondary">{description}</p>
+    <div class="mt-6 flex items-center justify-between border-t border-black/5 pt-4 text-sm dark:border-white/10">
+        <span class="text-secondary">{readTime}</span>
+        <span class="font-semibold text-accent" aria-hidden="true">Read guide →</span>
+    </div>
+</article>

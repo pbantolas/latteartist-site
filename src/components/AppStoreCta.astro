@@ -1,0 +1,39 @@
+---
+interface Props {
+    heading?: string;
+    body?: string;
+    compact?: boolean;
+}
+
+const {
+    heading = "Make every practice pour useful",
+    body = "Photograph the pour, record the pattern and setup, then compare your first attempt with your latest in LatteArtist.",
+    compact = false,
+} = Astro.props;
+
+const appStoreUrl = "https://apps.apple.com/us/app/latte-art-tracker-latteartist/id6744374882";
+---
+
+<aside class:list={["app-cta", compact && "app-cta--compact"]} aria-label="LatteArtist app">
+    <img
+        src="/assets/app-store/app-icon.png"
+        alt="LatteArtist app icon"
+        width="96"
+        height="96"
+        loading="lazy"
+        class="h-16 w-16 rounded-2xl shadow-lg sm:h-20 sm:w-20"
+    />
+    <div class="min-w-0 flex-1">
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-accent">LatteArtist for iPhone</p>
+        <h2 class="mt-1 text-xl font-semibold text-primary sm:text-2xl">{heading}</h2>
+        <p class="mt-2 max-w-2xl text-secondary">{body}</p>
+    </div>
+    <a
+        href={appStoreUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex shrink-0 items-center justify-center rounded-full bg-accent px-5 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+    >
+        View on the App Store
+    </a>
+</aside>

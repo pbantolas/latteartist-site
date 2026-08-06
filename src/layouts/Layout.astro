@@ -17,6 +17,10 @@ interface Props {
     twitterDescription?: string;
     twitterImage?: string;
     noIndex?: boolean;
+    type?: "website" | "article";
+    imageAlt?: string;
+    canonical?: string;
+    structuredData?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 import Seo from "../components/Seo.astro";
@@ -34,7 +38,7 @@ import Seo from "../components/Seo.astro";
             content="black-translucent"
         />
         <meta name="theme-color" content="#fafafa" id="theme-color-meta" />
-        <meta name="apple-itunes-app" content="app-id=6744374882">
+        <meta name="apple-itunes-app" content="app-id=6744374882" />
 
         <Seo {...Astro.props} />
         {
@@ -131,6 +135,12 @@ import Seo from "../components/Seo.astro";
     <body
         class="font-sans text-primary bg-gradient-to-b from-gradient-start to-gradient-end flex flex-col items-center min-h-screen p-2 leading-relaxed transition-colors duration-300 ease-in-out"
     >
+        <a
+            href="#main-content"
+            class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:rounded-full focus:bg-accent focus:px-4 focus:py-2 focus:text-white"
+        >
+            Skip to content
+        </a>
         <!-- Fixed Navigation Bar -->
         <header
             class="fixed top-0 left-0 w-screen z-50 transition-colors duration-300 ease-in-out"
@@ -144,9 +154,31 @@ import Seo from "../components/Seo.astro";
                 <slot />
             </main>
             <footer
-                class="mt-16 md:mt-20 lg:mt-24 pt-8 text-sm text-secondary text-center w-full border-t border-gray-200 dark:border-gray-700 transition-colors duration-300 ease-in-out"
+                class="mt-16 md:mt-20 lg:mt-24 py-10 text-sm text-secondary w-full border-t border-gray-200 dark:border-gray-700 transition-colors duration-300 ease-in-out"
             >
-                © {new Date().getFullYear()} LatteArtist
+                <div class="mx-auto grid w-full max-w-6xl gap-8 sm:grid-cols-3">
+                    <div>
+                        <a href="/" class="font-semibold text-primary">LatteArtist</a>
+                        <p class="mt-2 max-w-xs">A simple latte art practice journal for iPhone.</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-primary">Learn</p>
+                        <div class="mt-2 flex flex-col gap-2">
+                            <a href="/learn/latte-art-for-beginners">Latte art for beginners</a>
+                            <a href="/learn/how-to-steam-milk-for-latte-art">Steam milk for latte art</a>
+                            <a href="/learn/latte-art-troubleshooting">Troubleshoot a pour</a>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-primary">LatteArtist</p>
+                        <div class="mt-2 flex flex-col gap-2">
+                            <a href="/latte-art-tracker">App features</a>
+                            <a href="/support">Support</a>
+                            <a href="/privacy-policy">Privacy</a>
+                        </div>
+                    </div>
+                </div>
+                <p class="mx-auto mt-10 max-w-6xl">© {new Date().getFullYear()} LatteArtist</p>
             </footer>
         </div>
     </body>

@@ -4,6 +4,8 @@ const { pathname } = Astro.url;
 
 const navLinks = [
     { name: "Home", href: "/" },
+    { name: "Learn", href: "/learn" },
+    { name: "App", href: "/latte-art-tracker" },
     { name: "Log", href: "/log" },
     { name: "Support", href: "/support" },
 ];
@@ -32,8 +34,8 @@ const isActive = (linkPath: string) => {
                                 <a
                                     href={link.href}
                                     class={`
-                                        relative inline-flex items-center px-5 py-2 rounded-full
-                                        text-[15px] font-medium tracking-tight
+                                        relative inline-flex items-center px-3 sm:px-4 py-2 rounded-full
+                                        text-[13px] sm:text-[15px] font-medium tracking-tight
                                         transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]
                                         whitespace-nowrap
                                         ${

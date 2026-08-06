@@ -9,45 +9,68 @@ interface Props {
     twitterTitle?: string;
     twitterDescription?: string;
     twitterImage?: string;
+    type?: "website" | "article";
+    imageAlt?: string;
+    canonical?: string;
+    structuredData?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const {
-    title = "LatteArtist: Improve Latte Art – iOS Tracker | Stop Guessing",
-    description = "Inconsistent latte art? LatteArtist for iOS logs pours, tracks variables & shows real progress. Master your technique and turn practice into perfection!",
-    ogTitle = "LatteArtist (iOS): Understand & Perfect Your Latte Art Pours",
-    ogDescription = "Ditch the latte art guesswork! LatteArtist (iOS) helps you log, analyze, and visually track your pours to see real improvement. Join the waitlist!",
+    title = "LatteArtist: A Latte Art Practice Journal for iPhone",
+    description = "Photograph each pour, log the details, and compare your latte art practice over time with LatteArtist for iPhone.",
+    ogTitle = title,
+    ogDescription = description,
     ogImage = "https://latteartist.coffeeatpetros.com/assets/card-image.jpg",
-    ogUrl = "https://latteartist.coffeeatpetros.com/",
-    twitterTitle = "LatteArtist (iOS): Understand & Perfect Your Latte Art Pours",
-    twitterDescription = "Ditch the latte art guesswork! LatteArtist (iOS) helps you log, analyze, and visually track your pours to see real improvement. Join the waitlist!",
+    ogUrl,
+    twitterTitle = ogTitle,
+    twitterDescription = ogDescription,
     twitterImage = "https://latteartist.coffeeatpetros.com/assets/card-image.webp",
+    type = "website",
+    imageAlt = "LatteArtist latte art practice journal",
+    canonical,
+    structuredData,
 } = Astro.props;
 
-const canonicalURL = new URL(ogUrl);
+const siteURL = Astro.site ?? new URL("https://latteartist.coffeeatpetros.com");
+const canonicalURL = new URL(canonical ?? ogUrl ?? Astro.url.pathname, siteURL);
+canonicalURL.search = "";
+canonicalURL.hash = "";
+const schemas = structuredData
+    ? Array.isArray(structuredData)
+        ? structuredData
+        : [structuredData]
+    : [];
 ---
 
 <!-- SEO Meta Tags -->
 <meta name="description" content={description} />
-<meta
-    name="keywords"
-    content="latte art, improve latte art, latte art tracker, latte art app, iOS latte art, home barista, espresso, coffee, milk frothing, latte art practice, track latte art, latte art tips, coffee brewing, espresso variables, latte art progress, consistent latte art"
-/>
 <title>{title}</title>
 
 <!-- Open Graph Meta Tags -->
 <meta property="og:title" content={ogTitle} />
 <meta property="og:description" content={ogDescription} />
 <meta property="og:image" content={ogImage} />
+<meta property="og:image:alt" content={imageAlt} />
 <meta property="og:url" content={canonicalURL} />
-<meta property="og:type" content="website" />
+<meta property="og:type" content={type} />
 <meta property="og:site_name" content="LatteArtist" />
+<meta property="og:locale" content="en_US" />
 
 <!-- Twitter Card Meta Tags -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={twitterTitle} />
 <meta name="twitter:description" content={twitterDescription} />
 <meta name="twitter:image" content={twitterImage} />
-<!-- Optional: <meta name="twitter:site" content="@YourTwitterHandle"> -->
+<meta name="twitter:image:alt" content={imageAlt} />
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
+
+{
+    schemas.map((schema) => (
+        <script
+            type="application/ld+json"
+            set:html={JSON.stringify(schema).replace(/</g, "\\u003c")}
+        />
+    ))
+}
