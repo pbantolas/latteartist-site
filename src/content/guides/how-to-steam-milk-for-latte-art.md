@@ -6,6 +6,7 @@ pubDate: 2026-08-06
 readTime: "7 min read"
 order: 2
 featured: true
+footerLabel: "Steam milk for latte art"
 keywords:
   - how to steam milk for latte art
   - latte art microfoam
@@ -19,13 +20,13 @@ related:
 
 If the art keeps turning into a blob, start with the pitcher. Good pouring technique cannot rescue milk that is dry, bubbly, or separated.
 
-The target is **microfoam** that looks glossy and flows like wet paint.
+The target is **microfoam** that looks glossy and flows like wet paint. If you are not sure what that means yet, [what microfoam actually is](/learn/what-is-microfoam) defines it by sight.
 
 ## Set up
 
 Start with cold milk and a clean pitcher. Purge the wand, place the tip near the surface, and keep a damp cloth ready so you can wipe the wand as soon as you finish.
 
-Steam power varies, so watch the milk rather than copying someone else’s timing.
+Steam power varies, so watch the milk rather than copying someone else’s timing. On entry-level machines the timing stretches out — see [steaming on weaker machines](/learn/steaming-milk-weak-machine).
 
 ## Stretch: introduce a little air
 
@@ -54,7 +55,7 @@ After steaming:
 - Swirl until the milk looks glossy and incorporated.
 - Pour straight away before the foam separates.
 
-The milk should roll around the pitcher. If it moves as a stiff lump, it is too thick for clean lines.
+The milk should roll around the pitcher. If it moves as a stiff lump, it is too thick for clean lines — the [too thick or too thin guide](/learn/milk-too-thick-too-thin) shows how to read and fix it.
 
 ## Read the texture
 
@@ -70,7 +71,7 @@ The finished cup can point you in a direction, but it cannot prove the cause. Ch
 
 ## What about oat milk?
 
-Alt milks vary a lot. Keep the product and amount consistent while you learn how it stretches on your machine. Some need less air; some separate faster.
+Alt milks vary a lot. Keep the product and amount consistent while you learn how it stretches on your machine. Some need less air; some separate faster. The [oat milk guide](/learn/oat-milk-latte-art) covers the specifics.
 
 Judge the result by the pitcher: glossy, flowing milk is more useful than chasing a universal brand or temperature rule.
 

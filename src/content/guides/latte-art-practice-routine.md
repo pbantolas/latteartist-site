@@ -6,6 +6,7 @@ pubDate: 2026-08-06
 readTime: "5 min read"
 order: 5
 featured: true
+footerLabel: "Practice routine"
 keywords:
   - latte art practice routine
   - how to practice latte art

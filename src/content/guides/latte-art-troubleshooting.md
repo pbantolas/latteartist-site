@@ -6,6 +6,7 @@ pubDate: 2026-08-06
 readTime: "7 min read"
 order: 4
 featured: true
+footerLabel: "Troubleshoot a pour"
 keywords:
   - latte art troubleshooting
   - why is my latte art a blob
@@ -45,7 +46,7 @@ Keep the milk method the same for one pour and change only the drop height. If w
 - Swirl before pouring if the pitcher has been sitting.
 - Use a steadier low pour instead of suddenly flooding the cup.
 
-If thin milk comes out first and a lump follows, you have a dry cap sitting on liquid milk.
+If thin milk comes out first and a lump follows, you have a dry cap sitting on liquid milk. The [too thick or too thin guide](/learn/milk-too-thick-too-thin) helps you tell which side you are on.
 
 ## Big bubbles break the surface
 
@@ -65,7 +66,7 @@ See the full [get close, push, cut sequence](/learn/latte-art-heart).
 
 **What happened:** the heart leans, stretches, or runs to one side.
 
-**Try next:** line the pitcher spout up with the centre of the cup before you pour. Watch that line as you level the cup.
+**Try next:** line the pitcher spout up with the centre of the cup before you pour. Watch that line as you level the cup. If it keeps happening, work through the [symmetry fixes](/learn/latte-art-symmetry).
 
 Cup shape matters too. A pour that feels natural in a wide ceramic cup can spread differently in a narrow or double-walled glass.
 
@@ -73,7 +74,7 @@ Cup shape matters too. A pour that feels natural in a wide ceramic cup can sprea
 
 **What happened:** tulip layers merge, rosetta lines disappear, or the whole design looks blurry.
 
-**Try next:** simplify the pour. Make a white circle or heart. If its edge is clean, the milk can support a pattern and you can work on flow or movement. If the circle also washes out, check texture and pitcher height first.
+**Try next:** simplify the pour. Make a white circle or heart. If its edge is clean, the milk can support a pattern and you can work on flow or movement — [tulip layers](/learn/latte-art-tulip) and [rosetta lines](/learn/latte-art-rosetta) each have their own failure modes. If the circle also washes out, check texture and pitcher height first.
 
 ## The design overflows
 

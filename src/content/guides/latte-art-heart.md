@@ -6,6 +6,7 @@ pubDate: 2026-08-06
 readTime: "5 min read"
 order: 3
 featured: true
+footerLabel: "Pour your first heart"
 keywords:
   - how to pour latte art heart
   - latte art heart for beginners

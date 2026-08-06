@@ -41,6 +41,7 @@ const guidesCollection = defineCollection({
         readTime: z.string(),
         order: z.number(),
         featured: z.boolean().default(false),
+        footerLabel: z.string().optional(),
         keywords: z.array(z.string()),
         related: z.array(z.string()).default([]),
     }),
