@@ -4,6 +4,7 @@ import { getCollection } from "astro:content";
 import Layout from "./Layout.astro";
 import AppStoreCta from "../components/AppStoreCta.astro";
 import GuideCard from "../components/GuideCard.astro";
+import { guideSlug } from "../lib/guides";
 
 interface Props {
     guide: CollectionEntry<"guides">;
@@ -12,14 +13,13 @@ interface Props {
 
 const { guide, headings } = Astro.props;
 const { data } = guide;
-const slugFor = (entry: CollectionEntry<"guides">) => entry.id.replace(/\.md$/, "");
-const guideSlug = slugFor(guide);
-const canonicalPath = `/learn/${guideSlug}/`;
+const currentSlug = guideSlug(guide.id);
+const canonicalPath = `/learn/${currentSlug}/`;
 const guideURL = new URL(canonicalPath, Astro.site);
 const toc = headings.filter((heading) => heading.depth === 2);
 const allGuides = await getCollection("guides");
 const relatedGuides = data.related
-    .map((id) => allGuides.find((entry) => slugFor(entry) === id))
+    .map((id) => allGuides.find((entry) => guideSlug(entry.id) === id))
     .filter((entry): entry is CollectionEntry<"guides"> => Boolean(entry));
 
 const articleSchema = {
@@ -123,7 +123,7 @@ const breadcrumbSchema = {
                 <div class="grid gap-5 md:grid-cols-2">
                     {relatedGuides.map((entry) => (
                         <GuideCard
-                            href={`/learn/${slugFor(entry)}`}
+                            href={`/learn/${guideSlug(entry.id)}`}
                             eyebrow={entry.data.eyebrow}
                             title={entry.data.title}
                             description={entry.data.description}

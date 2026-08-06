@@ -2,19 +2,17 @@
 interface Props {
     heading?: string;
     body?: string;
-    compact?: boolean;
 }
 
 const {
-    heading = "Make every practice pour useful",
-    body = "Photograph the pour, record the pattern and setup, then compare your first attempt with your latest in LatteArtist.",
-    compact = false,
+    heading = "Keep your pours together",
+    body = "Save the photo and setup, then compare attempts by pattern.",
 } = Astro.props;
 
 const appStoreUrl = "https://apps.apple.com/us/app/latte-art-tracker-latteartist/id6744374882";
 ---
 
-<aside class:list={["app-cta", compact && "app-cta--compact"]} aria-label="LatteArtist app">
+<aside class="app-cta" aria-label="LatteArtist app">
     <img
         src="/assets/app-store/app-icon.png"
         alt="LatteArtist app icon"

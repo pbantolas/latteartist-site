@@ -1,9 +1,8 @@
 ---
-// src/pages/index.astro
-import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
 import GuideCard from "../components/GuideCard.astro";
-import AppStoreCta from "../components/AppStoreCta.astro";
+import { guideSlug } from "../lib/guides";
 
 const featuredGuides = (await getCollection("guides"))
     .filter((guide) => guide.data.featured)
@@ -11,7 +10,6 @@ const featuredGuides = (await getCollection("guides"))
     .slice(0, 3);
 
 const appStoreUrl = "https://apps.apple.com/us/app/latte-art-tracker-latteartist/id6744374882";
-const slugFor = (id: string) => id.replace(/\.md$/, "");
 const homeSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -23,53 +21,30 @@ const homeSchema = {
 
 <Layout
     title="LatteArtist: Track Latte Art Practice, Pour by Pour"
-    description="LatteArtist is a simple latte art practice journal for iPhone. Capture pours, record context, compare progress, and learn with practical home-barista guides."
+    description="Save each latte art pour, note your setup, and compare progress by pattern with LatteArtist for iPhone."
     canonical="/"
     structuredData={homeSchema}
 >
     <section class="mx-auto w-full max-w-6xl">
-        <div class="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
-            <div class="animate-fadeInUp opacity-0">
+        <div class="max-w-5xl py-8 sm:py-14">
+            <div class="flex items-center gap-4 animate-fadeInUp opacity-0">
+                <img src="/assets/app-store/app-icon.png" alt="LatteArtist app icon" width="64" height="64" class="h-14 w-14 rounded-2xl shadow-lg" />
                 <p class="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Latte art practice journal for iPhone</p>
-                <h1 class="mt-5 max-w-4xl text-5xl font-semibold leading-[0.98] tracking-[-0.05em] text-primary sm:text-6xl lg:text-8xl">
-                    Progress is easier to see when every pour has a place.
-                </h1>
-                <p class="mt-7 max-w-2xl text-lg leading-relaxed text-secondary sm:text-xl">
-                    Capture each attempt, record the pattern and setup, and compare how your latte art changes over time. No automatic scoring—just a clearer practice history.
-                </p>
-                <div class="mt-8 flex flex-wrap gap-4">
-                    <a href={appStoreUrl} target="_blank" rel="noopener noreferrer" class="rounded-full bg-accent px-6 py-3.5 font-semibold text-white transition hover:-translate-y-0.5 hover:shadow-xl">View on the App Store</a>
-                    <a href="/learn" class="rounded-full border border-black/10 bg-card px-6 py-3.5 font-semibold text-primary transition hover:border-accent/30 dark:border-white/15">Explore latte art guides</a>
-                </div>
             </div>
-
-            <div class="home-phone-stage" aria-label="LatteArtist progress and tracking screens">
-                <img src="/assets/app-store/improve-latte-art.webp" alt="LatteArtist comparing first and latest tulip pours" width="642" height="1389" class="home-phone home-phone--one" />
-                <img src="/assets/app-store/log-pour.webp" alt="LatteArtist screen for logging a new pour" width="642" height="1389" class="home-phone home-phone--two" />
+            <h1 class="mt-8 max-w-4xl text-5xl font-semibold leading-[0.98] tracking-[-0.05em] text-primary sm:text-7xl lg:text-8xl">Keep track of every pour.</h1>
+            <p class="mt-7 max-w-2xl text-lg leading-relaxed text-secondary sm:text-xl">Save each attempt, note your setup, and compare your progress by pattern over time.</p>
+            <div class="mt-8 flex flex-wrap gap-4">
+                <a href={appStoreUrl} target="_blank" rel="noopener noreferrer" class="rounded-full bg-accent px-6 py-3.5 font-semibold text-white transition hover:-translate-y-0.5 hover:shadow-xl">View on the App Store</a>
+                <a href="/learn" class="rounded-full border border-black/10 bg-card px-6 py-3.5 font-semibold text-primary transition hover:border-accent/30 dark:border-white/15">Read the guides</a>
             </div>
         </div>
     </section>
 
-    <section class="mx-auto mt-20 w-full max-w-6xl" aria-labelledby="practice-heading">
-        <div class="grid gap-6 rounded-[2rem] bg-card p-8 md:grid-cols-[0.9fr_1.1fr] md:p-12">
-            <div>
-                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-accent">A simple loop</p>
-                <h2 id="practice-heading" class="mt-3 text-3xl font-semibold tracking-tight text-primary sm:text-5xl">Pour. Notice. Record. Repeat.</h2>
-            </div>
-            <div class="grid gap-4 sm:grid-cols-2">
-                {[
-                    ["Capture", "Take a photo or choose one from your library."],
-                    ["Add context", "Log pattern, your rating, milk, cup, volume, and notes."],
-                    ["Compare", "Focus on a pattern and see your first and latest pours."],
-                    ["Keep", "Browse by pattern, share Pour Cards, and export your history."],
-                ].map(([title, body], index) => (
-                    <div class="rounded-2xl border border-black/5 p-5 dark:border-white/10">
-                        <span class="text-xs font-semibold text-accent">0{index + 1}</span>
-                        <h3 class="mt-3 text-xl font-semibold text-primary">{title}</h3>
-                        <p class="mt-2 text-secondary">{body}</p>
-                    </div>
-                ))}
-            </div>
+    <section class="mx-auto mt-16 w-full max-w-6xl border-y border-black/5 py-10 dark:border-white/10" aria-label="LatteArtist features">
+        <div class="grid gap-8 md:grid-cols-3">
+            <div><h2 class="text-xl font-semibold text-primary">Log the pour</h2><p class="mt-2 text-secondary">Save a photo, pattern, and your own rating.</p></div>
+            <div><h2 class="text-xl font-semibold text-primary">Note the setup</h2><p class="mt-2 text-secondary">Record the milk, cup, volume, and a short note.</p></div>
+            <div><h2 class="text-xl font-semibold text-primary">Compare by pattern</h2><p class="mt-2 text-secondary">Browse your history and see your first and latest attempts.</p></div>
         </div>
     </section>
 
@@ -77,42 +52,20 @@ const homeSchema = {
         <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div>
                 <p class="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Learn the craft</p>
-                <h2 id="learn-heading" class="mt-3 text-3xl font-semibold tracking-tight text-primary sm:text-5xl">Start with the question in your cup.</h2>
+                <h2 id="learn-heading" class="mt-3 text-3xl font-semibold tracking-tight text-primary sm:text-5xl">Start with what showed up in the cup.</h2>
             </div>
             <a href="/learn" class="font-semibold text-accent">All guides →</a>
         </div>
         <div class="mt-9 grid gap-5 md:grid-cols-3">
             {featuredGuides.map((guide) => (
-                <GuideCard href={`/learn/${slugFor(guide.id)}`} eyebrow={guide.data.eyebrow} title={guide.data.title} description={guide.data.description} readTime={guide.data.readTime} />
+                <GuideCard
+                    href={`/learn/${guideSlug(guide.id)}`}
+                    eyebrow={guide.data.eyebrow}
+                    title={guide.data.title}
+                    description={guide.data.description}
+                    readTime={guide.data.readTime}
+                />
             ))}
         </div>
     </section>
-
-    <div class="mx-auto mt-20 w-full max-w-6xl">
-        <AppStoreCta heading="A personal record—not an AI coach" body="LatteArtist stores the photos and details you choose, then helps you revisit and compare them. It does not grade or diagnose your pour." />
-    </div>
-</Layout>
-
-<style>
-    .home-phone-stage {
-        position: relative;
-        min-height: min(78vw, 43rem);
-        border-radius: 2.5rem;
-        background: radial-gradient(circle at 50% 42%, rgba(51, 48, 228, 0.16), transparent 58%);
-    }
-    .home-phone {
-        position: absolute;
-        width: min(55%, 20rem);
-        height: auto;
-        border-radius: 2rem;
-        filter: drop-shadow(0 28px 38px rgb(0 0 0 / 0.16));
-    }
-    .home-phone--one { left: 7%; top: 7%; transform: rotate(-6deg); }
-    .home-phone--two { right: 6%; top: 1%; transform: rotate(5deg); }
-    @media (max-width: 1023px) {
-        .home-phone-stage { min-height: min(125vw, 45rem); }
-    }
-</style>
-        </div>
-    </div>
 </Layout>

@@ -1,9 +1,9 @@
 ---
-title: "How to Pour a Latte Art Heart: Five Controlled Moves"
-description: "Turn a clean base and fluid microfoam into a centred heart by controlling cup tilt, pitcher height, flow, placement, and the cut-through."
+title: "How to Pour a Latte Art Heart: Get Close, Push, Cut"
+description: "Pour a centred heart by setting the base, getting the spout close, pushing a white circle, and finishing with a clean cut-through."
 eyebrow: "First pattern"
 pubDate: 2026-08-06
-readTime: "7 min read"
+readTime: "5 min read"
 order: 3
 featured: true
 keywords:
@@ -17,65 +17,57 @@ related:
   - latte-art-practice-routine
 ---
 
-The heart is a useful first pattern because it makes the essential controls visible. You need no wiggle and no stack of layers—only a clean base, a close spout, a steady placement, and a final **cut-through**.
+The heart is the best first pattern because it teaches the whole pour without a wiggle: base, height, flow, placement, push, and cut-through.
 
-If your first result looks more like an onion, apple, blob, or leaf, that is still useful feedback. Name the visible symptom and change one move.
+If yours looks like an onion, apple, blob, or accidental leaf, read the shape and change one move.
 
-## 1. Prepare fluid microfoam
+## 1. Start with glossy milk
 
-The heart begins with milk that can flow. Swirl the pitcher and look for a glossy surface with no dry cap of foam. If thin milk leaves first and stiff foam drops out later, revisit [how to steam milk for latte art](/learn/how-to-steam-milk-for-latte-art) before changing the hand movement.
+Swirl the pitcher. The milk should look shiny and move like wet paint, with no dry cap sitting on top.
 
-Also swirl the espresso gently if its surface is uneven. You want a consistent canvas for the milk.
+If thin milk pours first and foam dumps out later, go back to [stretching and rolling the milk](/learn/how-to-steam-milk-for-latte-art).
 
 ## 2. Tilt the cup and set the base
 
-Tilt the cup towards the pitcher without making it uncomfortable to hold. Start with the spout higher above the espresso and pour a controlled stream near the centre. At this height, the milk should sink and mix rather than draw white on top.
+Tilt the cup towards the pitcher. Start high and pour near the centre so the milk dives under the crema and builds an even brown base.
 
-As the cup fills, gradually level it. Avoid filling so far that there is no room left to form the heart.
+Level the cup as it fills, but leave enough room to push the heart. Too much base is a common reason the design ends up tiny.
 
-## 3. Lower the spout and commit to the shape
+## 3. Get close and start the push
 
-Bring the spout close to the surface. Increase the flow enough for white microfoam to spread rather than disappear. Hold the placement steady as a white circle grows.
+Drop the spout close to the surface and increase the flow. White foam should start laying on top.
 
-Beginners sometimes hover between high and low: the spout is too far away to place a clear shape, while the cup continues to fill. Make the height change deliberate.
+Hold the pitcher steady while the circle grows. This is the push. You do not need a wiggle.
 
-## 4. Let the circle build
+If no white appears, get closer or start the low pour earlier. Hovering between high and low usually fills the cup without drawing much.
 
-Keep feeding the centre of the circle. You do not need a side-to-side wiggle. The front edge should expand and begin to curl around the incoming stream.
+## 4. Let the circle wrap
 
-If the shape is tiny, you may have started this phase too late. On the next pour, lower the pitcher earlier while there is more space in the cup.
+Keep feeding the centre of the white circle. Its front edge should spread and begin to wrap around the incoming stream.
 
-## 5. Lift and cut through
+Do not rush the finish. Give the circle enough size to become a heart.
 
-Reduce the flow, lift the pitcher slightly, and draw a thin line through the circle. This **cut-through** pulls the top into a point and completes the heart.
+## 5. Cut through
 
-A heavy cut-through can split or wash out the shape. A hesitant one may leave a round apple. Practise a clean, continuous finish.
+Ease the flow, lift slightly, and pull a thinner stream through the circle. The **cut-through** turns the round top into a point.
 
-## Fix the shape you actually poured
+A heavy cut can split or wash out the shape. A hesitant cut leaves an apple. Aim for one clean motion.
 
-| What you see | What to test next |
+## Fix the heart you poured
+
+| What showed up | Try this next |
 | --- | --- |
-| No white heart | Lower the spout closer, check the microfoam, or begin the drawing phase earlier |
-| A white blob | Use more fluid milk and a steadier placement; check whether foam separated |
-| A tiny heart | Start drawing before the cup is nearly full |
-| An off-centre heart | Centre the spout and check that the cup is not twisted in your hand |
-| An apple with no point | Make the final cut-through more decisive |
-| A split, washed-out heart | Use a thinner, lighter cut-through |
+| No white heart | Get closer, check the microfoam, or drop low earlier |
+| A white blob | Use more fluid milk and a steadier push |
+| A tiny heart | Make less base and start the push sooner |
+| An off-centre heart | Line the spout up with the middle of the cup |
+| An apple | Make the cut-through more decisive |
+| A split heart | Use a lighter, thinner cut-through |
 
-A still photo cannot always identify the cause. If possible, record a side view of the pour occasionally so you can see height and flow. Use the photo of the finished cup to track the outcome, then change only the variable you can describe.
+## A three-pour heart session
 
-## A focused heart session
+1. First pour: notice when the white circle appears.
+2. Second pour: change only when you drop low.
+3. Third pour: keep the better timing and clean up the cut-through.
 
-For three consecutive pours, keep the espresso, milk, cup, and pitcher as consistent as practical.
-
-1. First pour: observe when the white circle appears.
-2. Second pour: change only when you lower the spout.
-3. Third pour: keep the better timing and refine the cut-through.
-
-Save a short note such as “lowered earlier; heart larger; cut-through heavy.” That is more actionable than “bad pour.” The [practice-routine guide](/learn/latte-art-practice-routine) shows how to review several sessions without changing everything at once.
-
-LatteArtist can help you keep those photos and notes together and compare your first heart with your latest. The judgment remains yours: the app does not automatically score the heart or tell you what went wrong.
-
-## Technique references
-
-The high-to-low pour and heart sequence is described in [La Marzocco’s introduction to latte art](https://www.lamarzocco.com/uk/en/how-to-pour-latte-art/) and demonstrated in [Breville’s latte art learning material](https://www.breville.com/us/en/coffee-journey/tutorials/espresso-tutorials/latte-art.html).
+A note like “dropped earlier; bigger heart; cut too heavy” is enough. Use the [practice routine](/learn/latte-art-practice-routine) if you want a repeatable way to review sessions.

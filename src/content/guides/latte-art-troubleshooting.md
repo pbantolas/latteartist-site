@@ -1,9 +1,9 @@
 ---
-title: "Latte Art Troubleshooting: Start With the Visible Symptom"
-description: "Use a symptom-first checklist for blobs, bubbles, disappearing designs, tiny hearts, and weak definition—without pretending one photo proves one cause."
+title: "Why Your Latte Art Is a Blob (and Other Pour Problems)"
+description: "Troubleshoot foam dumps, disappearing designs, tiny hearts, bubbles, and washed-out lines by changing one thing at a time."
 eyebrow: "Troubleshooting"
 pubDate: 2026-08-06
-readTime: "10 min read"
+readTime: "7 min read"
 order: 4
 featured: true
 keywords:
@@ -17,97 +17,77 @@ related:
   - latte-art-practice-routine
 ---
 
-“What went wrong?” is the most natural question after a difficult pour. It is also too broad to answer from a finished photo with certainty. A blob can come from thick milk, separated foam, a late drawing phase, or a sudden change in flow.
+“What went wrong?” is hard to answer from one photo. The same blob can come from dry milk, separated foam, a late drop, or a sudden jump in flow.
 
-A better process is: describe what you see, list a small number of plausible causes, then test one variable on the next pour.
+Start with what showed up in the cup. Pick one likely cause, then change one thing.
 
-## The design never appears
+## No white design appears
 
-**What you see:** the drink turns evenly brown or beige, but white foam never sits on the surface.
+**What happened:** the cup turns brown or beige, but the art disappears under the surface.
 
-**Variables to inspect:**
+**Try next:**
 
-- The pitcher may stay too high during the drawing phase.
-- The milk may have too little texture.
-- The cup may be almost full before you lower the spout.
-- The flow may be too thin to place foam on the surface.
+- Drop the pitcher closer to the surface.
+- Start the low pour earlier.
+- Use enough flow to lay foam on top.
+- If the milk looks thin, work on [stretching it a little more](/learn/how-to-steam-milk-for-latte-art).
 
-**Next test:** keep the milk method the same and deliberately bring the spout close earlier. If white still does not appear, focus the next session on [milk texture](/learn/how-to-steam-milk-for-latte-art).
+Keep the milk method the same for one pour and change only the drop height. If white still does not show, go back to texture.
 
 ## The pour becomes a blob
 
-**What you see:** a thick white mass appears, often late, with little definition.
+**What happened:** a thick white mass lands late with no clean edge. People often call this a **foam dump**.
 
-**Variables to inspect:**
+**Try next:**
 
-- Too much air may have made the foam stiff.
-- Foam may have separated while the pitcher sat.
-- Thin milk may pour first, leaving foam to fall out at the end.
-- A sudden, heavy flow close to the surface may flood the design.
+- Stretch for less time so the milk stays fluid.
+- Get a stronger vortex to incorporate the foam.
+- Swirl before pouring if the pitcher has been sitting.
+- Use a steadier low pour instead of suddenly flooding the cup.
 
-**Next test:** swirl before pouring and observe whether the milk moves fluidly. If it is stiff, add less air next time. If it looks fluid, keep the texture and make the close pour steadier.
+If thin milk comes out first and a lump follows, you have a dry cap sitting on liquid milk.
 
-## Large bubbles break the surface
+## Big bubbles break the surface
 
-**What you see:** visible bubbles or a rough, dry surface interrupt the pattern.
+**What happened:** the design looks rough, bubbly, or dry.
 
-**Variables to inspect:** air may have entered too aggressively; the wand tip may have spent time too far above the surface; the rolling phase may not have integrated the bubbles.
-
-**Next test:** aim for gentler air introduction and stronger circulation, following the guidance for your machine. Tapping can remove a few surface bubbles, but it cannot turn dry foam into integrated microfoam.
+**Try next:** introduce air more gently and spend more time rolling the milk. A light tap can pop a few surface bubbles, but it cannot fix dry foam.
 
 ## The heart is tiny
 
-**What you see:** a recognisable but very small design sits near the centre or edge.
+**What happened:** a recognisable heart appears, but it has no room to spread.
 
-**Variables to inspect:** you may have built too much base, started drawing late, kept the flow too low, or stayed too far from the surface.
+**Try next:** make less base and drop low sooner. If the cup is almost full when the push starts, the pattern can only stay small.
 
-**Next test:** lower the pitcher earlier on the next attempt. Keep the final cut-through unchanged so you can see whether timing made the difference. Then compare with the full [heart sequence](/learn/latte-art-heart).
+See the full [get close, push, cut sequence](/learn/latte-art-heart).
 
-## The pattern is off-centre or distorted
+## The design is off-centre
 
-**What you see:** the design leans, runs to one edge, or stretches asymmetrically.
+**What happened:** the heart leans, stretches, or runs to one side.
 
-**Variables to inspect:** cup tilt, pitcher alignment, where the base was poured, and whether you levelled the cup unevenly.
+**Try next:** line the pitcher spout up with the centre of the cup before you pour. Watch that line as you level the cup.
 
-**Next test:** before turning on the steam, rehearse the line from pitcher spout through the centre of the cup. During the pour, watch that line rather than the cup rim.
+Cup shape matters too. A pour that feels natural in a wide ceramic cup can spread differently in a narrow or double-walled glass.
 
-Cup shape also changes how the liquid spreads. If a design works in one ceramic cup but not a double-walled glass, keep that difference in mind before rewriting your whole milk technique.
+## Lines look washed out
 
-## The lines are blurry or disappear
+**What happened:** tulip layers merge, rosetta lines disappear, or the whole design looks blurry.
 
-**What you see:** a tulip layer or rosetta line begins but merges into the drink.
+**Try next:** simplify the pour. Make a white circle or heart. If its edge is clean, the milk can support a pattern and you can work on flow or movement. If the circle also washes out, check texture and pitcher height first.
 
-**Variables to inspect:** milk may be too thin or too thick; the spout may be too high; flow may be inconsistent; the base and crema may not be even.
+## The design overflows
 
-**Next test:** simplify. Return to a white circle or heart. If its edge is clean, the texture can probably support a design and you can work on movement. If the circle also blurs, investigate texture, distance, and flow before adding a wiggle.
+**What happened:** the pattern reaches the rim or runs out of the cup before the cut-through.
 
-## Troubleshoot in the right order
+**Try next:** use less base, begin the design earlier, and control the flow. Too much base leaves no room for the push.
 
-Use this order so you do not adjust five things at once:
+## Troubleshoot in this order
 
-1. **Texture:** is the milk glossy, integrated, and able to flow?
-2. **Timing:** did you leave room in the cup for the design?
-3. **Height:** did you clearly switch from mixing high to drawing low?
-4. **Flow:** was the stream controlled in both phases?
-5. **Placement:** was the pitcher aligned with the centre?
-6. **Movement:** only then refine a push, stack, wiggle, or cut-through.
+1. **Texture:** is the milk glossy and flowing, or stiff and dry?
+2. **Timing:** did you leave room to draw?
+3. **Height:** did you clearly switch from high mixing to a low pour?
+4. **Flow:** was the stream controlled?
+5. **Placement:** was the spout centred?
+6. **Movement:** only then work on the push, stack, wiggle, or cut-through.
 
-This order does not mean the first item always caused the problem. It gives you a stable way to test.
-
-## Keep a useful record
-
-After a pour, capture facts rather than a verdict:
-
-- Pattern attempted
-- Visible symptom
-- Milk and cup used
-- One thing you intentionally changed
-- One thing to test next
-
-LatteArtist supports photos, pattern, your own rating, milk, cup, volume, and notes. Use those fields as a practice record. The app can help you browse and compare attempts, but it does not analyse the photo or diagnose the cause.
-
-The [deliberate practice guide](/learn/latte-art-practice-routine) turns this checklist into a short weekly routine.
-
-## Technique references
-
-The symptom tests here use texture and pouring principles described by [La Marzocco Home](https://www.lamarzocco.com/uk/en/pro-tips-for-latte-art/) and [Breville](https://www.breville.com/us/en/blog/coffee-and-espresso/how-to-make-latte-art-with-ease.html). Manufacturer guidance is used for technique; community phrases such as “blob,” “wet paint,” and “cut-through” inform the plain-language descriptions.
+Save the photo, note the milk and cup, then write down the one thing you changed. The [practice routine](/learn/latte-art-practice-routine) keeps that review short.
