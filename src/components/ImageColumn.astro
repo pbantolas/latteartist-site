@@ -3,8 +3,7 @@
 ---
 
 <div
-    class="w-full md:flex-1 text-left animate-fadeInUp opacity-0"
-    style="animation-delay: 0.3s"
+    class="w-full text-left"
 >
     {/* Responsive width and flex */}
     <div
@@ -16,9 +15,11 @@
             loop
             muted
             playsinline
+            preload="metadata"
+            poster="/assets/demo-poster.png"
             width="1080"
             height="1920"
-            class="block max-w-full h-auto rounded-2xl"
+            class="block h-auto w-full rounded-2xl"
             aria-describedby="video-description-1"
         >
             <source src="/assets/demo.mp4" type="video/mp4" />
