@@ -22,6 +22,11 @@ More pours do not always mean better practice. If you change the cup, milk, pitc
 
 Keep the session simple: **change one thing, then see what moved**.
 
+<figure class="guide-image">
+  <img src="/assets/learn/three-pour-practice.webp" alt="Three home latte art attempts progressing from a white blob to a clearer heart" width="1600" height="1067" loading="lazy" />
+  <figcaption>Progress can be small and still be useful: a blob, an uneven heart, then a cleaner repeat.</figcaption>
+</figure>
+
 ## Pick one question
 
 Choose something you can see in the cup:

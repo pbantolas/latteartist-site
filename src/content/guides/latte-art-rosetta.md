@@ -23,6 +23,11 @@ If yours comes out as a stripe, a blob with stripes, or a fern that erases itsel
 
 Make sure you can pour a centred [heart](/learn/latte-art-heart) first. The rosetta reuses the same base, height change, and cut-through.
 
+<figure class="guide-image">
+  <img src="/assets/learn/rosetta-wiggle.webp" srcset="/assets/learn/rosetta-wiggle-800.webp 800w, /assets/learn/rosetta-wiggle.webp 1600w" sizes="(max-width: 1023px) calc(100vw - 3rem), 52rem" alt="A home barista pouring a narrow rosetta with slightly uneven white leaves" width="1600" height="1067" loading="lazy" />
+  <figcaption>Start the wiggle before you drag; small, even leaves are more useful than a fast, dramatic shake.</figcaption>
+</figure>
+
 ## 1. Set up exactly like a heart
 
 Swirl the pitcher until the milk looks glossy, like wet paint. Tilt the cup, start high near the centre, and build an even brown base.

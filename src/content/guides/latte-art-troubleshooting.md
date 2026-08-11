@@ -22,6 +22,11 @@ related:
 
 Start with what showed up in the cup. Pick one likely cause, then change one thing.
 
+<figure class="guide-image">
+  <img src="/assets/learn/failed-pour-diagnosis.webp" srcset="/assets/learn/failed-pour-diagnosis-800.webp 800w, /assets/learn/failed-pour-diagnosis.webp 1600w" sizes="(max-width: 1023px) calc(100vw - 3rem), 52rem" alt="Three home latte art attempts showing no white design, a foam blob, and a small bubbly heart" width="1600" height="1067" loading="lazy" />
+  <figcaption>A failed cup is still evidence: name the visible problem, then change one likely cause on the next pour.</figcaption>
+</figure>
+
 ## No white design appears
 
 **What happened:** the cup turns brown or beige, but the art disappears under the surface.

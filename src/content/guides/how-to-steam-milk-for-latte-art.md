@@ -22,6 +22,11 @@ If the art keeps turning into a blob, start with the pitcher. Good pouring techn
 
 The target is **microfoam** that looks glossy and flows like wet paint. If you are not sure what that means yet, [what microfoam actually is](/learn/what-is-microfoam) defines it by sight.
 
+<figure class="guide-image">
+  <img src="/assets/learn/milk-steaming-vortex.webp" srcset="/assets/learn/milk-steaming-vortex-800.webp 800w, /assets/learn/milk-steaming-vortex.webp 1600w" sizes="(max-width: 1023px) calc(100vw - 3rem), 52rem" alt="Milk spinning in a small stainless pitcher under a home espresso machine steam wand" width="1600" height="1067" loading="lazy" />
+  <figcaption>After adding a little air, use the vortex to fold it in until the milk moves as one glossy liquid.</figcaption>
+</figure>
+
 ## Set up
 
 Start with cold milk and a clean pitcher. Purge the wand, place the tip near the surface, and keep a damp cloth ready so you can wipe the wand as soon as you finish.

@@ -22,6 +22,11 @@ The heart is the best first pattern because it teaches the whole pour without a 
 
 If yours looks like an onion, apple, blob, or accidental leaf, read the shape and change one move.
 
+<figure class="guide-image">
+  <img src="/assets/learn/heart-pour.webp" alt="A home barista finishing the cut-through on a slightly imperfect latte art heart" width="1600" height="1067" loading="lazy" />
+  <figcaption>A recognisable heart does not need to be competition-perfect. Look for the close spout, growing white circle, and clean cut-through.</figcaption>
+</figure>
+
 ## 1. Start with glossy milk
 
 Swirl the pitcher. The milk should look shiny and move like wet paint, with no dry cap sitting on top.

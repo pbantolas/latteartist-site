@@ -21,6 +21,11 @@ A pattern that pours fine but sits crooked in the cup is its own kind of frustra
 
 Symmetry problems almost always come from one of three places: where you aimed, how you held the cup, or an uneven stream. Each has a different fix, so start by working out which one you have.
 
+<figure class="guide-image">
+  <img src="/assets/learn/heart-symmetry.webp" srcset="/assets/learn/heart-symmetry-800.webp 800w, /assets/learn/heart-symmetry.webp 1600w" sizes="(max-width: 1023px) calc(100vw - 3rem), 52rem" alt="Two home-poured latte art hearts viewed from above, one slightly off-centre and one more centred" width="1600" height="1067" loading="lazy" />
+  <figcaption>An overhead photo makes small placement differences easier to read: compare the heart with the line through the handle.</figcaption>
+</figure>
+
 ## Diagnose from the finished cup
 
 Look straight down at the design before you take a sip:

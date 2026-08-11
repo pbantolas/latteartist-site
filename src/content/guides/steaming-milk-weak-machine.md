@@ -21,6 +21,11 @@ Entry-level machines — the Breville Bambino, DeLonghi Dedica, Gaggia Classic a
 
 If your milk comes out hot but flat, or the foam is done before the milk is warm, the machine is asking for a different routine, not a replacement.
 
+<figure class="guide-image">
+  <img src="/assets/learn/bambino-steaming-v3.webp" srcset="/assets/learn/bambino-steaming-v3-800.webp 800w, /assets/learn/bambino-steaming-v3.webp 1600w" sizes="(max-width: 1023px) calc(100vw - 3rem), 52rem" alt="A Breville Bambino BES450 actively steaming milk in a small stainless pitcher" width="1600" height="1067" loading="lazy" />
+  <figcaption>A compact Bambino and small pitcher make the gentler home-machine steaming process easy to see.</figcaption>
+</figure>
+
 ## Why these machines feel different
 
 Café machines have big boilers and dry, powerful steam. A full pitcher textures in a few seconds, so baristas talk about the stretch and the roll as quick phases.

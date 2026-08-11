@@ -21,6 +21,11 @@ Microfoam is steamed milk where the bubbles are so small the surface looks like 
 
 That is the whole definition. The reason it matters is that latte art is painted with microfoam: the white lines in a design are this fine-textured milk laying on top of the crema. Visible foam cannot do that.
 
+<figure class="guide-image">
+  <img src="/assets/learn/glossy-microfoam.webp" alt="Glossy microfoam swirling smoothly inside a stainless steel milk pitcher on a home kitchen counter" width="1600" height="1067" loading="lazy" />
+  <figcaption>Good microfoam looks like one glossy liquid surface rather than a dry layer of visible bubbles.</figcaption>
+</figure>
+
 ## Foam vs microfoam
 
 Regular foam — the kind from a French press, a whisk, or a badly used steam wand — is made of bubbles you can see. It behaves like a solid:

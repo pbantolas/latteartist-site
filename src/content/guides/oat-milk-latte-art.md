@@ -21,6 +21,11 @@ Oat milk can pour latte art that is hard to tell apart from dairy — but only i
 
 Most “oat milk won’t froth” problems come down to the carton, the heat, or expecting it to behave exactly like whole milk.
 
+<figure class="guide-image">
+  <img src="/assets/learn/oat-milk-heart-v2.webp" srcset="/assets/learn/oat-milk-heart-v2-800.webp 800w, /assets/learn/oat-milk-heart-v2.webp 1600w" sizes="(max-width: 1023px) calc(100vw - 3rem), 52rem" alt="A home barista actively pouring a softly defined oat milk heart from a small stainless pitcher" width="1600" height="1067" loading="lazy" />
+  <figcaption>Oat milk works best as an active sequence: swirl, then pour while the texture is still integrated.</figcaption>
+</figure>
+
 ## Why the carton matters more than the technique
 
 Dairy milk foams because of its proteins. Oat milk has much less protein, so regular oat milk — the kind made for cereal and coffee — often stretches into big, fragile bubbles that pop before you finish pouring.

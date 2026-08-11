@@ -21,6 +21,11 @@ The tulip is a heart poured in stages: two or three white layers stacked on top 
 
 It has no wiggle, so it is often easier than the [rosetta](/learn/latte-art-rosetta) once your [heart](/learn/latte-art-heart) is consistent. The hard part is keeping the layers separate instead of watching them merge into one blob.
 
+<figure class="guide-image">
+  <img src="/assets/learn/tulip-finished-v2.webp" srcset="/assets/learn/tulip-finished-v2-800.webp 800w, /assets/learn/tulip-finished-v2.webp 1600w" sizes="(max-width: 1023px) calc(100vw - 3rem), 52rem" alt="A finished two-layer latte art tulip viewed directly from above" width="1600" height="1067" loading="lazy" />
+  <figcaption>A simple tulip is two pushed layers joined by one light cut-through.</figcaption>
+</figure>
+
 ## 1. Set up a smaller base than usual
 
 Swirl the pitcher until the milk is glossy. Tilt the cup, start high, and build an even base.

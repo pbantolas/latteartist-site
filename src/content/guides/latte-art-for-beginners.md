@@ -22,6 +22,11 @@ Don’t chase rosettas yet. A clean heart already teaches the parts that matter:
 
 Think of the pour as four moves: **set the base, get close, push, cut**.
 
+<figure class="guide-image">
+  <img src="/assets/learn/beginner-white-circle.webp" srcset="/assets/learn/beginner-white-circle-800.webp 800w, /assets/learn/beginner-white-circle.webp 1600w" sizes="(max-width: 1023px) calc(100vw - 3rem), 52rem" alt="A beginner home barista pouring a simple white circle into a tilted cup of espresso" width="1600" height="1067" loading="lazy" />
+  <figcaption>Before chasing a pattern, learn to drop the spout close and place one clean white circle.</figcaption>
+</figure>
+
 ## Get the milk glossy and flowing
 
 Latte-art milk needs **microfoam**: tiny bubbles fully incorporated into the milk. Baristas often call the right texture **wet paint**. It should look glossy and move as one fluid body when you swirl the pitcher.

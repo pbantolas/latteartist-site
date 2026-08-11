@@ -21,6 +21,11 @@ Almost every “why did my latte art fail” question ends here: the milk was ei
 
 The good news is you can diagnose it from one pour, and the fix is almost always the same dial — how long you stretch the milk.
 
+<figure class="guide-image">
+  <img src="/assets/learn/milk-texture-comparison.webp" srcset="/assets/learn/milk-texture-comparison-800.webp 800w, /assets/learn/milk-texture-comparison.webp 1600w" sizes="(max-width: 1023px) calc(100vw - 3rem), 52rem" alt="Three pitchers showing thin milk, a dry bubbly foam cap, and glossy pourable microfoam" width="1600" height="1067" loading="lazy" />
+  <figcaption>The useful target sits between watery milk and a dry foam cap: glossy, fluid, and free of visible bubbles.</figcaption>
+</figure>
+
 ## Read the milk in the pitcher
 
 Before you pour, swirl and look:
