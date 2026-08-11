@@ -43,6 +43,7 @@ const guidesCollection = defineCollection({
         featured: z.boolean().default(false),
         footerLabel: z.string().optional(),
         keywords: z.array(z.string()),
+        ogImage: z.string().optional(),
         related: z.array(z.string()).default([]),
     }),
 });

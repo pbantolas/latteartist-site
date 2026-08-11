@@ -11,6 +11,7 @@ keywords:
   - Breville Bambino milk steaming
   - DeLonghi Dedica steam wand
   - Gaggia Classic milk frothing
+ogImage: /assets/learn/bambino-steaming-v3.webp
 related:
   - how-to-steam-milk-for-latte-art
   - what-is-microfoam

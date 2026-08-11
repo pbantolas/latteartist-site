@@ -11,6 +11,7 @@ keywords:
   - latte art rosetta wiggle
   - rosetta crash
   - rosetta leaves uneven
+ogImage: /assets/learn/rosetta-wiggle.webp
 related:
   - latte-art-heart
   - how-to-steam-milk-for-latte-art

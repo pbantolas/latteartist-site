@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+    title="Page Not Found | LatteArtist"
+    description="The page you're looking for couldn't be found. Head back to LatteArtist or browse the latte art guides."
+    noIndex={true}
+>
+    <section class="mx-auto flex w-full max-w-4xl flex-col items-center px-4 py-24 text-center">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-accent">404</p>
+        <h1 class="mt-4 text-4xl font-semibold leading-[1.05] tracking-[-0.035em] text-primary sm:text-5xl">
+            That pour didn't land.
+        </h1>
+        <p class="mt-6 max-w-md text-lg leading-relaxed text-secondary">
+            The page you're looking for doesn't exist. Head back home or browse the latte art guides.
+        </p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+            <a
+                href="/"
+                class="rounded-full bg-accent px-6 py-3.5 font-semibold text-white transition hover:-translate-y-0.5 hover:shadow-xl"
+            >
+                Back to home
+            </a>
+            <a
+                href="/learn"
+                class="rounded-full border border-black/10 bg-card px-6 py-3.5 font-semibold text-primary transition hover:border-accent/30 dark:border-white/15"
+            >
+                Browse the guides
+            </a>
+        </div>
+    </section>
+</Layout>

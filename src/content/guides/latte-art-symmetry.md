@@ -11,6 +11,7 @@ keywords:
   - latte art off centre
   - lopsided latte art
   - crooked rosetta
+ogImage: /assets/learn/heart-symmetry.webp
 related:
   - latte-art-heart
   - latte-art-rosetta

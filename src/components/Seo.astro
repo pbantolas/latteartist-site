@@ -35,6 +35,15 @@ const siteURL = Astro.site ?? new URL("https://latteartist.coffeeatpetros.com");
 const canonicalURL = new URL(canonical ?? ogUrl ?? Astro.url.pathname, siteURL);
 canonicalURL.search = "";
 canonicalURL.hash = "";
+// Normalize to the trailing-slash form so canonical/og:url always match the
+// served URL (Astro builds directory pages as index.html).
+if (
+    canonicalURL.pathname !== "/" &&
+    !canonicalURL.pathname.endsWith("/") &&
+    !canonicalURL.pathname.includes(".")
+) {
+    canonicalURL.pathname += "/";
+}
 const schemas = structuredData
     ? Array.isArray(structuredData)
         ? structuredData

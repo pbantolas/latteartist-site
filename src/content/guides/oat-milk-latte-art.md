@@ -11,6 +11,7 @@ keywords:
   - barista oat milk
   - oat milk not frothing
   - latte art with oat milk
+ogImage: /assets/learn/oat-milk-heart-v2.webp
 related:
   - how-to-steam-milk-for-latte-art
   - latte-art-troubleshooting

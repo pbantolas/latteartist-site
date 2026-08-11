@@ -1,6 +1,7 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "LatteArtist",
+  "short_name": "LatteArtist",
+  "description": "A latte art practice journal for iPhone.",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +16,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#fafafa",
+  "background_color": "#fafafa",
   "display": "standalone"
 }

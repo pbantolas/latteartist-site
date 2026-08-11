@@ -16,6 +16,9 @@ const { data } = guide;
 const currentSlug = guideSlug(guide.id);
 const canonicalPath = `/learn/${currentSlug}/`;
 const guideURL = new URL(canonicalPath, Astro.site);
+const ogImage = data.ogImage
+    ? new URL(data.ogImage, Astro.site).href
+    : undefined;
 const toc = headings.filter((heading) => heading.depth === 2);
 const allGuides = await getCollection("guides");
 const relatedGuides = data.related
@@ -38,6 +41,7 @@ const articleSchema = {
         name: "LatteArtist",
         url: Astro.site?.href,
     },
+    image: ogImage ?? new URL("/assets/card-image.jpg", Astro.site).href,
     mainEntityOfPage: guideURL.href,
     keywords: data.keywords.join(", "),
 };
@@ -60,6 +64,8 @@ const breadcrumbSchema = {
     ogDescription={data.description}
     canonical={canonicalPath}
     type="article"
+    ogImage={ogImage}
+    twitterImage={ogImage}
     structuredData={[articleSchema, breadcrumbSchema]}
 >
     <div class="mx-auto w-full max-w-6xl">

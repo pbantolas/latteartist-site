@@ -11,6 +11,7 @@ keywords:
   - latte art milk too thin
   - milk aeration time
   - how long to stretch milk
+ogImage: /assets/learn/milk-texture-comparison.webp
 related:
   - how-to-steam-milk-for-latte-art
   - what-is-microfoam

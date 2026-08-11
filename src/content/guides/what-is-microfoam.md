@@ -11,6 +11,7 @@ keywords:
   - microfoam vs foam
   - velvety milk texture
   - how to make microfoam
+ogImage: /assets/learn/glossy-microfoam.webp
 related:
   - how-to-steam-milk-for-latte-art
   - milk-too-thick-too-thin

@@ -12,6 +12,7 @@ keywords:
   - how to practice latte art
   - improve latte art consistency
   - track latte art progress
+ogImage: /assets/learn/three-pour-practice.webp
 related:
   - latte-art-for-beginners
   - latte-art-troubleshooting

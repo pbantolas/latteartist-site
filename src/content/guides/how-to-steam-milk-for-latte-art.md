@@ -12,6 +12,7 @@ keywords:
   - latte art microfoam
   - milk texturing
   - stretching milk
+ogImage: /assets/learn/milk-steaming-vortex.webp
 related:
   - latte-art-troubleshooting
   - latte-art-heart

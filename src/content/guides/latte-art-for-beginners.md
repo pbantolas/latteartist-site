@@ -12,6 +12,7 @@ keywords:
   - how to make latte art
   - beginner latte art
   - latte art practice
+ogImage: /assets/learn/beginner-white-circle.webp
 related:
   - how-to-steam-milk-for-latte-art
   - latte-art-heart

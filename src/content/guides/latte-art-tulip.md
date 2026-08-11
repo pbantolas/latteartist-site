@@ -11,6 +11,7 @@ keywords:
   - tulip latte art layers
   - tulip layers merging
   - push and lift latte art
+ogImage: /assets/learn/tulip-finished-v2.webp
 related:
   - latte-art-heart
   - how-to-steam-milk-for-latte-art

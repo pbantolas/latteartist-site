@@ -12,6 +12,7 @@ keywords:
   - why is my latte art a blob
   - latte art milk too thick
   - latte art not showing
+ogImage: /assets/learn/failed-pour-diagnosis.webp
 related:
   - how-to-steam-milk-for-latte-art
   - latte-art-heart

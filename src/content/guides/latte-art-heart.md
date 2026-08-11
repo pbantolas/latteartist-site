@@ -12,6 +12,7 @@ keywords:
   - latte art heart for beginners
   - latte art cut through
   - latte art heart too small
+ogImage: /assets/learn/heart-pour.webp
 related:
   - how-to-steam-milk-for-latte-art
   - latte-art-troubleshooting
