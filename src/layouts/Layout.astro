@@ -220,7 +220,7 @@ const footerGuides = (await getCollection("guides"))
                         page_type: document.body.dataset.pageType ?? "site",
                         topic: document.body.dataset.topic ?? "general",
                         cta_variant: link.dataset.umamiCtaVariant,
-                        destination: link.href,
+                        destination: "app_store",
                     });
                 });
 
