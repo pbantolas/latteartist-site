@@ -37,7 +37,7 @@ Start with what showed up in the cup. Pick one likely cause, then change one thi
 - Drop the pitcher closer to the surface.
 - Start the low pour earlier.
 - Use enough flow to lay foam on top.
-- If the milk looks thin, work on [stretching it a little more](/learn/how-to-steam-milk-for-latte-art).
+- If the milk looks thin, work on [stretching it a little more](/learn/how-to-steam-milk-for-latte-art/).
 
 Keep the milk method the same for one pour and change only the drop height. If white still does not show, go back to texture.
 
@@ -52,7 +52,7 @@ Keep the milk method the same for one pour and change only the drop height. If w
 - Swirl before pouring if the pitcher has been sitting.
 - Use a steadier low pour instead of suddenly flooding the cup.
 
-If thin milk comes out first and a lump follows, you have a dry cap sitting on liquid milk. The [too thick or too thin guide](/learn/milk-too-thick-too-thin) helps you tell which side you are on.
+If thin milk comes out first and a lump follows, you have a dry cap sitting on liquid milk. The [too thick or too thin guide](/learn/milk-too-thick-too-thin/) helps you tell which side you are on.
 
 ## Big bubbles break the surface
 
@@ -66,13 +66,13 @@ If thin milk comes out first and a lump follows, you have a dry cap sitting on l
 
 **Try next:** make less base and drop low sooner. If the cup is almost full when the push starts, the pattern can only stay small.
 
-See the full [get close, push, cut sequence](/learn/latte-art-heart).
+See the full [get close, push, cut sequence](/learn/latte-art-heart/).
 
 ## The design is off-centre
 
 **What happened:** the heart leans, stretches, or runs to one side.
 
-**Try next:** line the pitcher spout up with the centre of the cup before you pour. Watch that line as you level the cup. If it keeps happening, work through the [symmetry fixes](/learn/latte-art-symmetry).
+**Try next:** line the pitcher spout up with the centre of the cup before you pour. Watch that line as you level the cup. If it keeps happening, work through the [symmetry fixes](/learn/latte-art-symmetry/).
 
 Cup shape matters too. A pour that feels natural in a wide ceramic cup can spread differently in a narrow or double-walled glass.
 
@@ -80,7 +80,7 @@ Cup shape matters too. A pour that feels natural in a wide ceramic cup can sprea
 
 **What happened:** tulip layers merge, rosetta lines disappear, or the whole design looks blurry.
 
-**Try next:** simplify the pour. Make a white circle or heart. If its edge is clean, the milk can support a pattern and you can work on flow or movement — [tulip layers](/learn/latte-art-tulip) and [rosetta lines](/learn/latte-art-rosetta) each have their own failure modes. If the circle also washes out, check texture and pitcher height first.
+**Try next:** simplify the pour. Make a white circle or heart. If its edge is clean, the milk can support a pattern and you can work on flow or movement — [tulip layers](/learn/latte-art-tulip/) and [rosetta lines](/learn/latte-art-rosetta/) each have their own failure modes. If the circle also washes out, check texture and pitcher height first.
 
 ## The design overflows
 
@@ -97,4 +97,4 @@ Cup shape matters too. A pour that feels natural in a wide ceramic cup can sprea
 5. **Placement:** was the spout centred?
 6. **Movement:** only then work on the push, stack, wiggle, or cut-through.
 
-Save the photo, note the milk and cup, then write down the one thing you changed. The [practice routine](/learn/latte-art-practice-routine) keeps that review short.
+Save the photo, note the milk and cup, then write down the one thing you changed. The [practice routine](/learn/latte-art-practice-routine/) keeps that review short.

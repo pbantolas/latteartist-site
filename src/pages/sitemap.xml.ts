@@ -9,8 +9,6 @@ export const GET: APIRoute = async ({ site }) => {
         "/learn/",
         "/support/",
         "/privacy-policy/",
-        "/roadmap/",
-        "/ideas/",
     ];
     const urls = [
         ...staticPaths.map((path) => ({ loc: new URL(path, site).href })),

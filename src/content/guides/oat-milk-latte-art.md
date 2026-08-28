@@ -39,9 +39,9 @@ Different barista oat milks still behave differently from each other, so expect 
 
 Oat milk aerates quickly and the foam it makes is less stable than dairy foam. A long stretch gives you a thick, dry cap that dumps instead of pours.
 
-Start with roughly two-thirds of the stretching time you would use for dairy, then get the vortex going early to fold the foam in. The [steaming guide](/learn/how-to-steam-milk-for-latte-art) covers stretch and roll in detail — the mechanics are the same, the timing is shorter.
+Start with roughly two-thirds of the stretching time you would use for dairy, then get the vortex going early to fold the foam in. The [steaming guide](/learn/how-to-steam-milk-for-latte-art/) covers stretch and roll in detail — the mechanics are the same, the timing is shorter.
 
-If you are not sure whether the milk is too thick or too thin, the [milk thickness guide](/learn/milk-too-thick-too-thin) helps you read the pitcher.
+If you are not sure whether the milk is too thick or too thin, the [milk thickness guide](/learn/milk-too-thick-too-thin/) helps you read the pitcher.
 
 ## Watch the temperature
 
@@ -73,4 +73,4 @@ Oat microfoam separates faster than dairy microfoam once the pitcher sits still.
 2. Second pour: stop steaming earlier and pour within five seconds of swirling.
 3. Third pour: keep both changes and work on the pattern itself.
 
-Oat milk varies enough between cartons that notes matter more than usual. “Barista edition, short stretch, poured fast — held a heart” tells future-you exactly what worked. See the [practice routine](/learn/latte-art-practice-routine) for how to log it.
+Oat milk varies enough between cartons that notes matter more than usual. “Barista edition, short stretch, poured fast — held a heart” tells future-you exactly what worked. See the [practice routine](/learn/latte-art-practice-routine/) for how to log it.

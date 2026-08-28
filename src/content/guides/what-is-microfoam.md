@@ -46,7 +46,7 @@ Getting there takes both phases of steaming, in order:
 1. **Stretching** puts the air in. The wand tip sits near the surface and you hear short paper-tearing sounds as air is drawn in. This alone makes foam — big, visible bubbles.
 2. **Rolling** breaks the bubbles down. The tip goes slightly deeper and the milk spins in a vortex, shredding the big bubbles into microscopic ones and folding them through the liquid.
 
-Skipping the roll is the most common reason home pitchers end up as foam-on-milk instead of microfoam. The [steaming guide](/learn/how-to-steam-milk-for-latte-art) walks through both phases step by step.
+Skipping the roll is the most common reason home pitchers end up as foam-on-milk instead of microfoam. The [steaming guide](/learn/how-to-steam-milk-for-latte-art/) walks through both phases step by step.
 
 ## The wet-paint test
 
@@ -55,7 +55,7 @@ You do not need a thermometer or a timer to check microfoam. Swirl the pitcher a
 - **Microfoam:** shiny, reflective, moves in one smooth sheet when you swirl. Like wet paint or melted ice cream.
 - **Not yet:** matte, bubbly, or a visible cap that lags behind when you swirl.
 
-If it fails the test, keep swirling — the pitcher often integrates with ten seconds of vigorous swirling. If it still looks dry on top, the milk is [too thick](/learn/milk-too-thick-too-thin) and needs a different fix.
+If it fails the test, keep swirling — the pitcher often integrates with ten seconds of vigorous swirling. If it still looks dry on top, the milk is [too thick](/learn/milk-too-thick-too-thin/) and needs a different fix.
 
 ## Why microfoam matters for art
 
@@ -65,8 +65,8 @@ Three practical reasons:
 - **It floats.** Finely textured milk is light enough to sit on the crema and draw white lines instead of sinking.
 - **It lasts.** Microfoam holds its texture through a pour; big-bubble foam collapses or separates before you finish the design.
 
-If your designs keep coming out as blobs or vanishing lines, check this first — the [troubleshooting guide](/learn/latte-art-troubleshooting) maps each symptom back to the milk.
+If your designs keep coming out as blobs or vanishing lines, check this first — the [troubleshooting guide](/learn/latte-art-troubleshooting/) maps each symptom back to the milk.
 
 ## A quick check for your next session
 
-Steam as normal, then before you pour, hold the pitcher up to the light and swirl. If you can see individual bubbles, roll longer next time. Write down what you saw next to a photo of the pour — after a few sessions the pattern between pitcher texture and cup result becomes obvious. The [practice routine](/learn/latte-art-practice-routine) has a simple way to keep those notes.
+Steam as normal, then before you pour, hold the pitcher up to the light and swirl. If you can see individual bubbles, roll longer next time. Write down what you saw next to a photo of the pour — after a few sessions the pattern between pitcher texture and cup result becomes obvious. The [practice routine](/learn/latte-art-practice-routine/) has a simple way to keep those notes.

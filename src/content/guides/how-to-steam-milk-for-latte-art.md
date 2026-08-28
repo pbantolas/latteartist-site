@@ -21,7 +21,7 @@ related:
 
 If the art keeps turning into a blob, start with the pitcher. Good pouring technique cannot rescue milk that is dry, bubbly, or separated.
 
-The target is **microfoam** that looks glossy and flows like wet paint. If you are not sure what that means yet, [what microfoam actually is](/learn/what-is-microfoam) defines it by sight.
+The target is **microfoam** that looks glossy and flows like wet paint. If you are not sure what that means yet, [what microfoam actually is](/learn/what-is-microfoam/) defines it by sight.
 
 <figure class="guide-image">
   <img src="/assets/learn/milk-steaming-vortex.webp" srcset="/assets/learn/milk-steaming-vortex-800.webp 800w, /assets/learn/milk-steaming-vortex.webp 1600w" sizes="(max-width: 1023px) calc(100vw - 3rem), 52rem" alt="Milk spinning in a small stainless pitcher under a home espresso machine steam wand" width="1600" height="1067" loading="lazy" />
@@ -32,7 +32,7 @@ The target is **microfoam** that looks glossy and flows like wet paint. If you a
 
 Start with cold milk and a clean pitcher. Purge the wand, place the tip near the surface, and keep a damp cloth ready so you can wipe the wand as soon as you finish.
 
-Steam power varies, so watch the milk rather than copying someone else’s timing. On entry-level machines the timing stretches out — see [steaming on weaker machines](/learn/steaming-milk-weak-machine).
+Steam power varies, so watch the milk rather than copying someone else’s timing. On entry-level machines the timing stretches out — see [steaming on weaker machines](/learn/steaming-milk-weak-machine/).
 
 ## Stretch: introduce a little air
 
@@ -61,7 +61,7 @@ After steaming:
 - Swirl until the milk looks glossy and incorporated.
 - Pour straight away before the foam separates.
 
-The milk should roll around the pitcher. If it moves as a stiff lump, it is too thick for clean lines — the [too thick or too thin guide](/learn/milk-too-thick-too-thin) shows how to read and fix it.
+The milk should roll around the pitcher. If it moves as a stiff lump, it is too thick for clean lines — the [too thick or too thin guide](/learn/milk-too-thick-too-thin/) shows how to read and fix it.
 
 ## Read the texture
 
@@ -77,7 +77,7 @@ The finished cup can point you in a direction, but it cannot prove the cause. Ch
 
 ## What about oat milk?
 
-Alt milks vary a lot. Keep the product and amount consistent while you learn how it stretches on your machine. Some need less air; some separate faster. The [oat milk guide](/learn/oat-milk-latte-art) covers the specifics.
+Alt milks vary a lot. Keep the product and amount consistent while you learn how it stretches on your machine. Some need less air; some separate faster. The [oat milk guide](/learn/oat-milk-latte-art/) covers the specifics.
 
 Judge the result by the pitcher: glossy, flowing milk is more useful than chasing a universal brand or temperature rule.
 
@@ -87,4 +87,4 @@ Judge the result by the pitcher: glossy, flowing milk is more useful than chasin
 2. Add slightly less air on the next one; change nothing else.
 3. Keep the better direction, then test the vortex in a later session.
 
-Once the milk flows well, move to the [heart guide](/learn/latte-art-heart). If it still dumps, bubbles, or disappears, use the [troubleshooting guide](/learn/latte-art-troubleshooting).
+Once the milk flows well, move to the [heart guide](/learn/latte-art-heart/). If it still dumps, bubbles, or disappears, use the [troubleshooting guide](/learn/latte-art-troubleshooting/).

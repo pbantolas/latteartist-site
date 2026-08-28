@@ -90,4 +90,4 @@ Move to tulips once you can place a heart on purpose. Save rosettas for when you
 
 You do not need perfection. You need enough control to tell whether the problem came from the milk, height, flow, or movement.
 
-If you are unsure where the pour broke down, use the [latte art troubleshooting guide](/learn/latte-art-troubleshooting) and pick one symptom.
+If you are unsure where the pour broke down, use the [latte art troubleshooting guide](/learn/latte-art-troubleshooting/) and pick one symptom.

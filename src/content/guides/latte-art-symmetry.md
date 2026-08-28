@@ -45,7 +45,7 @@ Symmetry starts before the pattern does. When you set the base, picture a line r
 - The most common aim error is pouring slightly towards yourself — the near edge of the cup feels like the centre from a standing position. Check from above, not from the side.
 - A practical cue: line the spout up with the handle. If the stream is on the handle line, it is on the centre line.
 
-The [heart guide](/learn/latte-art-heart) covers this for a single-centre pattern; the same line discipline is what keeps a [rosetta](/learn/latte-art-rosetta) straight.
+The [heart guide](/learn/latte-art-heart/) covers this for a single-centre pattern; the same line discipline is what keeps a [rosetta](/learn/latte-art-rosetta/) straight.
 
 ## Cup handling: the quiet cause of lopsided pours
 
@@ -81,4 +81,4 @@ Sometimes the pitcher is the problem. A spout that drips or a pitcher held at a 
 2. Second pour: add the pattern, then photograph the cup from directly overhead.
 3. Third pour: fix whichever of the three causes the photo showed.
 
-Overhead photos make asymmetry impossible to un-see — and easy to track. Comparing this week's overhead shots to last month's is one of the clearest progress signals there is; the [practice routine](/learn/latte-art-practice-routine) builds that comparison in.
+Overhead photos make asymmetry impossible to un-see — and easy to track. Comparing this week's overhead shots to last month's is one of the clearest progress signals there is; the [practice routine](/learn/latte-art-practice-routine/) builds that comparison in.

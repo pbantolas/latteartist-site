@@ -1,0 +1,27 @@
+---
+interface Props {
+    placement: string;
+    ctaVariant: string;
+    class?: string;
+}
+
+const {
+    placement,
+    ctaVariant,
+    class: className,
+} = Astro.props;
+
+const appStoreUrl = "https://apps.apple.com/us/app/latte-art-tracker-latteartist/id6744374882";
+---
+
+<a
+    href={appStoreUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    data-app-store-link
+    data-umami-placement={placement}
+    data-umami-cta-variant={ctaVariant}
+    class={className}
+>
+    <slot />
+</a>

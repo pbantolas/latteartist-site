@@ -32,7 +32,7 @@ If yours looks like an onion, apple, blob, or accidental leaf, read the shape an
 
 Swirl the pitcher. The milk should look shiny and move like wet paint, with no dry cap sitting on top.
 
-If thin milk pours first and foam dumps out later, go back to [stretching and rolling the milk](/learn/how-to-steam-milk-for-latte-art).
+If thin milk pours first and foam dumps out later, go back to [stretching and rolling the milk](/learn/how-to-steam-milk-for-latte-art/).
 
 ## 2. Tilt the cup and set the base
 
@@ -77,4 +77,4 @@ A heavy cut can split or wash out the shape. A hesitant cut leaves an apple. Aim
 2. Second pour: change only when you drop low.
 3. Third pour: keep the better timing and clean up the cut-through.
 
-A note like “dropped earlier; bigger heart; cut too heavy” is enough. Use the [practice routine](/learn/latte-art-practice-routine) if you want a repeatable way to review sessions.
+A note like “dropped earlier; bigger heart; cut too heavy” is enough. Use the [practice routine](/learn/latte-art-practice-routine/) if you want a repeatable way to review sessions.

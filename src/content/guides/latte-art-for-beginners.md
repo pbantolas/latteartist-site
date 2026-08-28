@@ -32,7 +32,7 @@ Think of the pour as four moves: **set the base, get close, push, cut**.
 
 Latte-art milk needs **microfoam**: tiny bubbles fully incorporated into the milk. Baristas often call the right texture **wet paint**. It should look glossy and move as one fluid body when you swirl the pitcher.
 
-If you have thin milk under a dry cap of foam, the two will leave the pitcher at different times. The liquid pours first; then the foam dumps out as a blob. Start with the [milk-steaming guide](/learn/how-to-steam-milk-for-latte-art) if that sounds familiar.
+If you have thin milk under a dry cap of foam, the two will leave the pitcher at different times. The liquid pours first; then the foam dumps out as a blob. Start with the [milk-steaming guide](/learn/how-to-steam-milk-for-latte-art/) if that sounds familiar.
 
 ## Set the base
 
@@ -59,9 +59,9 @@ No wiggle is needed yet. Learn to place one clean shape before adding stacks or 
 1. Steam milk that stays glossy when you swirl it.
 2. Pour an even base without trying to draw.
 3. Drop low and make a white circle.
-4. Turn the circle into a [simple heart](/learn/latte-art-heart).
+4. Turn the circle into a [simple heart](/learn/latte-art-heart/).
 5. Repeat the heart until you can place it on purpose.
-6. Move to a [tulip](/learn/latte-art-tulip), then a [rosetta](/learn/latte-art-rosetta).
+6. Move to a [tulip](/learn/latte-art-tulip/), then a [rosetta](/learn/latte-art-rosetta/).
 
 Each pattern keeps the skills from the one before it. A tulip is several pushes stacked together. A rosetta adds steady flow and a repeatable wiggle.
 
@@ -70,13 +70,13 @@ Each pattern keeps the skills from the one before it. A tulip is several pushes 
 - **No white appears:** get closer, start drawing earlier, or check the milk texture.
 - **A foam dump lands at the end:** the milk is likely too thick or has separated.
 - **The heart is tiny:** you probably made too much base or dropped low too late.
-- **The shape runs to one side:** check the cup tilt and whether the spout is centred — the [symmetry guide](/learn/latte-art-symmetry) has the full diagnosis.
+- **The shape runs to one side:** check the cup tilt and whether the spout is centred — the [symmetry guide](/learn/latte-art-symmetry/) has the full diagnosis.
 - **The design washes out:** check your height, flow, and whether the milk is still fluid.
 
-One photo rarely proves one cause. Use the [troubleshooting guide](/learn/latte-art-troubleshooting) to pick one thing to test next.
+One photo rarely proves one cause. Use the [troubleshooting guide](/learn/latte-art-troubleshooting/) to pick one thing to test next.
 
 ## Keep practice simple
 
 Make a few pours with the same cup, pitcher, milk, and pattern. Change one thing: less air, an earlier drop, a stronger push, or a lighter cut-through.
 
-Keep a photo and one short note after each session. The [latte art practice routine](/learn/latte-art-practice-routine) shows a simple way to review them.
+Keep a photo and one short note after each session. The [latte art practice routine](/learn/latte-art-practice-routine/) shows a simple way to review them.

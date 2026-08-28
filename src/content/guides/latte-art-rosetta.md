@@ -22,7 +22,7 @@ The rosetta is the heart with one extra skill: a side-to-side wiggle that lays d
 
 If yours comes out as a stripe, a blob with stripes, or a fern that erases itself at the end, the fix is usually timing or milk, not wrist speed.
 
-Make sure you can pour a centred [heart](/learn/latte-art-heart) first. The rosetta reuses the same base, height change, and cut-through.
+Make sure you can pour a centred [heart](/learn/latte-art-heart/) first. The rosetta reuses the same base, height change, and cut-through.
 
 <figure class="guide-image">
   <img src="/assets/learn/rosetta-wiggle.webp" srcset="/assets/learn/rosetta-wiggle-800.webp 800w, /assets/learn/rosetta-wiggle.webp 1600w" sizes="(max-width: 1023px) calc(100vw - 3rem), 52rem" alt="A home barista pouring a narrow rosetta with slightly uneven white leaves" width="1600" height="1067" loading="lazy" />
@@ -77,7 +77,7 @@ Finish with a thin, lifted stream and stop the pour decisively. A slightly small
 | Dense leaves, no gaps | Drag faster or wiggle wider |
 | Pattern erased at the end | Lift and thin the stream before the cut — that was the crash |
 | Rosetta only fills half the cup | Make less base and start the wiggle earlier |
-| Off-centre leaves | Line the spout up with the middle of the cup, as in the [symmetry guide](/learn/latte-art-symmetry) |
+| Off-centre leaves | Line the spout up with the middle of the cup, as in the [symmetry guide](/learn/latte-art-symmetry/) |
 
 ## A three-pour rosetta session
 
@@ -85,4 +85,4 @@ Finish with a thin, lifted stream and stop the pour decisively. A slightly small
 2. Second pour: add the drag and count your leaves out loud to keep the rhythm even.
 3. Third pour: keep the rhythm and work on a lifted, thin cut-through.
 
-Note what changed — “wiggle good, dragged too fast, crashed the finish” is enough. The [practice routine](/learn/latte-art-practice-routine) shows how to turn those notes into a repeatable session.
+Note what changed — “wiggle good, dragged too fast, crashed the finish” is enough. The [practice routine](/learn/latte-art-practice-routine/) shows how to turn those notes into a repeatable session.

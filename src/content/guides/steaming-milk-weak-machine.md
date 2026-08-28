@@ -66,7 +66,7 @@ The mistake is compensating for slow steaming with a more aggressive tip positio
 - Watch the volume, not the clock: stop stretching when the milk has expanded by roughly a third.
 - Then sink the tip slightly and spend the rest of the steam time rolling. On a small machine the roll is where microfoam is won.
 
-If you cannot tell whether the result is too thick or too thin, the [milk thickness guide](/learn/milk-too-thick-too-thin) has the diagnostic table.
+If you cannot tell whether the result is too thick or too thin, the [milk thickness guide](/learn/milk-too-thick-too-thin/) has the diagnostic table.
 
 ## Machine-specific notes
 
@@ -78,4 +78,4 @@ If you cannot tell whether the result is too thick or too thin, the [milk thickn
 
 Next session, change only the pitcher: same milk, same machine, smaller pitcher with less milk. Compare the texture against your usual setup.
 
-Weak machines reward small adjustments repeated over sessions. Log the machine, pitcher size, and what the milk looked like next to a photo of each pour — the [practice routine](/learn/latte-art-practice-routine) shows a simple way to keep that record, and after a week you will know exactly what your machine likes.
+Weak machines reward small adjustments repeated over sessions. Log the machine, pitcher size, and what the milk looked like next to a photo of each pour — the [practice routine](/learn/latte-art-practice-routine/) shows a simple way to keep that record, and after a week you will know exactly what your machine likes.

@@ -6,6 +6,7 @@ import { ClientRouter } from "astro:transitions";
 import "@fontsource-variable/outfit";
 import "../styles/global.css";
 import NavigationLinks from "../components/NavigationLinks.astro"; // Import the navigation component
+import AppStoreLink from "../components/AppStoreLink.astro";
 interface Props {
     title?: string;
     description?: string;
@@ -21,6 +22,8 @@ interface Props {
     imageAlt?: string;
     canonical?: string;
     structuredData?: Record<string, unknown> | Record<string, unknown>[];
+    pageType?: string;
+    topic?: string;
 }
 
 import Seo from "../components/Seo.astro";
@@ -60,7 +63,6 @@ const footerGuides = (await getCollection("guides"))
             href="/favicon-96x96.png"
             sizes="96x96"
         />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link
             rel="apple-touch-icon"
@@ -140,6 +142,8 @@ const footerGuides = (await getCollection("guides"))
     </head>
     <body
         class="font-sans text-primary bg-gradient-to-b from-gradient-start to-gradient-end flex flex-col items-center min-h-screen p-2 leading-relaxed transition-colors duration-300 ease-in-out"
+        data-page-type={Astro.props.pageType ?? "site"}
+        data-topic={Astro.props.topic ?? "general"}
     >
         <a
             href="#main-content"
@@ -166,21 +170,20 @@ const footerGuides = (await getCollection("guides"))
                     <div>
                         <a href="/" class="font-semibold text-primary">LatteArtist</a>
                         <p class="mt-2 max-w-xs">A simple latte art practice journal for iPhone.</p>
-                        <a
-                            href="https://apps.apple.com/us/app/latte-art-tracker-latteartist/id6744374882"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                        <AppStoreLink
+                            placement="footer"
+                            ctaVariant="text_link"
                             class="mt-4 inline-block font-semibold text-accent"
                         >
                             View on the App Store →
-                        </a>
+                        </AppStoreLink>
                     </div>
                     <nav aria-label="Guides">
                         <p class="font-semibold text-primary">Learn</p>
                         <div class="mt-3 flex flex-col gap-2">
-                            <a href="/learn" class="hover:text-accent">All guides</a>
+                            <a href="/learn/" class="hover:text-accent">All guides</a>
                             {footerGuides.map((guide) => (
-                                <a href={`/learn/${guideSlug(guide.id)}`} class="hover:text-accent">
+                                <a href={`/learn/${guideSlug(guide.id)}/`} class="hover:text-accent">
                                     {guide.data.footerLabel ?? guide.data.title}
                                 </a>
                             ))}
@@ -189,8 +192,8 @@ const footerGuides = (await getCollection("guides"))
                     <nav aria-label="Site">
                         <p class="font-semibold text-primary">LatteArtist</p>
                         <div class="mt-3 flex flex-col gap-2">
-                            <a href="/support" class="hover:text-accent">Support</a>
-                            <a href="/privacy-policy" class="hover:text-accent">Privacy</a>
+                            <a href="/support/" class="hover:text-accent">Support</a>
+                            <a href="/privacy-policy/" class="hover:text-accent">Privacy</a>
                         </div>
                     </nav>
                 </div>
@@ -200,5 +203,82 @@ const footerGuides = (await getCollection("guides"))
                 </div>
             </footer>
         </div>
+        <script is:inline>
+            if (!window.__latteArtistAnalyticsInitialized) {
+                window.__latteArtistAnalyticsInitialized = true;
+
+                document.addEventListener("click", (event) => {
+                    if (!(event.target instanceof Element)) return;
+
+                    const link = event.target.closest(
+                        "a[data-app-store-link]"
+                    );
+                    if (!link) return;
+
+                    window.umami?.track("app_store_click", {
+                        placement: link.dataset.umamiPlacement,
+                        page_type: document.body.dataset.pageType ?? "site",
+                        topic: document.body.dataset.topic ?? "general",
+                        cta_variant: link.dataset.umamiCtaVariant,
+                        destination: link.href,
+                    });
+                });
+
+                let cleanupGuideEngagement = () => {};
+
+                const setupGuideEngagement = () => {
+                    const article = document.querySelector(
+                        "article[data-guide-topic]"
+                    );
+                    const topic = article?.dataset.guideTopic;
+                    cleanupGuideEngagement();
+
+                    if (!article || !topic) return;
+
+                    let reachedHalfway = false;
+                    let spentThirtySeconds = false;
+                    let tracked = false;
+
+                    const trackEngagement = () => {
+                        if (tracked || !reachedHalfway || !spentThirtySeconds) {
+                            return;
+                        }
+
+                        if (typeof window.umami?.track !== "function") return;
+
+                        tracked = true;
+                        window.umami.track("guide_engaged", {
+                            topic,
+                            page_type: "guide",
+                        });
+                    };
+
+                    const checkScrollDepth = () => {
+                        const { top, height } = article.getBoundingClientRect();
+                        reachedHalfway ||= top + height / 2 <= window.innerHeight;
+                        trackEngagement();
+                    };
+
+                    const timer = window.setTimeout(() => {
+                        spentThirtySeconds = true;
+                        trackEngagement();
+                    }, 30_000);
+
+                    window.addEventListener("scroll", checkScrollDepth, {
+                        passive: true,
+                    });
+                    window.addEventListener("resize", checkScrollDepth);
+                    checkScrollDepth();
+
+                    cleanupGuideEngagement = () => {
+                        window.clearTimeout(timer);
+                        window.removeEventListener("scroll", checkScrollDepth);
+                        window.removeEventListener("resize", checkScrollDepth);
+                    };
+                };
+
+                document.addEventListener("astro:page-load", setupGuideEngagement);
+            }
+        </script>
     </body>
 </html>

@@ -67,13 +67,15 @@ const breadcrumbSchema = {
     ogImage={ogImage}
     twitterImage={ogImage}
     structuredData={[articleSchema, breadcrumbSchema]}
+    pageType="guide"
+    topic={currentSlug}
 >
     <div class="mx-auto w-full max-w-6xl">
         <nav aria-label="Breadcrumb" class="mb-8 text-sm text-secondary">
             <ol class="flex flex-wrap items-center gap-2">
                 <li><a href="/" class="hover:text-accent">Home</a></li>
                 <li aria-hidden="true">/</li>
-                <li><a href="/learn" class="hover:text-accent">Learn</a></li>
+                <li><a href="/learn/" class="hover:text-accent">Learn</a></li>
                 <li aria-hidden="true">/</li>
                 <li aria-current="page" class="text-primary">{data.eyebrow}</li>
             </ol>
@@ -108,7 +110,7 @@ const breadcrumbSchema = {
                 </aside>
             )}
 
-            <article class="guide-prose prose prose-lg max-w-none dark:prose-invert">
+            <article class="guide-prose prose prose-lg max-w-none dark:prose-invert" data-guide-topic={currentSlug}>
                 <slot />
             </article>
         </div>
@@ -124,12 +126,12 @@ const breadcrumbSchema = {
                         <p class="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Keep practising</p>
                         <h2 id="related-guides-heading" class="mt-2 text-3xl font-semibold text-primary">Related guides</h2>
                     </div>
-                    <a href="/learn" class="hidden font-semibold text-accent sm:block">All guides →</a>
+                    <a href="/learn/" class="hidden font-semibold text-accent sm:block">All guides →</a>
                 </div>
                 <div class="grid gap-5 md:grid-cols-2">
                     {relatedGuides.map((entry) => (
                         <GuideCard
-                            href={`/learn/${guideSlug(entry.id)}`}
+                            href={`/learn/${guideSlug(entry.id)}/`}
                             eyebrow={entry.data.eyebrow}
                             title={entry.data.title}
                             description={entry.data.description}

@@ -63,8 +63,8 @@ If it dumps anyway, note it and shorten the stretch next time. Chasing the pour 
 Thin milk means the vortex never got going or the stretch never happened — the milk was heated but not textured. Common causes:
 
 - The wand tip sat too deep, so no air was ever introduced.
-- The machine is underpowered and you ran out of steam time before any foam formed — see [steaming on entry-level machines](/learn/steaming-milk-weak-machine).
-- You stretched, but stopped the vortex early, so the foam sat on top instead of folding in — see [what microfoam should look like](/learn/what-is-microfoam).
+- The machine is underpowered and you ran out of steam time before any foam formed — see [steaming on entry-level machines](/learn/steaming-milk-weak-machine/).
+- You stretched, but stopped the vortex early, so the foam sat on top instead of folding in — see [what microfoam should look like](/learn/what-is-microfoam/).
 
 Thin milk can still taste fine, but it will not hold a design. Steam again with the tip nearer the surface for the first seconds.
 
@@ -76,4 +76,4 @@ Next session, keep everything the same and change only stretch time:
 2. Pour one with the stretch cut in half.
 3. Compare the two photos side by side.
 
-The better one tells you which side of the line you were on. Log the milk, the stretch, and the result so the finding sticks — the [practice routine](/learn/latte-art-practice-routine) shows a simple way to do that.
+The better one tells you which side of the line you were on. Log the milk, the stretch, and the result so the finding sticks — the [practice routine](/learn/latte-art-practice-routine/) shows a simple way to do that.

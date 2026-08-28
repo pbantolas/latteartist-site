@@ -1,2 +1,28 @@
 [functions]
   node_bundler = "esbuild"
+
+[build.processing.html]
+  # Netlify's Pretty URLs canonicalises /page to /page/ and preserves query
+  # strings. Redirect rules cannot distinguish the two slash variants.
+  pretty_urls = true
+
+# These historic, thin pages no longer have maintained content. Netlify matches
+# paths with or without trailing slashes, so each rule reaches the homepage in
+# one permanent redirect and preserves the incoming query string.
+[[redirects]]
+  from = "/log"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/roadmap"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ideas"
+  to = "/"
+  status = 301
+  force = true

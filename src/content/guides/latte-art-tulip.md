@@ -20,7 +20,7 @@ related:
 
 The tulip is a heart poured in stages: two or three white layers stacked on top of each other, each one nudging the previous layer forward.
 
-It has no wiggle, so it is often easier than the [rosetta](/learn/latte-art-rosetta) once your [heart](/learn/latte-art-heart) is consistent. The hard part is keeping the layers separate instead of watching them merge into one blob.
+It has no wiggle, so it is often easier than the [rosetta](/learn/latte-art-rosetta/) once your [heart](/learn/latte-art-heart/) is consistent. The hard part is keeping the layers separate instead of watching them merge into one blob.
 
 <figure class="guide-image">
   <img src="/assets/learn/tulip-finished-v2.webp" srcset="/assets/learn/tulip-finished-v2-800.webp 800w, /assets/learn/tulip-finished-v2.webp 1600w" sizes="(max-width: 1023px) calc(100vw - 3rem), 52rem" alt="A finished two-layer latte art tulip viewed directly from above" width="1600" height="1067" loading="lazy" />
@@ -60,7 +60,7 @@ The cut-through pulls each layer to a point and gives the tulip its stem line. K
 Merging is the most common tulip problem, and it has two main causes:
 
 1. **Not lifting between layers.** If the flow never pauses, each “layer” is just the same circle still growing. Lift enough that the white stops spreading before you move back.
-2. **Milk too thin or too hot.** Fluid milk lays clean separate layers; thin milk lets each push dissolve into the one before. If every layer disappears into the last, revisit [milk texture](/learn/how-to-steam-milk-for-latte-art) before blaming the pour.
+2. **Milk too thin or too hot.** Fluid milk lays clean separate layers; thin milk lets each push dissolve into the one before. If every layer disappears into the last, revisit [milk texture](/learn/how-to-steam-milk-for-latte-art/) before blaming the pour.
 
 A third cause is pushing in the same spot. If the pour point does not move backwards, the layers pile vertically instead of stacking.
 
@@ -81,4 +81,4 @@ A third cause is pushing in the same spot. If the pour point does not move backw
 2. Second pour: add the third layer, smaller than the second.
 3. Third pour: keep the stack and clean up the cut-through.
 
-Jot down what changed between pours. Logging the pour photo next to a note like “lifted more, layers held” makes the next session start where this one ended — the [practice routine](/learn/latte-art-practice-routine) has the full method.
+Jot down what changed between pours. Logging the pour photo next to a note like “lifted more, layers held” makes the next session start where this one ended — the [practice routine](/learn/latte-art-practice-routine/) has the full method.

@@ -35,7 +35,7 @@ const collectionSchema = {
         <div class="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {guides.map((guide) => (
                 <GuideCard
-                    href={`/learn/${guideSlug(guide.id)}`}
+                    href={`/learn/${guideSlug(guide.id)}/`}
                     eyebrow={guide.data.eyebrow}
                     title={guide.data.title}
                     description={guide.data.description}
