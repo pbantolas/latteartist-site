@@ -1,0 +1,80 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+USERNAME_SERVICE="agent-latteartist-umami-username"
+PASSWORD_SERVICE="agent-latteartist-umami-password"
+KEYCHAIN_ACCOUNT="$USER"
+
+if [[ "$(uname -s)" != "Darwin" ]]; then
+  echo "Error: this script currently supports macOS only." >&2
+  exit 1
+fi
+
+if ! command -v security >/dev/null 2>&1; then
+  echo "Error: macOS 'security' command not found." >&2
+  exit 1
+fi
+
+echo "Setting up Latte Artist agent credentials in macOS Keychain."
+echo
+echo "Existing entries will be updated if they already exist."
+echo
+
+read -r -p "Umami agent username: " UMAMI_USERNAME
+
+if [[ -z "$UMAMI_USERNAME" ]]; then
+  echo "Error: username cannot be empty." >&2
+  exit 1
+fi
+
+read -r -s -p "Umami agent password: " UMAMI_PASSWORD
+echo
+
+if [[ -z "$UMAMI_PASSWORD" ]]; then
+  echo "Error: password cannot be empty." >&2
+  exit 1
+fi
+
+security add-generic-password \
+  -U \
+  -a "$KEYCHAIN_ACCOUNT" \
+  -s "$USERNAME_SERVICE" \
+  -w "$UMAMI_USERNAME" \
+  >/dev/null
+
+security add-generic-password \
+  -U \
+  -a "$KEYCHAIN_ACCOUNT" \
+  -s "$PASSWORD_SERVICE" \
+  -w "$UMAMI_PASSWORD" \
+  >/dev/null
+
+# Remove secrets from shell variables as soon as possible.
+unset UMAMI_USERNAME
+unset UMAMI_PASSWORD
+
+# Verify that both entries can be retrieved, without printing them.
+if ! security find-generic-password \
+  -a "$KEYCHAIN_ACCOUNT" \
+  -s "$USERNAME_SERVICE" \
+  -w \
+  >/dev/null 2>&1; then
+  echo "Error: failed to verify stored Umami username." >&2
+  exit 1
+fi
+
+if ! security find-generic-password \
+  -a "$KEYCHAIN_ACCOUNT" \
+  -s "$PASSWORD_SERVICE" \
+  -w \
+  >/dev/null 2>&1; then
+  echo "Error: failed to verify stored Umami password." >&2
+  exit 1
+fi
+
+echo
+echo "✓ Agent credentials stored successfully."
+echo
+echo "Keychain entries:"
+echo "  $USERNAME_SERVICE"
+echo "  $PASSWORD_SERVICE"
