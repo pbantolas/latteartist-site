@@ -1,6 +1,6 @@
 ---
-title: "What Is Microfoam? The Difference Between Foam and Velvet"
-description: "Microfoam is milk with bubbles so small you cannot see them. Learn what velvety café texture actually means and how to tell if your pitcher has it."
+title: "What Is Microfoam for Latte Art? The Wet-Paint Test"
+description: "Microfoam is glossy, pourable milk with bubbles too small to see. Use this quick wet-paint test before you pour latte art."
 eyebrow: "Milk texture"
 pubDate: 2026-08-06
 readTime: "4 min read"
