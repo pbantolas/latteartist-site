@@ -224,6 +224,55 @@ const footerGuides = (await getCollection("guides"))
                     });
                 });
 
+                let cleanupAppStoreCtaSeen = () => {};
+
+                const setupAppStoreCtaSeen = () => {
+                    cleanupAppStoreCtaSeen();
+
+                    const links = document.querySelectorAll(
+                        "a[data-app-store-link]"
+                    );
+                    if (
+                        !links.length ||
+                        typeof IntersectionObserver === "undefined"
+                    ) {
+                        return;
+                    }
+
+                    const seenLinks = new WeakSet();
+                    const observer = new IntersectionObserver(
+                        (entries) => {
+                            entries.forEach((entry) => {
+                                if (
+                                    !entry.isIntersecting ||
+                                    entry.intersectionRatio < 0.5
+                                ) {
+                                    return;
+                                }
+
+                                const link = entry.target;
+                                if (seenLinks.has(link)) return;
+
+                                seenLinks.add(link);
+                                observer.unobserve(link);
+                                window.umami?.track("app_store_cta_seen", {
+                                    placement: link.dataset.umamiPlacement,
+                                    page_type:
+                                        document.body.dataset.pageType ?? "site",
+                                    topic:
+                                        document.body.dataset.topic ?? "general",
+                                    cta_variant: link.dataset.umamiCtaVariant,
+                                    destination: "app_store",
+                                });
+                            });
+                        },
+                        { threshold: 0.5 }
+                    );
+
+                    links.forEach((link) => observer.observe(link));
+                    cleanupAppStoreCtaSeen = () => observer.disconnect();
+                };
+
                 let cleanupGuideEngagement = () => {};
 
                 const setupGuideEngagement = () => {
@@ -277,7 +326,13 @@ const footerGuides = (await getCollection("guides"))
                     };
                 };
 
-                document.addEventListener("astro:page-load", setupGuideEngagement);
+                document.addEventListener("astro:before-swap", () => {
+                    cleanupAppStoreCtaSeen();
+                });
+                document.addEventListener("astro:page-load", () => {
+                    setupAppStoreCtaSeen();
+                    setupGuideEngagement();
+                });
             }
         </script>
     </body>
