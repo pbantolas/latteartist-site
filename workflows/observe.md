@@ -2,6 +2,24 @@
 
 Scope: LatteArtist (https://latteartist.coffeeatpetros.com), iOS app "Latte Art Tracker: LatteArtist".
 
+## 0. Authenticate before collecting data
+
+Run the preflight before making any collection calls:
+
+```bash
+scripts/setup-agent-auth --check
+```
+
+The preflight must have permission to access the macOS Login keychain and local CLI session stores. In an agent sandbox, request elevated permission for this command and for the subsequent `security`, `gog`, and `asc` commands; otherwise healthy credentials may appear to be missing.
+
+It validates all three sources without printing secrets:
+
+* Umami: the dedicated generic-password entries in the Login keychain, then an API login
+* Google Search Console: a refreshable `gog` OAuth token with the `searchconsole` scope
+* App Store Connect: a cached `asc web` session
+
+Stop and repair authentication before proceeding if the preflight fails. To create or replace the dedicated Umami entries, run `scripts/setup-agent-auth` interactively. For Google and ASC, follow the specific remediation printed by the preflight.
+
 ## 1. Time window
 
 Use:
@@ -114,42 +132,45 @@ Instrumentation gate: the two exposure-based rates depend on `app_store_cta_seen
 
 ### Pull
 
-Self-hosted at https://umami.bantolas.dev. Credentials are in the macOS Keychain (services `agent-latteartist-umami-username` and `agent-latteartist-umami-password`, account `$USER`), set up by `scripts/setup-agent-auth`.
+Self-hosted at https://umami.bantolas.dev. Credentials are dedicated generic-password entries in the macOS Login keychain (services `agent-latteartist-umami-username` and `agent-latteartist-umami-password`, account `$USER`), created by `scripts/setup-agent-auth`. Run these commands with permission to access the Login keychain.
 
 1. Log in:
 
    ```bash
    UM_USER=$(security find-generic-password -a "$USER" -s agent-latteartist-umami-username -w)
    UM_PASS=$(security find-generic-password -a "$USER" -s agent-latteartist-umami-password -w)
-   TOKEN=$(curl -s -X POST https://umami.bantolas.dev/api/auth/login \
+   LOGIN_RESPONSE=$(curl --fail --silent --show-error -X POST https://umami.bantolas.dev/api/auth/login \
      -H 'Content-Type: application/json' \
-     -d "{\"username\":\"$UM_USER\",\"password\":\"$UM_PASS\"}" | jq -r .token)
+     -d "{\"username\":\"$UM_USER\",\"password\":\"$UM_PASS\"}")
+   TOKEN=$(jq -er '.token | strings | select(length > 0)' <<<"$LOGIN_RESPONSE")
+   TEAM_ID=$(jq -er '.user.teams[0].id' <<<"$LOGIN_RESPONSE")
+   unset UM_USER UM_PASS LOGIN_RESPONSE
    ```
 
-2. Find the website id (the agent user is view-only; the LatteArtist website is team-scoped). The team id is `user.teams[0].id` from the login response:
+2. Find the website id (the agent user is view-only; the LatteArtist website is team-scoped):
 
    ```bash
-   curl -s https://umami.bantolas.dev/api/teams/<teamId>/websites \
+   curl --fail --silent --show-error https://umami.bantolas.dev/api/teams/$TEAM_ID/websites \
      -H "Authorization: Bearer $TOKEN"    # website named "LatteArtist"
    ```
 
 3. Dates are epoch milliseconds (`startAt`/`endAt`). Run each for both windows:
 
    ```bash
-   curl -s "https://umami.bantolas.dev/api/websites/<websiteId>/stats?startAt=$FROM&endAt=$TO" \
+   curl --fail --silent --show-error "https://umami.bantolas.dev/api/websites/<websiteId>/stats?startAt=$FROM&endAt=$TO" \
      -H "Authorization: Bearer $TOKEN"    # pageviews, visitors, bounces
-   curl -s "https://umami.bantolas.dev/api/websites/<websiteId>/metrics?type=path&startAt=$FROM&endAt=$TO" \
+   curl --fail --silent --show-error "https://umami.bantolas.dev/api/websites/<websiteId>/metrics?type=path&startAt=$FROM&endAt=$TO" \
      -H "Authorization: Bearer $TOKEN"    # pageviews per path
-   curl -s "https://umami.bantolas.dev/api/websites/<websiteId>/metrics?type=referrer&startAt=$FROM&endAt=$TO" \
+   curl --fail --silent --show-error "https://umami.bantolas.dev/api/websites/<websiteId>/metrics?type=referrer&startAt=$FROM&endAt=$TO" \
      -H "Authorization: Bearer $TOKEN"    # organic = google.com etc.
    ```
 
 4. Events and their properties (the `events` endpoint paginates, add `&page=N`):
 
    ```bash
-   curl -s "https://umami.bantolas.dev/api/websites/<websiteId>/events?startAt=$FROM&endAt=$TO" \
+   curl --fail --silent --show-error "https://umami.bantolas.dev/api/websites/<websiteId>/events?startAt=$FROM&endAt=$TO" \
      -H "Authorization: Bearer $TOKEN"     # rows: urlPath + eventName
-   curl -s "https://umami.bantolas.dev/api/websites/<websiteId>/event-data?startAt=$FROM&endAt=$TO" \
+   curl --fail --silent --show-error "https://umami.bantolas.dev/api/websites/<websiteId>/event-data?startAt=$FROM&endAt=$TO" \
      -H "Authorization: Bearer $TOKEN"     # eventProperties: placement, page_type, topic, cta_variant
    ```
 

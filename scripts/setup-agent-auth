@@ -5,6 +5,19 @@ USERNAME_SERVICE="agent-latteartist-umami-username"
 PASSWORD_SERVICE="agent-latteartist-umami-password"
 KEYCHAIN_ACCOUNT="$USER"
 
+usage() {
+  cat <<'EOF'
+Usage: scripts/setup-agent-auth [--check]
+
+Without arguments, securely store the Umami agent username and password in
+the macOS Login keychain.
+
+With --check, verify that Umami, Google Search Console (gog), and App Store
+Connect (asc) are ready for the observe workflow. This mode never prompts or
+prints credentials.
+EOF
+}
+
 if [[ "$(uname -s)" != "Darwin" ]]; then
   echo "Error: this script currently supports macOS only." >&2
   exit 1
@@ -13,6 +26,116 @@ fi
 if ! command -v security >/dev/null 2>&1; then
   echo "Error: macOS 'security' command not found." >&2
   exit 1
+fi
+
+check_umami() {
+  local umami_username umami_password login_response
+
+  if ! command -v curl >/dev/null 2>&1 || ! command -v jq >/dev/null 2>&1; then
+    echo "✗ Umami: curl and jq are required for the authentication check." >&2
+    return 1
+  fi
+
+  if ! umami_username=$(security find-generic-password \
+    -a "$KEYCHAIN_ACCOUNT" \
+    -s "$USERNAME_SERVICE" \
+    -w 2>/dev/null); then
+    echo "✗ Umami: Login keychain entry '$USERNAME_SERVICE' for '$KEYCHAIN_ACCOUNT' was not found." >&2
+    return 1
+  fi
+
+  if ! umami_password=$(security find-generic-password \
+    -a "$KEYCHAIN_ACCOUNT" \
+    -s "$PASSWORD_SERVICE" \
+    -w 2>/dev/null); then
+    unset umami_username
+    echo "✗ Umami: Login keychain entry '$PASSWORD_SERVICE' for '$KEYCHAIN_ACCOUNT' was not found." >&2
+    return 1
+  fi
+
+  if ! login_response=$(curl --fail --silent --show-error \
+    --connect-timeout 10 --max-time 20 \
+    -X POST https://umami.bantolas.dev/api/auth/login \
+    -H 'Content-Type: application/json' \
+    --data "$(jq -nc --arg username "$umami_username" --arg password "$umami_password" \
+      '{username: $username, password: $password}')"); then
+    unset umami_username umami_password
+    echo "✗ Umami: credentials could not authenticate with umami.bantolas.dev." >&2
+    return 1
+  fi
+
+  unset umami_username umami_password
+
+  if ! jq -e '.token | strings | select(length > 0)' >/dev/null <<<"$login_response"; then
+    echo "✗ Umami: login did not return a bearer token." >&2
+    return 1
+  fi
+
+  echo "✓ Umami: Login keychain credentials and API login are ready."
+}
+
+check_gsc() {
+  local gog_accounts
+
+  if ! command -v gog >/dev/null 2>&1; then
+    echo "✗ Google Search Console: gog is not installed." >&2
+    return 1
+  fi
+
+  if ! gog_accounts=$(gog auth list --plain --check 2>/dev/null); then
+    echo "✗ Google Search Console: gog could not validate a stored OAuth token." >&2
+    return 1
+  fi
+
+  if ! awk -F '\t' '$3 == "searchconsole" { found = 1 } END { exit !found }' <<<"$gog_accounts"; then
+    echo "✗ Google Search Console: no gog account has the searchconsole scope." >&2
+    return 1
+  fi
+
+  echo "✓ Google Search Console: gog OAuth token is ready."
+}
+
+check_asc() {
+  local asc_status
+
+  if ! command -v asc >/dev/null 2>&1; then
+    echo "✗ App Store Connect: asc is not installed." >&2
+    return 1
+  fi
+
+  if ! asc_status=$(asc web auth status 2>/dev/null) \
+    || ! jq -e '.authenticated == true' >/dev/null <<<"$asc_status"; then
+    echo "✗ App Store Connect: no usable asc web session is cached; run 'asc web auth login'." >&2
+    return 1
+  fi
+
+  echo "✓ App Store Connect: asc web session is ready."
+}
+
+if [[ "${1:-}" == "-h" || "${1:-}" == "--help" ]]; then
+  usage
+  exit 0
+fi
+
+if [[ "${1:-}" == "--check" ]]; then
+  if [[ $# -ne 1 ]]; then
+    usage >&2
+    exit 2
+  fi
+
+  echo "Checking observe workflow authentication…"
+  echo "Run this check with permission to access the macOS Login keychain and local CLI sessions."
+
+  status=0
+  check_umami || status=1
+  check_gsc || status=1
+  check_asc || status=1
+  exit "$status"
+fi
+
+if [[ $# -ne 0 ]]; then
+  usage >&2
+  exit 2
 fi
 
 echo "Setting up Latte Artist agent credentials in macOS Keychain."
