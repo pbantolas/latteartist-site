@@ -1,8 +1,9 @@
 ---
-title: "Latte Art for Beginners: Milk, Base, Push, Cut"
-description: "Start with glossy microfoam, learn the high and low pour, then build a simple heart without chasing advanced patterns too soon."
+title: "How to Make Latte Art: A Beginner’s Guide"
+description: "Learn how to make latte art with glossy microfoam, a high-and-low pour, and a simple heart before moving on to advanced patterns."
 eyebrow: "Start here"
 pubDate: 2026-08-06
+updatedDate: 2026-09-01
 readTime: "6 min read"
 order: 1
 featured: true
