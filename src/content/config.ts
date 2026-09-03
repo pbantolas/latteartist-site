@@ -48,7 +48,17 @@ const guidesCollection = defineCollection({
     }),
 });
 
+const releasesCollection = defineCollection({
+    type: "content",
+    schema: z.object({
+        version: z.string(),
+        title: z.string(),
+        pubDate: z.date(),
+    }),
+});
+
 export const collections = {
+    releases: releasesCollection,
     roadmap: roadmapCollection,
     ideas: ideasCollection,
     log: logCollection,
