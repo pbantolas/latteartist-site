@@ -87,8 +87,13 @@ check_gsc() {
     return 1
   fi
 
-  if ! awk -F '\t' '$3 == "searchconsole" { found = 1 } END { exit !found }' <<<"$gog_accounts"; then
+  if ! awk -F '\t' '$3 ~ /(^|,)[[:space:]]*searchconsole[[:space:]]*(,|$)/ { found = 1 } END { exit !found }' <<<"$gog_accounts"; then
     echo "✗ Google Search Console: no gog account has the searchconsole scope." >&2
+    return 1
+  fi
+
+  if ! awk -F '\t' '$3 ~ /(^|,)[[:space:]]*searchconsole[[:space:]]*(,|$)/ && $5 == "true" { found = 1 } END { exit !found }' <<<"$gog_accounts"; then
+    echo "✗ Google Search Console: a scoped gog account has a missing, expired, or invalid OAuth token." >&2
     return 1
   fi
 
