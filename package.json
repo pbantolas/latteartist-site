@@ -12,7 +12,7 @@
     "@fontsource-variable/outfit": "^5.2.5",
     "@netlify/functions": "^3.1.8",
     "@tailwindcss/vite": "^4.1.3",
-    "astro": "^5.6.1",
+    "astro": "^5.18.2",
     "tailwindcss": "^4.1.3"
   },
   "devDependencies": {
