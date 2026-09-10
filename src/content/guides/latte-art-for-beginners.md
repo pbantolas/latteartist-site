@@ -66,6 +66,8 @@ No wiggle is needed yet. Learn to place one clean shape before adding stacks or 
 
 Each pattern keeps the skills from the one before it. A tulip is several pushes stacked together. A rosetta adds steady flow and a repeatable wiggle.
 
+Plenty of people move faster with someone watching the pour. The [London latte art courses guide](/learn/latte-art-courses-london/) compares eight workshops, small-group classes and one-to-one sessions.
+
 ## Read what showed up in the cup
 
 - **No white appears:** get closer, start drawing earlier, or check the milk texture.

@@ -90,4 +90,6 @@ Move to tulips once you can place a heart on purpose. Save rosettas for when you
 
 You do not need perfection. You need enough control to tell whether the problem came from the milk, height, flow, or movement.
 
+If your pours have plateaued and nobody has watched your milk texture, the [London latte art courses guide](/learn/latte-art-courses-london/) compares workshops, small classes and one-to-one sessions.
+
 If you are unsure where the pour broke down, use the [latte art troubleshooting guide](/learn/latte-art-troubleshooting/) and pick one symptom.

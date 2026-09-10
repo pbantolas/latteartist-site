@@ -3,7 +3,8 @@ title: "Latte Art Courses in London: 8 Classes and Workshops"
 description: "Compare latte art courses in London by price, location, duration and class size, with workshops from Origin, Prufrock, Kaffeine and more."
 eyebrow: "London course guide"
 pubDate: 2026-09-04
-readTime: "8 min read"
+updatedDate: 2026-09-10
+readTime: "9 min read"
 order: 14
 featured: false
 footerLabel: "Latte art courses in London"
@@ -33,28 +34,42 @@ We checked these prices and booking pages on 4 September 2026. Course calendars 
 
 ## London latte art courses at a glance
 
-| Course | Area | Price | Duration | Format |
+| Course | Area | Price | Duration | Group size |
 | --- | --- | ---: | --- | --- |
-| [Origin Coffee](#origin-coffee-latte-art-enthusiast-course) | Shoreditch | £95 | About 1.5 hours | Beginner, group size not stated |
-| [Prufrock](#prufrock-introduction-to-latte-art) | Clerkenwell | £75 | 2.5 hours | Up to 6, no prerequisite |
+| [Origin Coffee](#origin-coffee-latte-art-enthusiast-course) | Shoreditch | £95 | About 1.5 hours | Not stated |
+| [Prufrock](#prufrock-introduction-to-latte-art) | Clerkenwell | £75 | 2.5 hours | Up to 6 |
 | [Kaffeine](#kaffeine-latte-art-classes) | Fitzrovia | £70 | About 2 hours | Up to 6 |
-| [Carnival Coffee Roasters](#carnival-coffee-roasters-latte-art-workshop) | Penge | £65 | 1.5 hours | Hands-on workshop |
-| [Kiss the Hippo](#kiss-the-hippo-latte-art-course) | Fitzrovia or Spitalfields | £75 | 2 hours | Up to 4, no experience needed |
+| [Carnival Coffee Roasters](#carnival-coffee-roasters-latte-art-workshop) | Penge | £65 | 1.5 hours | Not stated |
+| [Kiss the Hippo](#kiss-the-hippo-latte-art-course) | Fitzrovia or Spitalfields | £75 | 2 hours | Up to 4 |
 | [Camden Coffee Roastery](#camden-coffee-roastery-latte-art-class) | Camden | £75 | 1 hour | Up to 2 |
-| [BARistaBARBAR](#baristabarbar-latte-art-course) | Aldgate East | £89.99 | 2.5 hours | Beginner workshop |
+| [BARistaBARBAR](#baristabarbar-latte-art-course) | Aldgate East | £89.99 | 2.5 hours | Not stated |
 | [London School of Coffee](#london-school-of-coffee-latte-art-workshop) | Wandsworth | £150 | 2 hours | Up to 2 |
 
-Unless noted otherwise, the provider did not clearly state whether VAT was included in the displayed price.
+## Quick picks
+
+These are the trade-offs worth knowing before you read the detail below. They describe fit and price, not a quality ranking.
+
+- **Lowest price:** [Carnival Coffee Roasters](#carnival-coffee-roasters-latte-art-workshop) — £65 for 1.5 hours in Penge.
+- **Smallest group:** [Camden Coffee Roastery](#camden-coffee-roastery-latte-art-class) and the [London School of Coffee](#london-school-of-coffee-latte-art-workshop) both cap sessions at two people.
+- **Longest session:** [Prufrock](#prufrock-introduction-to-latte-art) and [BARistaBARBAR](#baristabarbar-latte-art-course) run 2.5-hour classes.
+- **Most central:** [Kaffeine](#kaffeine-latte-art-classes) at £70, [Prufrock](#prufrock-introduction-to-latte-art) at £75 and [Kiss the Hippo](#kiss-the-hippo-latte-art-course) at £75 sit in Fitzrovia, Clerkenwell and Spitalfields.
+- **One-to-one tuition:** the [London School of Coffee](#london-school-of-coffee-latte-art-workshop) offers a private session at £250.
 
 ## How to choose a latte art class
 
-For a first lesson, look for a class that spends time on milk texture rather than rushing straight to patterns. Starting with a heart makes sense because it teaches the high pour, low pour and pull-through you will use in more complicated designs.
+For a first lesson, look for a class that spends time on [milk texture](/learn/how-to-steam-milk-for-latte-art/) rather than rushing straight to patterns. Starting with a [heart](/learn/latte-art-heart/) makes sense because it teaches the high pour, low pour and pull-through you will use in more complicated designs.
 
 A group workshop is usually the cheaper introduction. With a class capped at two, the trainer should have more time to watch each attempt. If you can already steam consistent milk, ask whether the lesson can be adapted before you pay for another beginner session.
 
-All eight courses below focus on latte art. If you also need help dialing in espresso, look at a combined barista course instead.
+All eight courses below focus on latte art. If you also need help dialing in espresso, look at a combined barista course instead. To arrive already knowing the shapes, run through the [heart](/learn/latte-art-heart/), [tulip](/learn/latte-art-tulip/) and [rosetta](/learn/latte-art-rosetta/) guides first.
 
 ## Origin Coffee: Latte Art Enthusiast Course
+
+- **Where:** Scoresby Street or Charlotte Road, Shoreditch
+- **Price:** £95
+- **Length:** about 1.5 hours
+- **Group size:** not stated; a minimum of two attendees is needed to run
+- **Good for:** a first lesson with coffee and brewing gear included
 
 Origin charges **£95** for a London session of about **1.5 hours**. Courses run at either Scoresby Street or Charlotte Road, and the booking calendar shows which location applies to each date.
 
@@ -66,6 +81,12 @@ Students must be at least 16, and Origin needs two attendees for the course to r
 
 ## Prufrock: Introduction to Latte Art
 
+- **Where:** Leather Lane, Clerkenwell
+- **Price:** £75
+- **Length:** 2.5 hours
+- **Group size:** up to 6
+- **Good for:** the longest group class, with a published class cap
+
 Prufrock runs this **£75**, **2.5-hour** course at its training centre on Leather Lane in Clerkenwell. There is no prerequisite, and each class has no more than six people.
 
 The lesson begins with smooth, glossy microfoam, then moves on to free pouring. You practise hearts, tulips and rosettas with a trainer. The booking also includes coffee when you arrive, plus discounts at Prufrock and the Square Mile webshop.
@@ -75,6 +96,12 @@ At two and a half hours, it is one of the longer group classes here. Prufrock al
 [Check Prufrock's Introduction to Latte Art](https://www.prufrocktraining.com/products/introduction-to-latte-art-london).
 
 ## Kaffeine: Latte Art Classes
+
+- **Where:** 15 Eastcastle Street, Fitzrovia
+- **Price:** £70
+- **Length:** about 2 hours
+- **Group size:** up to 6, with one trainer for every three people
+- **Good for:** a central evening class with snacks and a handout
 
 Kaffeine lists its class at **£70 per person** for about **two hours** at 15 Eastcastle Street in Fitzrovia. It takes up to six students, with one trainer for every three people.
 
@@ -86,7 +113,13 @@ The course PDF is dated January 2025, so its timetable may be stale. It says cla
 
 ## Carnival Coffee Roasters: Latte Art Workshop
 
-Carnival's **1.5-hour** workshop costs **£65, including tax**, and takes place at its Penge roastery. The class is aimed at people who want to improve their pours at home, with practice on a professional espresso machine.
+- **Where:** Penge
+- **Price:** £65
+- **Length:** 1.5 hours
+- **Group size:** not stated
+- **Good for:** the lowest price of the eight courses
+
+Carnival's **1.5-hour** workshop costs **£65** and takes place at its Penge roastery. The class is aimed at people who want to improve their pours at home, with practice on a professional espresso machine.
 
 You learn how microfoam works, steam milk and practise pouring. Carnival has dairy and alternative milks, and sends each student home with a 230g bag of coffee. You can book a date for yourself or buy a voucher and leave the recipient to choose one later.
 
@@ -95,6 +128,12 @@ The course page does not give a class size. Ask Carnival if you want to know how
 [Check Carnival's latte art workshop](https://carnivalcoffee.co.uk/products/latte-art-workshop).
 
 ## Kiss the Hippo: Latte Art Course
+
+- **Where:** Fitzrovia or Spitalfields
+- **Price:** £75
+- **Length:** 2 hours
+- **Group size:** up to 4
+- **Good for:** a small central group; gift codes last 12 months
 
 Kiss the Hippo runs this **£75**, **two-hour** class in Fitzrovia and Spitalfields. Groups are limited to four, and beginners are welcome.
 
@@ -106,6 +145,12 @@ When we checked, both location pages showed no stock, while the main workshop pa
 
 ## Camden Coffee Roastery: Latte Art Class
 
+- **Where:** Castlehaven Road, Camden
+- **Price:** £75
+- **Length:** 1 hour, Thursdays
+- **Group size:** up to 2
+- **Good for:** the most trainer time per hour, in the shortest session here
+
 Camden Coffee Roastery charges **£75** for a **one-hour** Thursday class at its training room on Castlehaven Road. There are no more than **two people** in each session.
 
 After a short introduction, you spend most of the hour making espresso, texturing milk and trying to pour a heart in a flat white. Tulips and rosettas are also introduced. If you have more experience, mention it when booking so the trainer can cover harder patterns. A bag of coffee is included when available.
@@ -116,6 +161,12 @@ It is the shortest class on this list, with the smallest published group limit.
 
 ## BARistaBARBAR: Latte Art Course
 
+- **Where:** Aldgate East
+- **Price:** £89.99
+- **Length:** 2.5 hours
+- **Group size:** not stated
+- **Good for:** a long beginner session in east London
+
 BARistaBARBAR charges **£89.99** for a **2.5-hour** beginner class at its Aldgate East micro-roastery. You learn to free-pour hearts and start working on rosettas. It is not an accredited course, and the provider does not state a class-size limit.
 
 Several September dates appeared on the page when we checked, but the year was not shown consistently. Confirm the date directly before booking.
@@ -124,7 +175,13 @@ Several September dates appeared on the page when we checked, but the year was n
 
 ## London School of Coffee: Latte Art Workshop
 
-The London School of Coffee's Wandsworth workshop costs **£150 per person including VAT** and lasts **two hours**. Sessions have no more than two students. For a private one-to-one class, the price rises to £250 including VAT.
+- **Where:** Wandsworth
+- **Price:** £150 per person; £250 for a one-to-one session
+- **Length:** 2 hours
+- **Group size:** up to 2
+- **Good for:** one-to-one or tailored tuition, including weekend and evening dates
+
+The London School of Coffee's Wandsworth workshop costs **£150 per person** and lasts **two hours**. Sessions have no more than two students. For a private one-to-one class, the price rises to £250.
 
 The class covers preparing and texturing milk, followed by hearts, tulips and rosettas. Beginners can start from scratch. More experienced students can tell the trainer what they already know so the lesson can be adapted. The school lists weekday, weekend and selected evening dates.
 
