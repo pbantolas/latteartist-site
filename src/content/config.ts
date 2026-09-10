@@ -7,14 +7,6 @@ const roadmapCollection = defineCollection({
     }),
 });
 
-const ideasCollection = defineCollection({
-    type: "content",
-    schema: z.object({
-        title: z.string(),
-        pubDate: z.date().optional(),
-    }),
-});
-
 const logCollection = defineCollection({
     type: "content",
     schema: z.object({
@@ -60,7 +52,6 @@ const releasesCollection = defineCollection({
 export const collections = {
     releases: releasesCollection,
     roadmap: roadmapCollection,
-    ideas: ideasCollection,
     log: logCollection,
     privacy: privacyCollection,
     guides: guidesCollection,
