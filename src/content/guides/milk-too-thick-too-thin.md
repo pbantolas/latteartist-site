@@ -33,11 +33,11 @@ Before you pour, swirl and look:
 
 - **Too thick:** the milk barely moves when you swirl. A dry, meringue-like cap sits on top. When you pour, foam holds back and then dumps out in a lump — the classic blob.
 - **Too thin:** the milk looks like plain hot milk, no sheen. It pours fast and watery, and any white that appears sinks or washes out immediately.
-- **Right:** glossy, moves like wet paint, no visible cap. White lays on the surface as soon as you get the spout close.
+- **Right:** glossy, moves like wet paint, no visible cap. White lays on the surface as soon as you [get the spout close](/learn/latte-art-for-beginners/).
 
 ## Match the stretch to the drink size
 
-Aeration time is not a fixed number — it depends on how much foam the drink needs and how much milk is in the pitcher.
+Aeration time is not a fixed number — it depends on how much foam the drink needs and how much milk is in the pitcher. Plant milks need less air again: the [oat milk guide](/learn/oat-milk-latte-art/) covers the adjustments.
 
 | Drink | Rough milk volume | Stretch |
 | --- | --- | --- |

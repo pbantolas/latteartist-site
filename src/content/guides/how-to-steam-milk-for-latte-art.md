@@ -30,7 +30,7 @@ The target is **microfoam** that looks glossy and flows like wet paint. If you a
 
 ## Set up
 
-Start with cold milk and a clean pitcher. Purge the wand, place the tip near the surface, and keep a damp cloth ready so you can wipe the wand as soon as you finish.
+Start with cold milk and a clean pitcher. Purge the wand, place the tip near the surface, and keep a damp cloth ready so you can wipe the wand as soon as you finish. New to the motions? [Rehearse the steam-wand setup dry](/learn/how-to-practice-latte-art-without-wasting-coffee/) before you use milk.
 
 Steam power varies, so watch the milk rather than copying someone else’s timing. On entry-level machines the timing stretches out — see [steaming on weaker machines](/learn/steaming-milk-weak-machine/).
 
@@ -83,7 +83,7 @@ Judge the result by the pitcher: glossy, flowing milk is more useful than chasin
 
 ## A three-pour drill
 
-1. Make your usual pour and note whether the milk is thin, glossy, or stiff.
+1. [Make your usual pour](/learn/latte-art-practice-routine/) and note whether the milk is thin, glossy, or stiff.
 2. Add slightly less air on the next one; change nothing else.
 3. Keep the better direction, then test the vortex in a later session.
 

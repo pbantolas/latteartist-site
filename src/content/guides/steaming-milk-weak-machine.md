@@ -18,7 +18,7 @@ related:
   - milk-too-thick-too-thin
 ---
 
-Entry-level machines — the Breville Bambino, DeLonghi Dedica, Gaggia Classic and friends — can absolutely steam milk for latte art. They just do it slowly, and the standard café timing does not apply.
+Entry-level machines — the Breville Bambino, DeLonghi Dedica, Gaggia Classic and friends — can absolutely steam milk for [latte art](/learn/latte-art-for-beginners/). They just do it slowly, and the standard café timing does not apply.
 
 If your milk comes out hot but flat, or the foam is done before the milk is warm, the machine is asking for a different routine, not a replacement.
 
@@ -66,7 +66,7 @@ The mistake is compensating for slow steaming with a more aggressive tip positio
 - Watch the volume, not the clock: stop stretching when the milk has expanded by roughly a third.
 - Then sink the tip slightly and spend the rest of the steam time rolling. On a small machine the roll is where microfoam is won.
 
-If you cannot tell whether the result is too thick or too thin, the [milk thickness guide](/learn/milk-too-thick-too-thin/) has the diagnostic table.
+If you cannot tell whether the result is too thick or too thin, the [milk thickness guide](/learn/milk-too-thick-too-thin/) has the diagnostic table. If a pour still goes wrong from there, the [troubleshooting guide](/learn/latte-art-troubleshooting/) ties each symptom to one change.
 
 ## Machine-specific notes
 

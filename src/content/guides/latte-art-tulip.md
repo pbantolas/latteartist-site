@@ -29,7 +29,7 @@ It has no wiggle, so it is often easier than the [rosetta](/learn/latte-art-rose
 
 ## 1. Set up a smaller base than usual
 
-Swirl the pitcher until the milk is glossy. Tilt the cup, start high, and build an even base.
+Swirl the pitcher until the milk is [glossy](/learn/what-is-microfoam/). Tilt the cup, start high, and [build an even base](/learn/latte-art-for-beginners/).
 
 Every layer needs room. A three-layer tulip needs roughly three hearts' worth of white space, so keep the base lean or you will run out of cup on the second layer.
 
@@ -69,11 +69,11 @@ A third cause is pushing in the same spot. If the pour point does not move backw
 | What showed up | Try this next |
 | --- | --- |
 | One big blob | Lift fully between layers so each one stops growing |
-| Layers with no separation | Check milk texture; thin milk merges layers |
+| Layers with no separation | Check milk texture; [thin milk merges layers](/learn/milk-too-thick-too-thin/) |
 | Layers stacked but not spread | Push each new layer harder into the one before |
 | Tulip leans to one side | Move the pour point straight back, not sideways |
 | Ran out of room on layer two | Make a smaller base and smaller first layer |
-| Stem line drags the stack | Lighten the cut-through, as in the heart guide |
+| Stem line drags the stack | Lighten the cut-through, as in the [heart guide](/learn/latte-art-heart/) |
 
 ## A three-pour tulip session
 

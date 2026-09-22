@@ -31,7 +31,7 @@ Make sure you can pour a centred [heart](/learn/latte-art-heart/) first. The ros
 
 ## 1. Set up exactly like a heart
 
-Swirl the pitcher until the milk looks glossy, like wet paint. Tilt the cup, start high near the centre, and build an even brown base.
+Swirl the pitcher until the milk [looks glossy, like wet paint](/learn/what-is-microfoam/). Tilt the cup, start high near the centre, and build an even brown base.
 
 Rosettas need more room than hearts, so keep the base modest. If the cup is already half full of base, the leaves will have nowhere to grow.
 
@@ -63,7 +63,7 @@ The cup should be nearly full as you reach the near edge. If you run out of room
 
 Ease the flow, lift slightly, and pull a thin stream through the whole pattern, from the far leaves to the near edge.
 
-The **crash** is the common failure here: finishing with too much flow so the last white dump floods the leaves you just laid. It happens when the cup is full but you keep pouring at wiggle flow rate.
+The **crash** is the common failure here: finishing with too much flow so [the last white dump](/learn/milk-too-thick-too-thin/) floods the leaves you just laid. It happens when the cup is full but you keep pouring at wiggle flow rate.
 
 Finish with a thin, lifted stream and stop the pour decisively. A slightly smaller rosetta with clean leaves beats a full cup with a washed-out tail.
 
