@@ -121,7 +121,7 @@ The course PDF is dated January 2025, so its timetable may be stale. It says cla
 
 Carnival's **1.5-hour** workshop costs **£65** and takes place at its Penge roastery. The class is aimed at people who want to improve their pours at home, with practice on a professional espresso machine.
 
-You learn how microfoam works, steam milk and practise pouring. Carnival has dairy and alternative milks, and sends each student home with a 230g bag of coffee. You can book a date for yourself or buy a voucher and leave the recipient to choose one later.
+You learn how [microfoam](/learn/what-is-microfoam/) works, steam milk and practise pouring. Carnival has dairy and [alternative milks](/learn/oat-milk-latte-art/), and sends each student home with a 230g bag of coffee. You can book a date for yourself or buy a voucher and leave the recipient to choose one later.
 
 The course page does not give a class size. Ask Carnival if you want to know how much time you are likely to get with the trainer.
 
@@ -191,13 +191,13 @@ This class is solely about latte art. The school has a separate barista and latt
 
 ## What to do after the class
 
-You will still need to practise after the class. Use the same cup, pitcher and pattern for a few sessions, changing one thing at a time.
+You will still need to practise after the class. Use the same cup, pitcher and pattern for a few sessions, changing one thing at a time. You can [practice without wasting much coffee](/learn/how-to-practice-latte-art-without-wasting-coffee/) while the new movements settle in.
 
 Photograph each pour and jot down what you changed, perhaps the milk texture, pitcher height or flow. Next time, you can compare the result rather than relying on memory. LatteArtist keeps the photos and notes together, and the [latte art practice routine](/learn/latte-art-practice-routine/) provides a simple structure for each session.
 
 ## Before you book
 
-You can learn from a beginner class without owning an espresso machine, though you will need access to one to repeat the full process afterwards. If you use oat or another plant milk, check whether the provider has it. Some do; others do not say.
+You can learn from a beginner class without owning an [espresso machine](/learn/steaming-milk-weak-machine/), though you will need access to one to repeat the full process afterwards. If you use oat or another plant milk, check whether the provider has it. Some do; others do not say.
 
 Each provider has its own dates, venues and cancellation terms. Read the current booking page before paying, particularly when the class needs a minimum number of students to go ahead.
 

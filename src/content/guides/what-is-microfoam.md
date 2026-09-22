@@ -20,7 +20,7 @@ related:
 
 Microfoam is steamed milk with bubbles so small that the surface looks like wet paint: glossy, smooth and free of visible foam.
 
-That is the definition. Latte art relies on it because the white lines in a design are fine-textured milk sitting on the crema. Foam with visible bubbles will not behave the same way.
+That is the definition. [Latte art relies on it](/learn/latte-art-for-beginners/) because the white lines in a design are fine-textured milk sitting on the crema. Foam with visible bubbles will not behave the same way.
 
 <figure class="guide-image">
   <img src="/assets/learn/glossy-microfoam.webp" alt="Glossy microfoam swirling smoothly inside a stainless steel milk pitcher on a home kitchen counter" width="1600" height="1067" loading="lazy" />
@@ -42,7 +42,7 @@ Steaming has two phases, in this order:
 1. Stretching puts air into the milk. Keep the wand tip near the surface. You should hear short paper-tearing sounds as the milk draws in air. On its own, this produces foam with large, visible bubbles.
 2. Rolling breaks those bubbles down. Lower the tip slightly and spin the milk in a vortex. The motion breaks up the large bubbles and mixes them through the liquid.
 
-Skipping the rolling phase is the usual reason a home pitcher ends up with foam sitting on milk rather than microfoam. The [steaming guide](/learn/how-to-steam-milk-for-latte-art/) covers both phases step by step.
+Skipping the rolling phase is the usual reason a home pitcher ends up with foam sitting on milk rather than microfoam, especially on an [entry-level espresso machine](/learn/steaming-milk-weak-machine/) where the vortex is weaker. The [steaming guide](/learn/how-to-steam-milk-for-latte-art/) covers both phases step by step.
 
 ## The wet-paint test
 

@@ -21,7 +21,7 @@ related:
 
 “What went wrong?” is hard to answer from one photo. The same blob can come from dry milk, separated foam, a late drop, or a sudden jump in flow.
 
-Start with what showed up in the cup. Pick one likely cause, then change one thing.
+Start with [what showed up in the cup](/learn/latte-art-for-beginners/). Pick one likely cause, then change one thing.
 
 <figure class="guide-image">
   <img src="/assets/learn/failed-pour-diagnosis.webp" srcset="/assets/learn/failed-pour-diagnosis-800.webp 800w, /assets/learn/failed-pour-diagnosis.webp 1600w" sizes="(max-width: 1023px) calc(100vw - 3rem), 52rem" alt="Three home latte art attempts showing no white design, a foam blob, and a small bubbly heart" width="1600" height="1067" loading="lazy" />
@@ -90,11 +90,11 @@ Cup shape matters too. A pour that feels natural in a wide ceramic cup can sprea
 
 ## Troubleshoot in this order
 
-1. **Texture:** is the milk glossy and flowing, or stiff and dry?
+1. **Texture:** is the milk [glossy and flowing](/learn/what-is-microfoam/), or stiff and dry?
 2. **Timing:** did you leave room to draw?
 3. **Height:** did you clearly switch from high mixing to a low pour?
 4. **Flow:** was the stream controlled?
 5. **Placement:** was the spout centred?
 6. **Movement:** only then work on the push, stack, wiggle, or cut-through.
 
-Save the photo, note the milk and cup, then write down the one thing you changed. The [practice routine](/learn/latte-art-practice-routine/) keeps that review short.
+Save the photo, note the milk and cup, then write down the one thing you changed. The [practice routine](/learn/latte-art-practice-routine/) keeps that review short. If you are still drilling the moves, [practice without wasting coffee](/learn/how-to-practice-latte-art-without-wasting-coffee/) keeps the sessions cheap.

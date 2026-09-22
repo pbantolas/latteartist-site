@@ -32,7 +32,7 @@ Keep the session simple: **change one thing, then see what moved**.
 
 Choose something you can see in the cup:
 
-- Can I get the milk glossier?
+- Can I [get the milk glossier](/learn/how-to-steam-milk-for-latte-art/)?
 - Can I make white appear earlier?
 - Can I centre the heart?
 - Can I use a lighter cut-through?
@@ -60,7 +60,7 @@ Make one small adjustment. Add less air, drop low earlier, push more confidently
 
 If the second pour moved in the right direction, repeat it. If not, go back towards the first pour or make the change smaller.
 
-You do not need to waste drinks for a giant practice session. A few normal coffees can still give you useful reps.
+You do not need to waste drinks for a giant practice session. A few normal coffees can still give you [useful reps](/learn/how-to-practice-latte-art-without-wasting-coffee/).
 
 ## Keep the note short
 
@@ -86,7 +86,7 @@ LatteArtist can keep those photos, patterns, ratings, milk, cup, volume, and not
 
 ## Know when to move on
 
-Move to tulips once you can place a heart on purpose. Save rosettas for when your flow and wiggle feel repeatable.
+Move to tulips once you can place a heart on purpose. [Save rosettas](/learn/latte-art-rosetta/) for when your flow and wiggle feel repeatable.
 
 You do not need perfection. You need enough control to tell whether the problem came from the milk, height, flow, or movement.
 

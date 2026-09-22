@@ -33,7 +33,7 @@ You can practise the physical parts of pouring without pulling fresh espresso ev
 - controlling the flow
 - lifting for a clean pull-through
 
-These are useful skills to build. They make the next real pour less of a guess.
+These are useful skills to build. The [latte art beginner’s guide](/learn/latte-art-for-beginners/) covers each of them in context, and they make the next pour less of a guess.
 
 Do not use a substitute to judge your milk texture. Microfoam, espresso, and the surface of a finished drink work together in ways a practice base cannot fully copy. Use cheap drills to get comfortable with the movement, then use real coffee to see how it translates.
 
@@ -43,7 +43,7 @@ Before using milk, practise with an empty pitcher and the machine off.
 
 Place the pitcher where it would sit under the wand. Rehearse the angle, the wand tip position, and the small movement you use to find a rolling motion. You do not need to mime a full steaming routine. The aim is to make the starting position familiar, so you are not searching for it with your next pitcher of milk.
 
-A few quiet dry runs can help when you are new to a machine, switching pitchers, or finding it hard to repeat the same result.
+A few quiet dry runs can help when you are [new to a machine](/learn/steaming-milk-weak-machine/), switching pitchers, or finding it hard to repeat the same result.
 
 Once the setup feels automatic, steam a small amount of real milk and focus on texture. The [milk-steaming guide](/learn/how-to-steam-milk-for-latte-art/) covers the stretch and roll. This drill simply removes one source of hesitation before you begin.
 
@@ -68,9 +68,9 @@ More milk does not create more useful practice. It usually means a bigger pitche
 
 Pour enough cold milk for one drink and one intended pattern. Keep the cup, pitcher, and amount consistent for a few sessions so you can tell whether a technique change helped.
 
-After steaming, tap out only obvious large bubbles, swirl until the milk looks glossy, and pour promptly. Milk left in the pitcher starts to separate, and a late pour can turn a good practice session into a foam dump.
+After steaming, tap out only obvious large bubbles, swirl until the milk [looks glossy](/learn/what-is-microfoam/), and pour promptly. Milk left in the pitcher starts to separate, and a late pour can turn a good practice session into a foam dump.
 
-An imperfect drink is still a drink. If the milk is a little too thick, make the best heart or tulip it will allow, enjoy it, and note what you would change next time. Throwing it away will not teach you more.
+An imperfect drink is still a drink. If the milk is a [little too thick](/learn/milk-too-thick-too-thin/), make the best heart or tulip it will allow, enjoy it, and note what you would change next time. Throwing it away will not teach you more.
 
 ## Make one real coffee a deliberate practice rep
 
@@ -95,7 +95,7 @@ Use a real pour when you need to judge:
 - **Milk texture.** Is it glossy, integrated, and fluid rather than thin or dry?
 - **Contrast.** Does the white sit clearly on the brown base?
 - **Definition.** Does a heart keep a clean edge, or does it blur and wash out?
-- **Diagnosis.** Did the issue come from milk, height, flow, or placement?
+- **Diagnosis.** Did the issue come from milk, height, flow, or [placement](/learn/latte-art-symmetry/)?
 
 A practice base can help you reach the cup with steadier hands. It cannot replace feedback from the drink itself. If the result is a blob, tiny heart, or disappearing design, use the [troubleshooting guide](/learn/latte-art-troubleshooting/) to choose one likely fix.
 

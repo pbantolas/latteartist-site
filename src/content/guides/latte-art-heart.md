@@ -19,7 +19,7 @@ related:
   - latte-art-practice-routine
 ---
 
-The heart is the best first pattern because it teaches the whole pour without a wiggle: base, height, flow, placement, push, and cut-through.
+The heart is the [best first pattern](/learn/latte-art-for-beginners/) because it teaches the whole pour without a wiggle: base, height, flow, placement, push, and cut-through.
 
 If yours looks like an onion, apple, blob, or accidental leaf, read the shape and change one move.
 
@@ -32,7 +32,7 @@ If yours looks like an onion, apple, blob, or accidental leaf, read the shape an
 
 Swirl the pitcher. The milk should look shiny and move like wet paint, with no dry cap sitting on top.
 
-If thin milk pours first and foam dumps out later, go back to [stretching and rolling the milk](/learn/how-to-steam-milk-for-latte-art/).
+If thin milk pours first and [foam dumps out later](/learn/milk-too-thick-too-thin/), go back to [stretching and rolling the milk](/learn/how-to-steam-milk-for-latte-art/).
 
 ## 2. Tilt the cup and set the base
 
@@ -64,10 +64,10 @@ A heavy cut can split or wash out the shape. A hesitant cut leaves an apple. Aim
 
 | What showed up | Try this next |
 | --- | --- |
-| No white heart | Get closer, check the microfoam, or drop low earlier |
+| No white heart | Get closer, check the [microfoam](/learn/what-is-microfoam/), or drop low earlier |
 | A white blob | Use more fluid milk and a steadier push |
 | A tiny heart | Make less base and start the push sooner |
-| An off-centre heart | Line the spout up with the middle of the cup |
+| An off-centre heart | Line the spout up with the middle of the cup, as in the [symmetry guide](/learn/latte-art-symmetry/) |
 | An apple | Make the cut-through more decisive |
 | A split heart | Use a lighter, thinner cut-through |
 
@@ -77,4 +77,4 @@ A heavy cut can split or wash out the shape. A hesitant cut leaves an apple. Aim
 2. Second pour: change only when you drop low.
 3. Third pour: keep the better timing and clean up the cut-through.
 
-A note like “dropped earlier; bigger heart; cut too heavy” is enough. Use the [practice routine](/learn/latte-art-practice-routine/) if you want a repeatable way to review sessions.
+A note like “dropped earlier; bigger heart; cut too heavy” is enough. Use the [practice routine](/learn/latte-art-practice-routine/) if you want a repeatable way to review sessions. To keep the drills cheap, [practice without wasting coffee](/learn/how-to-practice-latte-art-without-wasting-coffee/).

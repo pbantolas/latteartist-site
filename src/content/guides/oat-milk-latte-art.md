@@ -65,7 +65,7 @@ Oat microfoam separates faster than dairy microfoam once the pitcher sits still.
 | White appears then vanishes | Milk overheated; stop steaming sooner |
 | Foam and liquid separated | Pour sooner after swirling |
 | Grainy or chalky texture | Shake the carton hard before pouring into the pitcher |
-| Great texture, weak design | Same fixes as dairy: get closer, commit to the push |
+| Great texture, weak design | Same fixes as dairy: [get closer, commit to the push](/learn/latte-art-for-beginners/) |
 
 ## A three-pour oat session
 
@@ -73,4 +73,4 @@ Oat microfoam separates faster than dairy microfoam once the pitcher sits still.
 2. Second pour: stop steaming earlier and pour within five seconds of swirling.
 3. Third pour: keep both changes and work on the pattern itself.
 
-Oat milk varies enough between cartons that notes matter more than usual. “Barista edition, short stretch, poured fast — held a heart” tells future-you exactly what worked. See the [practice routine](/learn/latte-art-practice-routine/) for how to log it.
+Oat milk varies enough between cartons that notes matter more than usual. “Barista edition, short stretch, poured fast — held a heart” tells future-you exactly what worked. See the [practice routine](/learn/latte-art-practice-routine/) for how to log it. You can also [practice without wasting coffee](/learn/how-to-practice-latte-art-without-wasting-coffee/) while the movements settle.

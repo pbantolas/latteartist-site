@@ -31,9 +31,9 @@ Think of the pour as four moves: **set the base, get close, push, cut**.
 
 ## Get the milk glossy and flowing
 
-Latte-art milk needs **microfoam**: tiny bubbles fully incorporated into the milk. Baristas often call the right texture **wet paint**. It should look glossy and move as one fluid body when you swirl the pitcher.
+Latte-art milk needs [**microfoam**: tiny bubbles](/learn/what-is-microfoam/) fully incorporated into the milk. Baristas often call the right texture **wet paint**. It should look glossy and move as one fluid body when you swirl the pitcher.
 
-If you have thin milk under a dry cap of foam, the two will leave the pitcher at different times. The liquid pours first; then the foam dumps out as a blob. Start with the [milk-steaming guide](/learn/how-to-steam-milk-for-latte-art/) if that sounds familiar.
+If you have thin milk under a dry cap of foam, the two will leave the pitcher at different times. The liquid pours first; then the foam dumps out as a blob. Start with the [milk-steaming guide](/learn/how-to-steam-milk-for-latte-art/) if that sounds familiar. On an [entry-level espresso machine](/learn/steaming-milk-weak-machine/) the stretch just takes longer.
 
 ## Set the base
 
@@ -71,7 +71,7 @@ Plenty of people move faster with someone watching the pour. The [London latte a
 ## Read what showed up in the cup
 
 - **No white appears:** get closer, start drawing earlier, or check the milk texture.
-- **A foam dump lands at the end:** the milk is likely too thick or has separated.
+- **[A foam dump](/learn/milk-too-thick-too-thin/) lands at the end:** the milk is likely too thick or has separated.
 - **The heart is tiny:** you probably made too much base or dropped low too late.
 - **The shape runs to one side:** check the cup tilt and whether the spout is centred — the [symmetry guide](/learn/latte-art-symmetry/) has the full diagnosis.
 - **The design washes out:** check your height, flow, and whether the milk is still fluid.
@@ -80,6 +80,6 @@ One photo rarely proves one cause. Use the [troubleshooting guide](/learn/latte-
 
 ## Keep practice simple
 
-Make a few pours with the same cup, pitcher, milk, and pattern. Change one thing: less air, an earlier drop, a stronger push, or a lighter cut-through.
+Make a few pours with the same cup, pitcher, milk, and pattern. Change one thing: less air, an earlier drop, a stronger push, or a lighter cut-through. Keep the session small: [practice without wasting coffee](/learn/how-to-practice-latte-art-without-wasting-coffee/).
 
 Keep a photo and one short note after each session. The [latte art practice routine](/learn/latte-art-practice-routine/) shows a simple way to review them.
