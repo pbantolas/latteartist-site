@@ -30,7 +30,7 @@ import Seo from "../components/Seo.astro";
 import { getCollection } from "astro:content";
 import { guideSlug } from "../lib/guides";
 
-const footerGuides = (await getCollection("guides"))
+const footerGuides = (await getCollection("guides", ({ data }) => !data.draft))
     .filter((guide) => guide.data.featured)
     .sort((a, b) => a.data.order - b.data.order);
 ---

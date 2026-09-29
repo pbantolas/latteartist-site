@@ -20,7 +20,7 @@ const ogImage = data.ogImage
     ? new URL(data.ogImage, Astro.site).href
     : undefined;
 const toc = headings.filter((heading) => heading.depth === 2);
-const allGuides = await getCollection("guides");
+const allGuides = await getCollection("guides", ({ data }) => !data.draft);
 const relatedGuides = data.related
     .map((id) => allGuides.find((entry) => guideSlug(entry.id) === id))
     .filter((entry): entry is CollectionEntry<"guides"> => Boolean(entry));

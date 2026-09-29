@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import { guideSlug } from "../lib/guides";
 
 export const GET: APIRoute = async ({ site }) => {
-    const guides = await getCollection("guides");
+    const guides = await getCollection("guides", ({ data }) => !data.draft);
     const staticPaths = [
         "/",
         "/learn/",
