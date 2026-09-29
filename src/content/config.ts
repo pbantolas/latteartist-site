@@ -33,6 +33,7 @@ const guidesCollection = defineCollection({
         readTime: z.string(),
         order: z.number(),
         featured: z.boolean().default(false),
+        draft: z.boolean().default(false),
         footerLabel: z.string().optional(),
         keywords: z.array(z.string()),
         ogImage: z.string().optional(),

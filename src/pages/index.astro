@@ -10,7 +10,7 @@ import GuideCard from "../components/GuideCard.astro";
 import AppStoreLink from "../components/AppStoreLink.astro";
 import { guideSlug } from "../lib/guides";
 
-const featuredGuides = (await getCollection("guides"))
+const featuredGuides = (await getCollection("guides", ({ data }) => !data.draft))
     .filter((guide) => guide.data.featured)
     .sort((a, b) => a.data.order - b.data.order)
     .slice(0, 3);
